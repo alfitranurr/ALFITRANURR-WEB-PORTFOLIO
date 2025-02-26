@@ -14,6 +14,7 @@ import DataVisualization from "./components/Projects/Data/DataVisualization/data
 import ArtificialIntelligence from "./components/Projects/Data/ArtificialIntelligence/artificialintelligence";
 import DataAutomation from "./components/Projects/Data/DataAutomation/dataautomation";
 import DataAnalytics from "./components/Projects/Data/DataAnalytic/dataanalytic";
+import DataMining from "./components/Projects/Data/DataMining/datamining";
 
 /* BEYOND DATA */
 import DigitalMarketing from "./components/Projects/BeyondData/DigitalMarketing/digitalmarketing";
@@ -64,6 +65,10 @@ const App: React.FC = () => {
             <Route
               path="/components/Projects/Data/DataAnalytic/dataanalytic"
               element={<DataAnalytics />}
+            />
+            <Route
+              path="/components/Projects/Data/DataMining/datamining"
+              element={<DataMining />}
             />
             {/* BEYOND DATA PROJECTS */}
             <Route
