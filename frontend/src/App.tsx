@@ -21,6 +21,7 @@ import DigitalMarketing from "./components/Projects/BeyondData/DigitalMarketing/
 import MobileDevelopment from "./components/Projects/BeyondData/MobileDevelopment/mobiledevelopment";
 import SmartDeviceIOT from "./components/Projects/BeyondData/SmartDeviceIOT/smartdeviceiot";
 import WebDevelopment from "./components/Projects/BeyondData/WebDevelopment/webdevelopment";
+import GraphicDesign from "./components/Projects/BeyondData/GraphicDesign/graphicdesign";
 
 /* CERTIFICATE */
 import Competition from "./components/Certificate/Competition/competition";
@@ -86,6 +87,10 @@ const App: React.FC = () => {
             <Route
               path="/components/Projects/WebDevelopment/webdevelopment"
               element={<WebDevelopment />}
+            />
+            <Route
+              path="/components/Projects/GraphicDesign/graphicdesign"
+              element={<GraphicDesign />}
             />
             {/* CERTIFICATES */}
             <Route path="/certificate/competition" element={<Competition />} />

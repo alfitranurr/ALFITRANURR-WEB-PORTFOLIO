@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Projects = () => {
   return (
     <section id="projects" className="flex justify-center mt-6 px-4 pt-[60px]">
-      <div className="w-full max-w-screen-xl mx-auto p-8 border border-white rounded-2xl shadow-md flex flex-col items-center">
+      <div className="w-full max-w-6xl mx-auto p-8 border border-white rounded-2xl shadow-md flex flex-col items-center">
         <h1 className="text-lg font-semibold text-white text-center mb-4">
           MY PROJECTS IN DATA
         </h1>
@@ -69,7 +69,7 @@ const Projects = () => {
 
         {/* ====================================== BEYOND DATA ====================================== */}
 
-        <h1 className="text-lg font-semibold text-white text-center mt-12 mb-4">
+        <h1 className="text-lg font-semibold text-white text-center mt-15 mb-4">
           OTHER PROJECTS BEYOND DATA
         </h1>
         <div className="mt-6 flex flex-wrap justify-center gap-6 w-full">
@@ -110,6 +110,17 @@ const Projects = () => {
             <h3 className="text-base font-bold">Digital Marketing</h3>
             <p className="mt-1 text-xs">
               Optimize and grow brands through digital strategies.
+            </p>
+          </Link>
+
+          <Link
+            to="/components/Projects/GraphicDesign/graphicdesign"
+            className="max-w-[250px] w-full border border-white rounded-lg p-4 shadow transition transform hover:scale-95 hover:shadow-lg hover:cursor-pointer hover:bg-white hover:text-[var(--warna1-color)]"
+          >
+            <h3 className="text-base font-bold">Graphic Design</h3>
+            <p className="mt-1 text-xs">
+              Design innovative and captivating visuals for diverse creative
+              needs.
             </p>
           </Link>
         </div>

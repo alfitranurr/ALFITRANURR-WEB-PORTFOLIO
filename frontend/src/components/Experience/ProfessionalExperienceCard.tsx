@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import RiseDown from "./RiseDown";
+import RiseDown from "../RiseDown/RiseDown";
 import {
   AiOutlineUp,
   AiOutlineDown,
