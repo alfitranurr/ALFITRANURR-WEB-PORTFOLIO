@@ -1,42 +1,40 @@
-import Pantai from "../../../../assets/images/Pantai.png";
-import React from "react";
-import { useState, useEffect, useMemo } from "react";
-import { FiArrowRight } from "react-icons/fi"; // Import ikon arrow
+import DataVisualizationImage from "../../../../assets/images/Pantai.png"; // Replace with your specific image
+import { useState, useEffect } from "react";
+import { FiArrowRight } from "react-icons/fi"; // Import arrow icon
 import ScrollToTopButton from "../../../../components/ScrollToTopButton/scrolltotopbutton";
-import { CSSTransition } from "react-transition-group"; // Import react-transition-group
 
-const dataVisualizationProjects = [
+const committees = [
   {
     id: 1,
-    title: "Sales Analytics",
+    title: "Data Visualization Research Group",
     description:
-      "Visualized sales data to provide insights into business performance and trends.",
-    image: Pantai,
+      "A group dedicated to advancing techniques and tools for visualizing complex data, helping to uncover patterns and trends through interactive graphics.",
+    image: DataVisualizationImage,
     tags: ["Infographic"],
   },
   {
     id: 2,
-    title: "Customer Insights",
+    title: "Data Storytelling Coalition",
     description:
-      "Created visualizations to explore customer demographics and preferences.",
-    image: Pantai,
+      "A coalition focused on helping organizations present data-driven insights through compelling narratives and visualizations.",
+    image: DataVisualizationImage,
     tags: ["Dashboard"],
   },
   {
     id: 3,
-    title: "Market Trends",
+    title: "Interactive Data Visualization Forum",
     description:
-      "Analyzed and visualized market trends to inform strategic decision-making.",
-    image: Pantai,
-    tags: ["Dashboard"],
+      "A forum where experts gather to discuss the future of interactive data visualizations, focusing on user experience and engagement.",
+    image: DataVisualizationImage,
+    tags: ["Infographic"],
   },
   {
     id: 4,
-    title: "Financial Data",
+    title: "Visual Analytics for Business Hub",
     description:
-      "Built financial dashboards for easy tracking and monitoring of key metrics.",
-    image: Pantai,
-    tags: ["Infographic", "Dashboard"],
+      "An initiative to apply data visualization techniques to business analytics, enabling data-driven decision-making and insights.",
+    image: DataVisualizationImage,
+    tags: ["Infographic"],
   },
 ];
 
@@ -44,31 +42,20 @@ const tagColors = ["bg-[#50577A]", "bg-[#6B728E]"];
 
 const DataVisualization = () => {
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
-  const [isDissolving, setIsDissolving] = useState(true); // Set initial state to true
+  const [isDissolving, setIsDissolving] = useState(false);
   const [showScroll, setShowScroll] = useState(false);
-  const [, setIsLoaded] = useState(false); // State to manage loading
+  const [isLoaded, setIsLoaded] = useState(false); // State to manage loading
 
-  // Memoize the unique tags
-  const uniqueTags = useMemo(() => {
-    return [
-      ...new Set(dataVisualizationProjects.flatMap((project) => project.tags)),
-    ];
-  }, []);
+  const uniqueTags = [...new Set(committees.flatMap((event) => event.tags))];
 
-  // Memoize the filtered projects based on selectedTag
-  const filteredProjects = useMemo(() => {
-    return selectedTag
-      ? dataVisualizationProjects.filter((project) =>
-          project.tags.includes(selectedTag)
-        )
-      : dataVisualizationProjects;
-  }, [selectedTag]);
+  const filteredCommittees = selectedTag
+    ? committees.filter((event) => event.tags.includes(selectedTag))
+    : committees;
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsLoaded(true); // Set isLoaded state to true after 1000ms
-      setIsDissolving(false); // End dissolve effect after content is ready
-    }, 1000); // Adjust delay for the dissolve effect
+      setIsLoaded(true); // Set isLoaded state to true after 100ms
+    }, 100);
 
     const handleScroll = () => {
       if (window.scrollY > 50) {
@@ -78,165 +65,128 @@ const DataVisualization = () => {
       }
     };
 
-    // Debouncing the scroll handler to improve performance
-    const debouncedScroll = debounce(handleScroll, 200);
-    window.addEventListener("scroll", debouncedScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
       clearTimeout(timer);
-      window.removeEventListener("scroll", debouncedScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []); // Empty dependency array so this effect runs once after initial render
 
   useEffect(() => {
-    // Reset the dissolve effect when changing the tag
     setIsDissolving(true);
-    setIsLoaded(false);
-
-    const timer = setTimeout(() => {
-      setIsLoaded(true); // Set isLoaded state to true after 1000ms
-      setIsDissolving(false); // End dissolve effect after content is ready
-    }, 1000); // Adjust delay for the dissolve effect
-
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [selectedTag]); // This effect runs every time the selectedTag changes
+    const timeout = setTimeout(() => {
+      setIsDissolving(false);
+    }, 500);
+    return () => clearTimeout(timeout);
+  }, [selectedTag]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  // Debounce function to limit how often scroll handler is called
-  const debounce = (func: Function, delay: number) => {
-    let timeout: NodeJS.Timeout;
-    return (...args: any[]) => {
-      clearTimeout(timeout);
-      timeout = setTimeout(() => func(...args), delay);
-    };
-  };
-
-  const TagButton = React.memo(({ tag, isSelected, onClick }: any) => {
-    return (
-      <button
-        onClick={onClick}
-        className={`px-4 py-2 rounded-full text-xs font-bold cursor-pointer ${
-          isSelected ? "bg-[#50577A] text-white" : "bg-[#f3f4f6] text-[#333]"
-        } hover:bg-[#50577A] hover:text-white`}
-      >
-        {tag}
-      </button>
-    );
-  });
-
   return (
-    <section id="datavisualization" className="mt-[-20px] px-4">
+    <section
+      id="datavisualization"
+      className={`mt-[-20px] px-4 transition-all duration-1000 transform ${
+        isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+      }`}
+    >
       <div className="w-full max-w-6xl mx-auto p-6 border border-white rounded-2xl shadow-md mb-4">
         <h1 className="text-3xl font-semibold text-white text-center">
           DATA VISUALIZATION PROJECTS
         </h1>
       </div>
 
-      {/* Loading Animation (Dissolve Effect) */}
-      {isDissolving && (
-        <div className="w-full h-full fixed top-0 left-0 bg-white z-50 flex justify-center items-center">
-          <div className="animate-pulse">
-            <div className="h-4 w-32 bg-[#50577A] rounded-full mb-2"></div>
-            <div className="h-2 w-24 bg-[#50577A] rounded-full"></div>
-          </div>
+      <div className="w-full max-w-6xl mx-auto p-6 border border-white rounded-2xl shadow-md flex flex-col items-center">
+        <div className="flex justify-start gap-4 mb-6 rounded-full bg-[#f3f4f6] p-2">
+          <button
+            onClick={() => setSelectedTag(null)}
+            className={`px-4 py-2 rounded-full text-xs font-bold cursor-pointer ${
+              !selectedTag
+                ? "bg-[#50577A] text-white"
+                : "bg-[#f3f4f6] text-[#333]"
+            } hover:bg-[#50577A] hover:text-white`}
+          >
+            All
+          </button>
+
+          {uniqueTags.map((tag) => (
+            <button
+              key={tag}
+              onClick={() => setSelectedTag(tag)}
+              className={`px-4 py-2 rounded-full text-xs font-bold cursor-pointer ${
+                selectedTag === tag
+                  ? "bg-[#50577A] text-white"
+                  : "bg-[#f3f4f6] text-[#333]"
+              } hover:bg-[#50577A] hover:text-white`}
+            >
+              {tag}
+            </button>
+          ))}
         </div>
-      )}
 
-      {/* Content After Loading */}
-      <CSSTransition
-        in={!isDissolving}
-        timeout={500}
-        classNames="dissolve"
-        unmountOnExit
-      >
-        <div
-          className={`w-full max-w-6xl mx-auto p-6 border border-white rounded-2xl shadow-md flex flex-col items-center transition-opacity duration-500 ${
-            isDissolving ? "opacity-0" : "opacity-100"
-          }`}
-        >
-          <div className="flex justify-start gap-4 mb-6 rounded-full bg-[#f3f4f6] p-2">
-            <TagButton
-              tag="All"
-              isSelected={!selectedTag}
-              onClick={() => setSelectedTag(null)}
-            />
-            {uniqueTags.map((tag) => (
-              <TagButton
-                key={tag}
-                tag={tag}
-                isSelected={selectedTag === tag}
-                onClick={() => setSelectedTag(tag)}
-              />
-            ))}
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredProjects.map((project) => (
-              <div
-                key={project.id}
-                className={`w-full border border-white rounded-lg p-4 shadow transition transform hover:shadow-lg hover:bg-white hover:text-[var(--warna1-color)] group ${
-                  isDissolving
-                    ? "opacity-0 transition-opacity duration-500 ease-in-out"
-                    : "opacity-100 transition-opacity duration-500 ease-in-out"
-                }`}
-              >
-                <div className="relative mb-4">
-                  <div className="overflow-hidden rounded-lg">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-[230px] object-cover transition duration-300 ease-in-out transform scale-110 hover:brightness-55 hover:scale-100"
-                      loading="lazy" // Add lazy loading for images
-                    />
-                  </div>
-                </div>
-
-                <h3 className="text-base font-bold pointer-events-none">
-                  {project.title}
-                </h3>
-                <p className="mt-1 text-xs pointer-events-none">
-                  {project.description}
-                </p>
-
-                <div className="mt-3 flex flex-wrap gap-2">
-                  {project.tags.map((tag, index) => (
-                    <span
-                      key={index}
-                      className={`text-xs px-2 py-1 rounded-full ${
-                        tagColors[index % tagColors.length]
-                      } cursor-pointer group-hover:text-white ${
-                        tagColors[index % tagColors.length] === "bg-[#6B728E]"
-                          ? "group-hover:text-white"
-                          : "group-hover:text-black"
-                      }`}
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                {/* Button View Project */}
-                <div className="mt-4 text-center group relative">
-                  <button className="w-full px-4 py-2 bg-[#474E68] text-white rounded-lg cursor-pointer shadow-xl hover:bg-[#6B728E] hover:shadow-lg transition-all duration-300">
-                    View Project
-                    <span
-                      className="absolute right-4 opacity-0 transform translate-x-[-20px] group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
-                      style={{ fontSize: "1.2rem" }}
-                    >
-                      <FiArrowRight />
-                    </span>
-                  </button>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {filteredCommittees.map((committee) => (
+            <div
+              key={committee.id}
+              className={`w-full border border-white rounded-lg p-4 shadow transition transform hover:shadow-lg hover:bg-white hover:text-[var(--warna1-color)] group ${
+                isDissolving
+                  ? "opacity-0 transition-opacity duration-500 ease-in-out"
+                  : "opacity-100 transition-opacity duration-500 ease-in-out"
+              }`}
+            >
+              <div className="relative mb-4">
+                <div className="overflow-hidden rounded-lg">
+                  <img
+                    src={committee.image}
+                    alt={committee.title}
+                    className="w-full h-[230px] object-cover transition duration-300 ease-in-out transform scale-110 hover:brightness-55 hover:scale-100"
+                    loading="lazy" // Lazy loading
+                  />
                 </div>
               </div>
-            ))}
-          </div>
+
+              <h3 className="text-base font-bold pointer-events-none">
+                {committee.title}
+              </h3>
+              <p className="mt-1 text-xs pointer-events-none">
+                {committee.description}
+              </p>
+
+              <div className="mt-3 flex flex-wrap gap-2">
+                {committee.tags.map((tag, index) => (
+                  <span
+                    key={index}
+                    className={`text-xs px-2 py-1 rounded-full ${
+                      tagColors[index % tagColors.length]
+                    } cursor-pointer group-hover:text-white ${
+                      tagColors[index % tagColors.length] === "bg-[#6B728E]"
+                        ? "group-hover:text-white"
+                        : "group-hover:text-black"
+                    }`}
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+
+              {/* Button View Committee */}
+              <div className="mt-4 text-center group relative">
+                <button className="w-full px-4 py-2 bg-[#474E68] text-white rounded-lg cursor-pointer shadow-xl hover:bg-[#6B728E] hover:shadow-lg transition-all duration-300">
+                  View Committee
+                  <span
+                    className="absolute right-4 opacity-0 transform translate-x-[-20px] group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
+                    style={{ fontSize: "1.2rem" }}
+                  >
+                    <FiArrowRight />
+                  </span>
+                </button>
+              </div>
+            </div>
+          ))}
         </div>
-      </CSSTransition>
+      </div>
 
       {/* Scroll to Top Button */}
       <ScrollToTopButton showScroll={showScroll} />
