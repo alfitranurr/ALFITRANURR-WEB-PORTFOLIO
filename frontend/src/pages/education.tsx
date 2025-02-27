@@ -1,4 +1,7 @@
 // src/pages/education.tsx
+import { LazyLoadImage } from "react-lazy-load-image-component"; // Import LazyLoadImage
+import "react-lazy-load-image-component/src/effects/blur.css"; // Optional: Effect when the image is loading
+
 import LogoUMM from "../assets/images/Logo UMM Color.png";
 import LogoIsyKarima from "../assets/images/Logo Isy Karima.png";
 import LogoAlMuqoddasah from "../assets/images/Logo Al Muqoddasah.png";
@@ -58,10 +61,13 @@ const EducationCard = () => {
           className="bg-[var(--bas-color)] p-6 rounded-2xl shadow-lg w-full max-w-4xl mx-auto transform transition-all duration-300 hover:scale-95 hover:shadow-2xl cursor-pointer"
         >
           <div className="flex items-center space-x-4 mb-2">
-            <img
+            <LazyLoadImage
               src={education.logo}
               alt="Institution Logo"
               className="w-12 h-12"
+              effect="blur" // Optional: adds a blur effect while loading
+              height="48" // Optional: Ensures a consistent image height
+              width="48" // Optional: Ensures a consistent image width
             />
             <div>
               <h3 className="text-white text-md font-semibold">

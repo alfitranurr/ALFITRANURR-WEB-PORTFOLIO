@@ -6,6 +6,9 @@ import {
   AiOutlineStop,
   AiOutlineRight,
 } from "react-icons/ai";
+import { LazyLoadImage } from "react-lazy-load-image-component"; // Import LazyLoadImage
+import "react-lazy-load-image-component/src/effects/blur.css"; // Optional: to add a blur effect while loading
+
 import LogoAzkaGroup from "../../assets/images/Logo Azka Group.png";
 import LogoMetadari from "../../assets/images/Logo Metadari.png";
 import LogoINDEF from "../../assets/images/Logo INDEF.png";
@@ -100,10 +103,13 @@ const ProfessionalExperienceCard = () => {
               onClick={() => toggleCard(card.id)}
             >
               <div className="flex items-center space-x-4 mb-2">
-                <img
+                <LazyLoadImage
                   src={card.logo}
                   alt="Professional Experience Logo"
                   className="w-12 h-12"
+                  effect="blur" // Optional: adds a blur effect while loading
+                  height="48" // Optional: Ensures a consistent image height
+                  width="48" // Optional: Ensures a consistent image width
                 />
                 <div>
                   <h3 className="text-white text-md font-semibold">

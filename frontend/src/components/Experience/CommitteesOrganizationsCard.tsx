@@ -6,6 +6,9 @@ import {
   AiOutlineStop,
   AiOutlineRight,
 } from "react-icons/ai";
+import { LazyLoadImage } from "react-lazy-load-image-component"; // Import LazyLoadImage
+import "react-lazy-load-image-component/src/effects/blur.css"; // Optional: for blur effect during image load
+
 import LogoDSCUMM from "../../assets/images/Logo DSC UMM.png";
 import LogoSDGsUMM from "../../assets/images/Logo SDGs UMM.png";
 import LogoJDD from "../../assets/images/Logo JDD.png";
@@ -119,10 +122,13 @@ const CommitteesOrganizationsCard = () => {
               onClick={() => toggleCard(card.id)}
             >
               <div className="flex items-center space-x-4 mb-4">
-                <img
+                <LazyLoadImage
                   src={card.logo}
                   alt="Committee Logo"
                   className="w-12 h-12"
+                  effect="blur" // Optional: adds a blur effect while loading
+                  height="48" // Optional: Ensures a consistent image height
+                  width="48" // Optional: Ensures a consistent image width
                 />
                 <div>
                   <h3 className="text-white text-md font-semibold">
@@ -131,7 +137,6 @@ const CommitteesOrganizationsCard = () => {
                   <p className="text-gray-300 text-sm">
                     {card.organization} • {card.location}
                   </p>
-                  {/* Added space-y-1 for spacing between Organization/Location and Duration */}
                   <p className="text-gray-300 text-sm mt-2">{card.duration}</p>
                 </div>
               </div>
@@ -148,7 +153,6 @@ const CommitteesOrganizationsCard = () => {
           ))}
       </div>
 
-      {/* Scroll Buttons at the Bottom */}
       <div className="flex justify-center items-center space-x-6 mt-4">
         <div className="text-center">
           <button
@@ -188,7 +192,6 @@ const CommitteesOrganizationsCard = () => {
         </div>
       </div>
 
-      {/* More Button at Bottom Right */}
       <div className="absolute bottom-4 right-1">
         <button className="flex items-center space-x-2 p-2 rounded-full bg-[var(--warna1-color)] text-white hover:bg-white hover:text-[var(--base-color)] transition-all duration-300 cursor-pointer">
           <p className="text-xs">More</p>
