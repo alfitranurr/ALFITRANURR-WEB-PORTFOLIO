@@ -3,6 +3,9 @@
 @import url("https://unpkg.com/leaflet@1.7.1/dist/leaflet.css");
 
 @import "tailwindcss";
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities; */
 
 :root {
   --base-color: #404258;
@@ -24,3 +27,33 @@ body {
   margin: 0;
   padding: 0;
 }
+
+@keyframes slideInFromTop {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0; /* Start with the alert transparent */
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1; /* End with the alert fully visible */
+  }
+}
+
+/* CSS for dissolve transition */
+/* .dissolve-enter {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.dissolve-enter-active {
+  opacity: 1;
+}
+
+.dissolve-exit {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.dissolve-exit-active {
+  opacity: 0;
+} */

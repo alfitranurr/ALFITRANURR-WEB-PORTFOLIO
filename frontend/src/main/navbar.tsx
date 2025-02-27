@@ -65,21 +65,20 @@ const Navbar: React.FC = () => {
     };
   }, []);
 
-  // Scroll to top when clicking "HOME"
   const handleNavigateToTop = () => {
     scroll.scrollToTop({ duration: 500, smooth: "easeInOutQuad" });
   };
 
   return (
     <>
-      {/* Progress Bar */}
+      {/* PROGRESS BAR */}
       <div
         className="fixed top-0 left-0 right-0 h-0.5 bg-white z-20 transition-all duration-800"
         style={{ width: `${scrollProgress}%` }}
       ></div>
 
-      {/* Navbar */}
-      <nav className="bg-[var(--warna1-color)] p-4 shadow-xl rounded-4xl mt-4 mb max-w-3xl mx-auto fixed top-0 left-0 right-0 z-[9999]">
+      {/* NAVBAR */}
+      <nav className="bg-[var(--warna1-color)] p-4 shadow-xl rounded-4xl mt-4 mb max-w-3xl mx-auto fixed top-0 left-0 right-0 z-[1]">
         <div className="max-w-7xl mx-auto flex items-center justify-center">
           <ul className="flex space-x-10">
             {/* HOME */}
@@ -219,12 +218,8 @@ const Navbar: React.FC = () => {
         </div>
       </nav>
 
-      {/* Main Content */}
-      <div className="pt-[120px]">
-        {" "}
-        {/* Adjust this value to match the height of your navbar */}
-        {/* Add your page content here */}
-      </div>
+      {/* MAIN CONTENT */}
+      <div className="pt-[120px]"> </div>
     </>
   );
 };

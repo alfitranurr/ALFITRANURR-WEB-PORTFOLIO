@@ -36,7 +36,7 @@ const MapCard = () => {
           center={[location.latitude, location.longitude]}
           zoom={13}
           style={{ width: "100%", height: "250px" }}
-          className="rounded-lg overflow-hidden"
+          className="rounded-lg overflow-hidden z-0" // Set z-index of map to 0 (behind)
         >
           <TileLayer
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

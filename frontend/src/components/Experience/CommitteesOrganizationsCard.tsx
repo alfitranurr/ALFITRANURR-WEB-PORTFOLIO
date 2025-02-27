@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import RiseDown from "./RiseDown";
+import RiseDown from "../RiseDown/RiseDown";
 import {
   AiOutlineUp,
   AiOutlineDown,
@@ -34,12 +34,7 @@ const CommitteesOrganizationsCard = () => {
       organization: "Rumah Kepemimpinan",
       duration: "Jun 2024 - Present",
       location: "Malang, East Java, Indonesia",
-      description: [
-        "• Promoting sustainable development goals",
-        "• Organizing outreach programs and events",
-        "• Collaborating with local and global organizations",
-        "• Raising awareness among students about social impact",
-      ],
+      description: ["• ", "• ", "• ", "• "],
     },
     {
       id: 2,
@@ -48,12 +43,7 @@ const CommitteesOrganizationsCard = () => {
       organization: "SDGs Student Center UMM",
       duration: "Nov 2024 - Present",
       location: "Malang, East Java, Indonesia",
-      description: [
-        "• Promoting sustainable development goals",
-        "• Organizing outreach programs and events",
-        "• Collaborating with local and global organizations",
-        "• Raising awareness among students about social impact",
-      ],
+      description: ["• ", "• ", "• ", "• "],
     },
     {
       id: 3,
@@ -63,10 +53,8 @@ const CommitteesOrganizationsCard = () => {
       duration: "May 2024 - Present",
       location: "Malang, East Java, Indonesia",
       description: [
-        "• Organizing data science events and workshops",
-        "• Collaborating with faculty and industry experts",
-        "• Managing and leading a team of students",
-        "• Fostering a community of learners and professionals",
+        "• Organized workshops and the GCP (Gathering Capstone Project) for student final Projects and proposal seminars",
+        "• successfully attracted 30+ participants to a data competition",
       ],
     },
     {
@@ -77,10 +65,8 @@ const CommitteesOrganizationsCard = () => {
       duration: "Nov 2024 - Nov 2024",
       location: "Malang, East Java, Indonesia",
       description: [
-        "• Promoting sustainable development goals",
-        "• Organizing outreach programs and events",
-        "• Collaborating with local and global organizations",
-        "• Raising awareness among students about social impact",
+        "• Guided and assisted 50+ workshop participants",
+        "• acted as a liaison between the speaker (Danny Dwi Cahyono), and participants during parallel classes, ensuring effective communication and seamless workshop execution",
       ],
     },
     {
@@ -91,10 +77,7 @@ const CommitteesOrganizationsCard = () => {
       duration: "Apr 2024 - Jun 2024",
       location: "Malang, East Java, Indonesia",
       description: [
-        "• Promoting sustainable development goals",
-        "• Organizing outreach programs and events",
-        "• Collaborating with local and global organizations",
-        "• Raising awareness among students about social impact",
+        "• Managed and controlled 10+ media partners to establish collaborations for the Dies Natalis event, ensuring successful coordination and promotion",
       ],
     },
     {
@@ -105,17 +88,13 @@ const CommitteesOrganizationsCard = () => {
       duration: "Aug 2023 - Aug 2023",
       location: "Malang, East Java, Indonesia",
       description: [
-        "• Promoting sustainable development goals",
-        "• Organizing outreach programs and events",
-        "• Collaborating with local and global organizations",
-        "• Raising awareness among students about social impact",
+        "• Guided and successfully assisted 40 students throughout the PESMABA program, from their arrival, participation in activities, providing directions, to the closing ceremony",
       ],
     },
-    // Add more cards if needed
   ];
 
   const totalCards = cardsData.length;
-  const cardsPerPage = 3; // Change this value to 3 for 3 cards per page
+  const cardsPerPage = 3;
 
   const scrollUp = () => {
     setVisibleStartIndex((prev) => Math.max(prev - 1, 0));
@@ -143,7 +122,7 @@ const CommitteesOrganizationsCard = () => {
                 <img
                   src={card.logo}
                   alt="Committee Logo"
-                  className="w-16 h-16"
+                  className="w-12 h-12"
                 />
                 <div>
                   <h3 className="text-white text-md font-semibold">
@@ -168,7 +147,7 @@ const CommitteesOrganizationsCard = () => {
             </div>
           ))}
       </div>
-  
+
       {/* Scroll Buttons at the Bottom */}
       <div className="flex justify-center items-center space-x-6 mt-4">
         <div className="text-center">
@@ -208,7 +187,7 @@ const CommitteesOrganizationsCard = () => {
           <p className="text-white text-xs mt-2">Scroll Down</p>
         </div>
       </div>
-  
+
       {/* More Button at Bottom Right */}
       <div className="absolute bottom-4 right-1">
         <button className="flex items-center space-x-2 p-2 rounded-full bg-[var(--warna1-color)] text-white hover:bg-white hover:text-[var(--base-color)] transition-all duration-300 cursor-pointer">
@@ -216,9 +195,8 @@ const CommitteesOrganizationsCard = () => {
           <AiOutlineRight size={16} />
         </button>
       </div>
-      </div>
-    );
-  };
-  
-  export default CommitteesOrganizationsCard;
+    </div>
+  );
+};
 
+export default CommitteesOrganizationsCard;

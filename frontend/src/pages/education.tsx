@@ -1,4 +1,4 @@
-// Import images
+// src/pages/education.tsx
 import LogoUMM from "../assets/images/Logo UMM Color.png";
 import LogoIsyKarima from "../assets/images/Logo Isy Karima.png";
 import LogoAlMuqoddasah from "../assets/images/Logo Al Muqoddasah.png";
@@ -8,7 +8,7 @@ const educationData = [
   {
     id: 1,
     logo: LogoUMM,
-    title: "Bachelor's degree • Informatics Engineering, S.Kom",
+    title: "Bachelor's degree • Informatics Engineering • S.Kom",
     institution: "University of Muhammadiyah Malang",
     duration: "2022 - Present",
     location: "Malang, East Java, Indonesia",
@@ -21,25 +21,25 @@ const educationData = [
     institution: "MA Isy Karima",
     duration: "2018 - 2022",
     location: "Karanganyar, Central Java, Indonesia",
-    gpa: "4.00/4.00",
+    gpa: "85.09/100",
   },
   {
     id: 3,
     logo: LogoAlMuqoddasah,
     title: "Junior High School • Natural Sciences",
     institution: "Al Muqoddasah Islamic Boarding School",
-    duration: "2015 - 2018",
+    duration: "2015 - 2017",
     location: "Ponorogo, East Java, Indonesia",
-    gpa: "4.00/4.00",
+    gpa: "85.5/100",
   },
   {
     id: 4,
     logo: LogoSDMuhammadiyah,
     title: "Primary school • Natural Sciences",
     institution: "SD Muhammadiyah 1 Ponorogo",
-    duration: "2008 - 2014",
+    duration: "2009 - 2014",
     location: "Ponorogo, East Java, Indonesia",
-    gpa: "9.00/10",
+    gpa: "90/100",
   },
 ];
 
@@ -57,7 +57,7 @@ const EducationCard = () => {
           key={education.id}
           className="bg-[var(--bas-color)] p-6 rounded-2xl shadow-lg w-full max-w-4xl mx-auto transform transition-all duration-300 hover:scale-95 hover:shadow-2xl cursor-pointer"
         >
-          <div className="flex items-center space-x-4">
+          <div className="flex items-center space-x-4 mb-2">
             <img
               src={education.logo}
               alt="Institution Logo"

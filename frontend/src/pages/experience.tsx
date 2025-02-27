@@ -1,3 +1,5 @@
+// src/pages/experience.tsx
+
 import { useState } from "react";
 import ProfessionalExperienceCard from "../components/Experience/ProfessionalExperienceCard";
 import CommitteesOrganizationsCard from "../components/Experience/CommitteesOrganizationsCard";
@@ -20,14 +22,14 @@ const Experience = () => {
         EXPERIENCE
       </h2>
 
-      {/* Button container with circular buttons */}
+      {/* BUTTON CONTAINER WITH CIRCULAR BUTTONS */}
       <div className="flex mb-6 justify-center items-center">
-        {/* Inner container for the buttons */}
+        {/* INNER CONTAINER FOR THE BUTTONS */}
         <div
           className="flex rounded-full p-1"
           style={{ backgroundColor: "var(--warna1-color)" }}
         >
-          {/* Professional Experience button */}
+          {/* PROFESSIONAL EXPERIENCE BUTTON */}
           <button
             onClick={() => handleTabClick("professional")}
             className={`px-4 py-1 text-xs font-semibold cursor-pointer ${
@@ -39,7 +41,7 @@ const Experience = () => {
             Professional Experience
           </button>
 
-          {/* Committees & Organizations button */}
+          {/* COMMITTEES & ORGANIZATIONS BUTTON */}
           <button
             onClick={() => handleTabClick("committees")}
             className={`px-4 py-1 text-xs font-semibold cursor-pointer ${
@@ -48,12 +50,12 @@ const Experience = () => {
                 : "text-gray-300 hover:bg-gray-500 rounded-full"
             } transition-all duration-200 ease-in-out mx-2`}
           >
-            Committees & Organizations
+            Committee & Organization
           </button>
         </div>
       </div>
 
-      {/* Conditional rendering based on selected tab */}
+      {/* CONDITIONAL RENDERING BASED ON SELECTED TAB */}
       {activeTab === "professional" ? (
         <ProfessionalExperienceCard />
       ) : (

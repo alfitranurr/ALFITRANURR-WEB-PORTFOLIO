@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-import RiseDown from "./RiseDown"; // Ensure RiseDown supports dynamic height
+import RiseDown from "../RiseDown/RiseDown";
 import {
   AiOutlineUp,
   AiOutlineDown,
@@ -28,15 +28,14 @@ const ProfessionalExperienceCard = () => {
     {
       id: 1,
       logo: LogoAzkaGroup,
-      title: "Web Development • Business Development • Graphic Design",
+      title: "Web Development • Data Automation • Graphic Design",
       company: "CV. Indo Azka Konsultan",
       duration: "Jan 2025 - Mar 2025",
       location: "Malang, East Java, Indonesia",
       description: [
-        "• Developing and maintaining web applications",
-        "• Working with frontend and backend technologies",
-        "• Collaborating with cross-functional teams",
-        "• Ensuring the performance and scalability of applications",
+        "• Created automated financial reporting for the company's 6 branches using Macro VBA in Excel, resulting in a 90% increase in work efficiency",
+        "• Developed a frontend e-commerce website for Depo79 using React Framework, enabling all sales to be conducted directly on the platform.",
+        "• Performed data preprocessing on a product sales list of 3,709 items using Python, cleaning the data by removing duplicates, handling missing values, and transforming it into the appropriate format, resulting in structured, consistent data ready for e-commerce website use.",
       ],
     },
     {
@@ -47,12 +46,8 @@ const ProfessionalExperienceCard = () => {
       duration: "Dec 2024 - Now",
       location: "Malang, East Java, Indonesia",
       description: [
-        "• Analyzing large datasets",
-        "• Creating reports to support business decisions",
-        "• Building data models",
-        "• Automating data pipelines using Python and SQL",
-        "• Collaborating with business teams to optimize data strategies",
-        "• Using Tableau for data visualization and presentation",
+        "• Analyzed metaverse data and tracked virtual reality development, contributing to a 30% increase in metaverse engagement both within UMM and externally",
+        "• Creating reports to support business decisions Created an operational team attendance system in Looker Studio, improving tracking efficiency and boosting team productivity by 50%.",
       ],
     },
     {
@@ -63,10 +58,7 @@ const ProfessionalExperienceCard = () => {
       duration: "Aug 2024 - Sep 2024",
       location: "Malang, East Java, Indonesia",
       description: [
-        "• Leading multiple project teams",
-        "• Managing project timelines and deliverables",
-        "• Collaborating with stakeholders",
-        "• Ensuring projects are delivered on time and within budget",
+        "• Represented INDEF for the Malang region, conducted surveys with GOJEK, engaged 10 drivers, 3 restaurants, and 1 school, delivering valid data for the analysis of President Prabowo’s program and the MBG (Makan Bergizi Gratis) initiative",
       ],
     },
     {
@@ -77,10 +69,7 @@ const ProfessionalExperienceCard = () => {
       duration: "May 2024 - July 2024",
       location: "Work From Home (WFH)",
       description: [
-        "• Developing and deploying scalable software solutions",
-        "• Writing clean and efficient code",
-        "• Performing code reviews and debugging",
-        "• Collaborating with the product team to design features",
+        "• Completed a 30-day Fullstack Data Analyst Bootcamp with Distinction score (92/100), covering SQL, Python analysis, and dashboard creation presented to stakeholders.",
       ],
     },
   ];
@@ -110,11 +99,11 @@ const ProfessionalExperienceCard = () => {
               style={{ backgroundColor: "var(--bas-color)" }}
               onClick={() => toggleCard(card.id)}
             >
-              <div className="flex items-center space-x-4 mb-4">
+              <div className="flex items-center space-x-4 mb-2">
                 <img
                   src={card.logo}
                   alt="Professional Experience Logo"
-                  className="w-16 h-16"
+                  className="w-12 h-12"
                 />
                 <div>
                   <h3 className="text-white text-md font-semibold">
@@ -140,7 +129,7 @@ const ProfessionalExperienceCard = () => {
           ))}
       </div>
 
-      {/* Scroll Buttons at the Bottom */}
+      {/* SCROLL UP & DOWN BUTTONS AT THE BOTTOM */}
       <div className="flex justify-center items-center space-x-6 mt-4">
         <div className="text-center">
           <button
@@ -180,7 +169,7 @@ const ProfessionalExperienceCard = () => {
         </div>
       </div>
 
-      {/* More Button at Bottom Right */}
+      {/* MORE BUTTON AT BOTTOM RIGHT */}
       <div className="absolute bottom-4 right-1">
         <button className="flex items-center space-x-2 p-2 rounded-full bg-[var(--warna1-color)] text-white hover:bg-white hover:text-[var(--base-color)] transition-all duration-300 cursor-pointer">
           <p className="text-xs">More</p>

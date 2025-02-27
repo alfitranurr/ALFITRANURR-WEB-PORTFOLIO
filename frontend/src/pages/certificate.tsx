@@ -1,3 +1,7 @@
+// src/pages/certificate.tsx
+
+import { Link } from "react-router-dom";
+
 const Certificate = () => {
   return (
     <section
@@ -14,33 +18,45 @@ const Certificate = () => {
         </p>
 
         <div className="mt-6 flex flex-wrap justify-center gap-6 w-full">
-          <div className="max-w-[250px] w-full border border-white rounded-lg p-4 shadow transition transform hover:scale-95 hover:shadow-lg hover:cursor-pointer hover:bg-white hover:text-[var(--warna1-color)]">
+          <Link
+            to="/certificate/competition"
+            className="max-w-[250px] w-full border border-white rounded-lg p-4 shadow transition transform hover:scale-95 hover:shadow-lg hover:cursor-pointer hover:bg-white hover:text-[var(--warna1-color)]"
+          >
             <h3 className="text-base font-bold">Competition</h3>
             <p className="mt-1 text-xs">
               Gained valuable experience through participation in various
               competitions.
             </p>
-          </div>
-          <div className="max-w-[250px] w-full border border-white rounded-lg p-4 shadow transition transform hover:scale-95 hover:shadow-lg hover:cursor-pointer hover:bg-white hover:text-[var(--warna1-color)]">
+          </Link>
+          <Link
+            to="/certificate/seminar-workshop"
+            className="max-w-[250px] w-full border border-white rounded-lg p-4 shadow transition transform hover:scale-95 hover:shadow-lg hover:cursor-pointer hover:bg-white hover:text-[var(--warna1-color)]"
+          >
             <h3 className="text-base font-bold">Seminar & Workshop</h3>
             <p className="mt-1 text-xs">
               Engaged in insightful sessions to broaden perspectives and expand
               knowledge.
             </p>
-          </div>
-          <div className="max-w-[250px] w-full border border-white rounded-lg p-4 shadow transition transform hover:scale-95 hover:shadow-lg hover:cursor-pointer hover:bg-white hover:text-[var(--warna1-color)]">
+          </Link>
+          <Link
+            to="/certificate/license-certification"
+            className="max-w-[250px] w-full border border-white rounded-lg p-4 shadow transition transform hover:scale-95 hover:shadow-lg hover:cursor-pointer hover:bg-white hover:text-[var(--warna1-color)]"
+          >
             <h3 className="text-base font-bold">License & Certification</h3>
             <p className="mt-1 text-xs">
               Earned professional certifications in various fields.
             </p>
-          </div>
-          <div className="max-w-[250px] w-full border border-white rounded-lg p-4 shadow transition transform hover:scale-95 hover:shadow-lg hover:cursor-pointer hover:bg-white hover:text-[var(--warna1-color)]">
+          </Link>
+          <Link
+            to="/certificate/committee-organization"
+            className="max-w-[250px] w-full border border-white rounded-lg p-4 shadow transition transform hover:scale-95 hover:shadow-lg hover:cursor-pointer hover:bg-white hover:text-[var(--warna1-color)]"
+          >
             <h3 className="text-base font-bold">Committee & Organization</h3>
             <p className="mt-1 text-xs">
               Led and participated in various committees and organizations to
               drive impactful events.
             </p>
-          </div>
+          </Link>
         </div>
       </div>
     </section>
@@ -48,3 +64,4 @@ const Certificate = () => {
 };
 
 export default Certificate;
+``;
