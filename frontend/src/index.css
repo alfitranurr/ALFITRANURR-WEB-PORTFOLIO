@@ -38,3 +38,22 @@ body {
     opacity: 1; /* End with the alert fully visible */
   }
 }
+
+/* CSS untuk transisi dissolve */
+.dissolve-enter {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.dissolve-enter-active {
+  opacity: 1;
+}
+
+.dissolve-exit {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.dissolve-exit-active {
+  opacity: 0;
+}
