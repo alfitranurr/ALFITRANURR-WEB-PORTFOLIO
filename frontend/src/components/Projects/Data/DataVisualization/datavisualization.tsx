@@ -10,7 +10,7 @@ const committees = [
     description:
       "A global group dedicated to advancing research in data visualization techniques and methodologies, promoting innovation and collaboration among data visualization experts.",
     image: OrganizationImage,
-    tags: ["Committee", "Data Visualization", "Research"],
+    tags: ["Infographic"],
   },
   {
     id: 2,
@@ -18,7 +18,7 @@ const committees = [
     description:
       "A coalition of organizations focused on using data visualization to solve global challenges such as climate change, healthcare, and education.",
     image: OrganizationImage,
-    tags: ["Committee", "Data Visualization", "Social Impact"],
+    tags: ["Dashboard"],
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ const committees = [
     description:
       "An interdisciplinary forum focusing on the ethical implications of data visualization, governance, and regulatory frameworks.",
     image: OrganizationImage,
-    tags: ["Committee", "Visualization Ethics", "Governance"],
+    tags: ["Infographic"],
   },
   {
     id: 4,
@@ -34,13 +34,7 @@ const committees = [
     description:
       "An initiative to foster innovation in the data visualization startup ecosystem, connecting entrepreneurs, investors, and professionals in the field.",
     image: OrganizationImage,
-    tags: [
-      "Committee",
-      "Visualization Startups",
-      "Innovation",
-      "Entrepreneurship",
-      "Data Visualization",
-    ],
+    tags: ["Infographic"],
   },
 ];
 
