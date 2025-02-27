@@ -1,6 +1,6 @@
-import GraphicDesignImage from "../../../../assets/images/Pantai.png"; // Replace with your specific image
+import OrganizationImage from "../../../../assets/images/Pantai.png";
 import { useState, useEffect } from "react";
-import { FiArrowRight } from "react-icons/fi"; // Import arrow icon
+import { FiArrowRight } from "react-icons/fi"; // Import icon arrow
 import ScrollToTopButton from "../../../../components/ScrollToTopButton/scrolltotopbutton";
 
 const committees = [
@@ -8,33 +8,39 @@ const committees = [
     id: 1,
     title: "Graphic Design Research Group",
     description:
-      "A group dedicated to exploring the principles and techniques of graphic design, including typography, color theory, and layout.",
-    image: GraphicDesignImage,
-    tags: ["Committee", "Graphic Design", "Typography"],
+      "A global group dedicated to advancing research in graphic design, exploring innovative techniques, and promoting creativity among graphic design experts.",
+    image: OrganizationImage,
+    tags: ["Committee", "Graphic Design", "Research"],
   },
   {
     id: 2,
-    title: "UI/UX Design Coalition",
+    title: "Design for Social Impact Coalition",
     description:
-      "A coalition that focuses on designing intuitive user interfaces and user experiences for digital platforms, emphasizing usability and accessibility.",
-    image: GraphicDesignImage,
-    tags: ["Committee", "UI/UX"],
+      "A coalition of organizations focused on using graphic design to solve global challenges such as education, environmental sustainability, and social justice.",
+    image: OrganizationImage,
+    tags: ["Committee", "Graphic Design", "Social Impact"],
   },
   {
     id: 3,
-    title: "Motion Graphics Forum",
+    title: "Design Ethics and Visual Culture Forum",
     description:
-      "A forum that brings together motion designers to explore animation techniques and create visually engaging moving graphics.",
-    image: GraphicDesignImage,
-    tags: ["Committee", "Motion Graphics", "Animation"],
+      "An interdisciplinary forum discussing the ethical implications of graphic design, the influence of visual culture, and its impact on society.",
+    image: OrganizationImage,
+    tags: ["Committee", "Design Ethics", "Visual Culture"],
   },
   {
     id: 4,
-    title: "Branding and Identity Hub",
+    title: "Graphic Design Innovation and Startups Hub",
     description:
-      "An initiative to help businesses create and maintain a strong visual identity, focusing on logos, color schemes, and brand guidelines.",
-    image: GraphicDesignImage,
-    tags: ["Committee", "Branding", "Identity"],
+      "An initiative to foster innovation in the graphic design startup ecosystem, connecting designers, entrepreneurs, and professionals in the field.",
+    image: OrganizationImage,
+    tags: [
+      "Committee",
+      "Design Startups",
+      "Innovation",
+      "Entrepreneurship",
+      "Graphic Design",
+    ],
   },
 ];
 
@@ -99,10 +105,10 @@ const GraphicDesign = () => {
       </div>
 
       <div className="w-full max-w-6xl mx-auto p-6 border border-white rounded-2xl shadow-md flex flex-col items-center">
-        <div className="flex justify-start gap-4 mb-6 rounded-full bg-[#f3f4f6] p-2">
+        <div className="flex flex-wrap gap-4 mb-6">
           <button
             onClick={() => setSelectedTag(null)}
-            className={`px-4 py-2 rounded-full text-xs font-bold cursor-pointer ${
+            className={`px-4 py-2 text-xs font-bold cursor-pointer rounded-full ${
               !selectedTag
                 ? "bg-[#50577A] text-white"
                 : "bg-[#f3f4f6] text-[#333]"
@@ -115,7 +121,7 @@ const GraphicDesign = () => {
             <button
               key={tag}
               onClick={() => setSelectedTag(tag)}
-              className={`px-4 py-2 rounded-full text-xs font-bold cursor-pointer ${
+              className={`px-4 py-2 text-xs font-bold cursor-pointer rounded-full ${
                 selectedTag === tag
                   ? "bg-[#50577A] text-white"
                   : "bg-[#f3f4f6] text-[#333]"

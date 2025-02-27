@@ -1,58 +1,56 @@
-import Pantai from "../../../assets/images/Pantai.png";
+import OrganizationImage from "../../../assets/images/Pantai.png";
 import { useState, useEffect } from "react";
-import { FiArrowRight } from "react-icons/fi"; // Import ikon arrow
-import ScrollToTopButton from "../../../components/ScrollToTopButton/scrolltotopbutton";
+import { FiArrowRight } from "react-icons/fi"; // Import icon arrow
+import ScrollToTopButton from "../../ScrollToTopButton/scrolltotopbutton";
 
-const seminarsAndWorkshops = [
+const licenses = [
   {
     id: 1,
-    title: "Data Science and AI Workshop",
+    title: "Certified Ethical Hacker (CEH)",
     description:
-      "An interactive workshop on the fundamentals of Data Science and Artificial Intelligence with practical case studies.",
-    image: Pantai,
-    tags: ["Workshop", "Data Science", "AI"],
+      "A certification that focuses on ethical hacking skills, including penetration testing, network security, and risk management, ideal for professionals seeking careers in cybersecurity.",
+    image: OrganizationImage,
+    tags: ["Certification", "Cybersecurity", "Ethical Hacking", "IT"],
   },
   {
     id: 2,
-    title: "Web Development Bootcamp",
+    title: "Project Management Professional (PMP)",
     description:
-      "A comprehensive bootcamp that covers everything from HTML, CSS to advanced JavaScript frameworks and full-stack development.",
-    image: Pantai,
-    tags: ["Workshop", "Web Development"],
+      "A globally recognized certification for project management professionals that demonstrates your skills and expertise in leading projects and teams.",
+    image: OrganizationImage,
+    tags: ["Certification", "Project Management", "Leadership", "Business"],
   },
   {
     id: 3,
-    title: "Project Management Essentials Seminar",
+    title: "Google Analytics Certification",
     description:
-      "A seminar designed to help professionals master the core principles of project management, from planning to execution.",
-    image: Pantai,
-    tags: ["Seminar", "Project Management"],
+      "A certification program for mastering Google Analytics, enabling you to track and analyze website traffic, understand audience behavior, and improve online marketing strategies.",
+    image: OrganizationImage,
+    tags: ["Certification", "Analytics", "Digital Marketing", "Google"],
   },
   {
     id: 4,
-    title: "Cloud Computing and AWS Seminar",
+    title: "Certified Public Accountant (CPA)",
     description:
-      "Explore cloud technologies and best practices with a focus on AWS, designed for IT professionals looking to expand their expertise.",
-    image: Pantai,
-    tags: ["Seminar", "Cloud Computing", "AWS"],
+      "A certification for accounting professionals that is recognized worldwide, demonstrating expertise in accounting principles, taxation, and financial reporting.",
+    image: OrganizationImage,
+    tags: ["Certification", "Accounting", "Finance", "Taxation"],
   },
 ];
 
 const tagColors = ["bg-[#50577A]", "bg-[#6B728E]"];
 
-const SeminarAndWorkshop = () => {
+const LicenseCertification = () => {
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
   const [isDissolving, setIsDissolving] = useState(false);
   const [showScroll, setShowScroll] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false); // State to manage loading
 
-  const uniqueTags = [
-    ...new Set(seminarsAndWorkshops.flatMap((event) => event.tags)),
-  ];
+  const uniqueTags = [...new Set(licenses.flatMap((license) => license.tags))];
 
-  const filteredEvents = selectedTag
-    ? seminarsAndWorkshops.filter((event) => event.tags.includes(selectedTag))
-    : seminarsAndWorkshops;
+  const filteredLicenses = selectedTag
+    ? licenses.filter((license) => license.tags.includes(selectedTag))
+    : licenses;
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -89,22 +87,22 @@ const SeminarAndWorkshop = () => {
 
   return (
     <section
-      id="seminar-workshop"
+      id="licensecertification"
       className={`mt-[-20px] px-4 transition-all duration-1000 transform ${
         isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
       }`}
     >
       <div className="w-full max-w-6xl mx-auto p-6 border border-white rounded-2xl shadow-md mb-4">
         <h1 className="text-3xl font-semibold text-white text-center">
-          SEMINAR & WORKSHOP CERTIFICATES
+          LICENSES & CERTIFICATIONS
         </h1>
       </div>
 
       <div className="w-full max-w-6xl mx-auto p-6 border border-white rounded-2xl shadow-md flex flex-col items-center">
-        <div className="flex justify-start gap-4 mb-6 rounded-full bg-[#f3f4f6] p-2">
+        <div className="flex flex-wrap gap-4 mb-6">
           <button
             onClick={() => setSelectedTag(null)}
-            className={`px-4 py-2 rounded-full text-xs font-bold cursor-pointer ${
+            className={`px-4 py-2 text-xs font-bold cursor-pointer rounded-full ${
               !selectedTag
                 ? "bg-[#50577A] text-white"
                 : "bg-[#f3f4f6] text-[#333]"
@@ -117,7 +115,7 @@ const SeminarAndWorkshop = () => {
             <button
               key={tag}
               onClick={() => setSelectedTag(tag)}
-              className={`px-4 py-2 rounded-full text-xs font-bold cursor-pointer ${
+              className={`px-4 py-2 text-xs font-bold cursor-pointer rounded-full ${
                 selectedTag === tag
                   ? "bg-[#50577A] text-white"
                   : "bg-[#f3f4f6] text-[#333]"
@@ -129,9 +127,9 @@ const SeminarAndWorkshop = () => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredEvents.map((event) => (
+          {filteredLicenses.map((license) => (
             <div
-              key={event.id}
+              key={license.id}
               className={`w-full border border-white rounded-lg p-4 shadow transition transform hover:shadow-lg hover:bg-white hover:text-[var(--warna1-color)] group ${
                 isDissolving
                   ? "opacity-0 transition-opacity duration-500 ease-in-out"
@@ -141,8 +139,8 @@ const SeminarAndWorkshop = () => {
               <div className="relative mb-4">
                 <div className="overflow-hidden rounded-lg">
                   <img
-                    src={event.image}
-                    alt={event.title}
+                    src={license.image}
+                    alt={license.title}
                     className="w-full h-[230px] object-cover transition duration-300 ease-in-out transform scale-110 hover:brightness-55 hover:scale-100"
                     loading="lazy" // Lazy loading
                   />
@@ -150,14 +148,14 @@ const SeminarAndWorkshop = () => {
               </div>
 
               <h3 className="text-base font-bold pointer-events-none">
-                {event.title}
+                {license.title}
               </h3>
               <p className="mt-1 text-xs pointer-events-none">
-                {event.description}
+                {license.description}
               </p>
 
               <div className="mt-3 flex flex-wrap gap-2">
-                {event.tags.map((tag, index) => (
+                {license.tags.map((tag, index) => (
                   <span
                     key={index}
                     className={`text-xs px-2 py-1 rounded-full ${
@@ -173,10 +171,10 @@ const SeminarAndWorkshop = () => {
                 ))}
               </div>
 
-              {/* Button View Event */}
+              {/* Button View License */}
               <div className="mt-4 text-center group relative">
                 <button className="w-full px-4 py-2 bg-[#474E68] text-white rounded-lg cursor-pointer shadow-xl hover:bg-[#6B728E] hover:shadow-lg transition-all duration-300">
-                  View Event
+                  View License
                   <span
                     className="absolute right-4 opacity-0 transform translate-x-[-20px] group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
                     style={{ fontSize: "1.2rem" }}
@@ -196,4 +194,4 @@ const SeminarAndWorkshop = () => {
   );
 };
 
-export default SeminarAndWorkshop;
+export default LicenseCertification;

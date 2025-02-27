@@ -1,6 +1,6 @@
-import DataVisualizationImage from "../../../../assets/images/Pantai.png"; // Replace with your specific image
+import OrganizationImage from "../../../../assets/images/Pantai.png";
 import { useState, useEffect } from "react";
-import { FiArrowRight } from "react-icons/fi"; // Import arrow icon
+import { FiArrowRight } from "react-icons/fi"; // Import icon arrow
 import ScrollToTopButton from "../../../../components/ScrollToTopButton/scrolltotopbutton";
 
 const committees = [
@@ -8,33 +8,39 @@ const committees = [
     id: 1,
     title: "Data Visualization Research Group",
     description:
-      "A group dedicated to advancing techniques and tools for visualizing complex data, helping to uncover patterns and trends through interactive graphics.",
-    image: DataVisualizationImage,
-    tags: ["Infographic"],
+      "A global group dedicated to advancing research in data visualization techniques and methodologies, promoting innovation and collaboration among data visualization experts.",
+    image: OrganizationImage,
+    tags: ["Committee", "Data Visualization", "Research"],
   },
   {
     id: 2,
-    title: "Data Storytelling Coalition",
+    title: "Data Visualization for Good Coalition",
     description:
-      "A coalition focused on helping organizations present data-driven insights through compelling narratives and visualizations.",
-    image: DataVisualizationImage,
-    tags: ["Dashboard"],
+      "A coalition of organizations focused on using data visualization to solve global challenges such as climate change, healthcare, and education.",
+    image: OrganizationImage,
+    tags: ["Committee", "Data Visualization", "Social Impact"],
   },
   {
     id: 3,
-    title: "Interactive Data Visualization Forum",
+    title: "Data Visualization Ethics and Governance Forum",
     description:
-      "A forum where experts gather to discuss the future of interactive data visualizations, focusing on user experience and engagement.",
-    image: DataVisualizationImage,
-    tags: ["Infographic"],
+      "An interdisciplinary forum focusing on the ethical implications of data visualization, governance, and regulatory frameworks.",
+    image: OrganizationImage,
+    tags: ["Committee", "Visualization Ethics", "Governance"],
   },
   {
     id: 4,
-    title: "Visual Analytics for Business Hub",
+    title: "Data Visualization Startups and Innovation Hub",
     description:
-      "An initiative to apply data visualization techniques to business analytics, enabling data-driven decision-making and insights.",
-    image: DataVisualizationImage,
-    tags: ["Infographic"],
+      "An initiative to foster innovation in the data visualization startup ecosystem, connecting entrepreneurs, investors, and professionals in the field.",
+    image: OrganizationImage,
+    tags: [
+      "Committee",
+      "Visualization Startups",
+      "Innovation",
+      "Entrepreneurship",
+      "Data Visualization",
+    ],
   },
 ];
 
@@ -99,10 +105,10 @@ const DataVisualization = () => {
       </div>
 
       <div className="w-full max-w-6xl mx-auto p-6 border border-white rounded-2xl shadow-md flex flex-col items-center">
-        <div className="flex justify-start gap-4 mb-6 rounded-full bg-[#f3f4f6] p-2">
+        <div className="flex flex-wrap gap-4 mb-6">
           <button
             onClick={() => setSelectedTag(null)}
-            className={`px-4 py-2 rounded-full text-xs font-bold cursor-pointer ${
+            className={`px-4 py-2 text-xs font-bold cursor-pointer rounded-full ${
               !selectedTag
                 ? "bg-[#50577A] text-white"
                 : "bg-[#f3f4f6] text-[#333]"
@@ -115,7 +121,7 @@ const DataVisualization = () => {
             <button
               key={tag}
               onClick={() => setSelectedTag(tag)}
-              className={`px-4 py-2 rounded-full text-xs font-bold cursor-pointer ${
+              className={`px-4 py-2 text-xs font-bold cursor-pointer rounded-full ${
                 selectedTag === tag
                   ? "bg-[#50577A] text-white"
                   : "bg-[#f3f4f6] text-[#333]"

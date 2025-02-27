@@ -34,7 +34,7 @@ const committees = [
     description:
       "An initiative to foster innovation in the AI startup ecosystem, connecting entrepreneurs, investors, and professionals in the AI field.",
     image: OrganizationImage,
-    tags: ["Committee", "AI Startups", "Innovation"],
+    tags: ["Committee", "AI Startups", "Innovation", "Entrepreneurship", "AI"],
   },
 ];
 
@@ -99,10 +99,10 @@ const ArtificialIntelligence = () => {
       </div>
 
       <div className="w-full max-w-6xl mx-auto p-6 border border-white rounded-2xl shadow-md flex flex-col items-center">
-        <div className="flex justify-start gap-4 mb-6 rounded-full bg-[#f3f4f6] p-2">
+        <div className="flex flex-wrap gap-4 mb-6">
           <button
             onClick={() => setSelectedTag(null)}
-            className={`px-4 py-2 rounded-full text-xs font-bold cursor-pointer ${
+            className={`px-4 py-2 text-xs font-bold cursor-pointer rounded-full ${
               !selectedTag
                 ? "bg-[#50577A] text-white"
                 : "bg-[#f3f4f6] text-[#333]"
@@ -115,7 +115,7 @@ const ArtificialIntelligence = () => {
             <button
               key={tag}
               onClick={() => setSelectedTag(tag)}
-              className={`px-4 py-2 rounded-full text-xs font-bold cursor-pointer ${
+              className={`px-4 py-2 text-xs font-bold cursor-pointer rounded-full ${
                 selectedTag === tag
                   ? "bg-[#50577A] text-white"
                   : "bg-[#f3f4f6] text-[#333]"

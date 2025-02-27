@@ -1,40 +1,40 @@
-import SmartDeviceIoTImage from "../../../../assets/images/Pantai.png"; // Replace with your specific image
+import OrganizationImage from "../../../../assets/images/Pantai.png";
 import { useState, useEffect } from "react";
-import { FiArrowRight } from "react-icons/fi"; // Import arrow icon
+import { FiArrowRight } from "react-icons/fi"; // Import icon arrow
 import ScrollToTopButton from "../../../../components/ScrollToTopButton/scrolltotopbutton";
 
 const committees = [
   {
     id: 1,
-    title: "IoT Research Group",
+    title: "IoT for Smart Devices Research Group",
     description:
-      "A research group dedicated to exploring the potential of IoT in various industries, from home automation to industrial solutions, utilizing smart devices for real-time data analysis and control.",
-    image: SmartDeviceIoTImage,
-    tags: ["Committee", "IoT", "Smart Devices", "Research"],
+      "A research group dedicated to exploring innovative solutions for IoT (Internet of Things) in smart devices, focusing on connectivity, automation, and security.",
+    image: OrganizationImage,
+    tags: ["Committee", "IoT", "Smart Devices", "Connectivity", "Automation"],
   },
   {
     id: 2,
     title: "Smart Home Solutions Coalition",
     description:
-      "A coalition focused on creating innovative IoT-based smart home solutions, enabling seamless integration of devices for improved convenience and efficiency in everyday life.",
-    image: SmartDeviceIoTImage,
-    tags: ["Committee", "IoT", "Smart Home", "Automation"],
+      "A coalition of companies and researchers working to develop smart home technologies that enhance living comfort, security, and energy efficiency through IoT.",
+    image: OrganizationImage,
+    tags: ["Committee", "Smart Home", "IoT Solutions", "Technology"],
   },
   {
     id: 3,
-    title: "Industrial IoT Innovation Forum",
+    title: "IoT Security and Privacy Forum",
     description:
-      "An interdisciplinary forum to discuss and develop IoT applications in industrial settings, optimizing processes through automation, predictive maintenance, and real-time monitoring.",
-    image: SmartDeviceIoTImage,
-    tags: ["Committee", "Industrial IoT", "Automation"],
+      "An interdisciplinary forum focused on the security and privacy challenges in IoT systems, providing insights on best practices and emerging trends.",
+    image: OrganizationImage,
+    tags: ["Committee", "IoT Security", "Privacy", "Tech Governance"],
   },
   {
     id: 4,
-    title: "Wearable IoT Devices Hub",
+    title: "Smart Device Innovation and Startups Hub",
     description:
-      "A hub for developing wearable IoT devices that track health metrics, provide real-time data analysis, and connect users to smarter, more efficient ways of managing their health and fitness.",
-    image: SmartDeviceIoTImage,
-    tags: ["Committee", "Wearable IoT"],
+      "A hub for innovators and entrepreneurs in the smart device IoT space, fostering collaboration and growth for startups and businesses in the smart tech industry.",
+    image: OrganizationImage,
+    tags: ["Committee", "IoT Startups", "Innovation", "Smart Devices"],
   },
 ];
 
@@ -99,10 +99,10 @@ const SmartDeviceIoT = () => {
       </div>
 
       <div className="w-full max-w-6xl mx-auto p-6 border border-white rounded-2xl shadow-md flex flex-col items-center">
-        <div className="flex justify-start gap-4 mb-6 rounded-full bg-[#f3f4f6] p-2">
+        <div className="flex flex-wrap gap-4 mb-6">
           <button
             onClick={() => setSelectedTag(null)}
-            className={`px-4 py-2 rounded-full text-xs font-bold cursor-pointer ${
+            className={`px-4 py-2 text-xs font-bold cursor-pointer rounded-full ${
               !selectedTag
                 ? "bg-[#50577A] text-white"
                 : "bg-[#f3f4f6] text-[#333]"
@@ -115,7 +115,7 @@ const SmartDeviceIoT = () => {
             <button
               key={tag}
               onClick={() => setSelectedTag(tag)}
-              className={`px-4 py-2 rounded-full text-xs font-bold cursor-pointer ${
+              className={`px-4 py-2 text-xs font-bold cursor-pointer rounded-full ${
                 selectedTag === tag
                   ? "bg-[#50577A] text-white"
                   : "bg-[#f3f4f6] text-[#333]"

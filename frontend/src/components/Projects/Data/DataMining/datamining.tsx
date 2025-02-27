@@ -1,6 +1,6 @@
-import DataMiningImage from "../../../../assets/images/Pantai.png"; // Replace with your specific image
+import OrganizationImage from "../../../../assets/images/Pantai.png";
 import { useState, useEffect } from "react";
-import { FiArrowRight } from "react-icons/fi"; // Import arrow icon
+import { FiArrowRight } from "react-icons/fi"; // Import icon arrow
 import ScrollToTopButton from "../../../../components/ScrollToTopButton/scrolltotopbutton";
 
 const committees = [
@@ -8,33 +8,39 @@ const committees = [
     id: 1,
     title: "Data Mining Research Group",
     description:
-      "A research group focused on exploring and developing methods to extract valuable insights from large datasets through data mining techniques.",
-    image: DataMiningImage,
+      "A global group dedicated to advancing research in data mining techniques and methodologies, promoting innovation and collaboration among data mining experts.",
+    image: OrganizationImage,
     tags: ["Committee", "Data Mining", "Research"],
   },
   {
     id: 2,
-    title: "Big Data Mining Coalition",
+    title: "Data Mining for Good Coalition",
     description:
-      "A coalition of organizations working to apply data mining techniques to big data sets, enabling smarter business decisions and predictions.",
-    image: DataMiningImage,
-    tags: ["Committee", "Big Data", "Data Mining"],
+      "A coalition of organizations focused on using data mining to solve global challenges such as climate change, healthcare, and education.",
+    image: OrganizationImage,
+    tags: ["Committee", "Data Mining", "Social Impact"],
   },
   {
     id: 3,
-    title: "Predictive Analytics Forum",
+    title: "Data Mining Ethics and Governance Forum",
     description:
-      "A forum discussing the use of data mining to build predictive models, aiming to uncover future trends and improve decision-making.",
-    image: DataMiningImage,
-    tags: ["Committee", "Predictive Analytics", "Data Mining"],
+      "An interdisciplinary forum focusing on the ethical implications of data mining, governance, and regulatory frameworks.",
+    image: OrganizationImage,
+    tags: ["Committee", "Mining Ethics", "Governance"],
   },
   {
     id: 4,
-    title: "Data Mining for Social Impact Hub",
+    title: "Data Mining Startups and Innovation Hub",
     description:
-      "An initiative to apply data mining techniques to solve global challenges, including healthcare, climate change, and education.",
-    image: DataMiningImage,
-    tags: ["Committee", "Data Mining", "Social Impact"],
+      "An initiative to foster innovation in the data mining startup ecosystem, connecting entrepreneurs, investors, and professionals in the mining field.",
+    image: OrganizationImage,
+    tags: [
+      "Committee",
+      "Mining Startups",
+      "Innovation",
+      "Entrepreneurship",
+      "Data Mining",
+    ],
   },
 ];
 
@@ -99,10 +105,10 @@ const DataMining = () => {
       </div>
 
       <div className="w-full max-w-6xl mx-auto p-6 border border-white rounded-2xl shadow-md flex flex-col items-center">
-        <div className="flex justify-start gap-4 mb-6 rounded-full bg-[#f3f4f6] p-2">
+        <div className="flex flex-wrap gap-4 mb-6">
           <button
             onClick={() => setSelectedTag(null)}
-            className={`px-4 py-2 rounded-full text-xs font-bold cursor-pointer ${
+            className={`px-4 py-2 text-xs font-bold cursor-pointer rounded-full ${
               !selectedTag
                 ? "bg-[#50577A] text-white"
                 : "bg-[#f3f4f6] text-[#333]"
@@ -115,7 +121,7 @@ const DataMining = () => {
             <button
               key={tag}
               onClick={() => setSelectedTag(tag)}
-              className={`px-4 py-2 rounded-full text-xs font-bold cursor-pointer ${
+              className={`px-4 py-2 text-xs font-bold cursor-pointer rounded-full ${
                 selectedTag === tag
                   ? "bg-[#50577A] text-white"
                   : "bg-[#f3f4f6] text-[#333]"

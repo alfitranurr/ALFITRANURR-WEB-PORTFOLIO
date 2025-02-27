@@ -1,4 +1,4 @@
-import Pantai from "../../../assets/images/Pantai.png";
+import OrganizationImage from "../../../assets/images/Pantai.png";
 import { useState, useEffect } from "react";
 import { FiArrowRight } from "react-icons/fi"; // Import icon arrow
 import ScrollToTopButton from "../../../components/ScrollToTopButton/scrolltotopbutton";
@@ -6,35 +6,35 @@ import ScrollToTopButton from "../../../components/ScrollToTopButton/scrolltotop
 const competitions = [
   {
     id: 1,
-    title: "International Data Science Challenge",
+    title: "International Coding Championship",
     description:
-      "A global competition that brings together top data scientists to solve complex real-world problems using data-driven approaches.",
-    image: Pantai,
-    tags: ["Competition", "Data Science", "AI"],
+      "A global competition for developers to showcase their coding skills and problem-solving abilities. The event features multiple coding challenges and prizes.",
+    image: OrganizationImage,
+    tags: ["Competition", "Coding", "Technology", "International"],
   },
   {
     id: 2,
-    title: "Global Coding Marathon",
+    title: "Business Strategy Challenge",
     description:
-      "Join coders worldwide in a thrilling coding marathon, testing your algorithmic skills and ability to solve problems under pressure.",
-    image: Pantai,
-    tags: ["Competition", "Coding", "Programming"],
+      "A competition for aspiring entrepreneurs to pitch their business ideas, compete for funding, and showcase their business strategies in front of investors.",
+    image: OrganizationImage,
+    tags: ["Competition", "Business", "Entrepreneurship", "Pitching"],
   },
   {
     id: 3,
-    title: "Digital Marketing Innovation Contest",
+    title: "Digital Art and Design Contest",
     description:
-      "Showcase your innovative digital marketing strategies and win exciting prizes while learning from industry experts.",
-    image: Pantai,
-    tags: ["Competition", "Digital Marketing"],
+      "A creative competition for graphic designers and digital artists to demonstrate their artistic talent, with a chance to win recognition and rewards.",
+    image: OrganizationImage,
+    tags: ["Competition", "Design", "Digital Art", "Creativity"],
   },
   {
     id: 4,
-    title: "Hackathon for Social Good",
+    title: "Public Speaking and Debate Tournament",
     description:
-      "Compete in a hackathon where you create solutions that have a positive impact on society, using technology for social good.",
-    image: Pantai,
-    tags: ["Competition", "Hackathon", "Tech for Good"],
+      "A competition where participants debate on various topics, showcasing their public speaking and argumentation skills to a panel of judges.",
+    image: OrganizationImage,
+    tags: ["Competition", "Public Speaking", "Debate", "Communication"],
   },
 ];
 
@@ -46,10 +46,14 @@ const Competition = () => {
   const [showScroll, setShowScroll] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false); // State to manage loading
 
-  const uniqueTags = [...new Set(competitions.flatMap((event) => event.tags))];
+  const uniqueTags = [
+    ...new Set(competitions.flatMap((competition) => competition.tags)),
+  ];
 
-  const filteredEvents = selectedTag
-    ? competitions.filter((event) => event.tags.includes(selectedTag))
+  const filteredCompetitions = selectedTag
+    ? competitions.filter((competition) =>
+        competition.tags.includes(selectedTag)
+      )
     : competitions;
 
   useEffect(() => {
@@ -99,10 +103,10 @@ const Competition = () => {
       </div>
 
       <div className="w-full max-w-6xl mx-auto p-6 border border-white rounded-2xl shadow-md flex flex-col items-center">
-        <div className="flex justify-start gap-4 mb-6 rounded-full bg-[#f3f4f6] p-2">
+        <div className="flex flex-wrap gap-4 mb-6">
           <button
             onClick={() => setSelectedTag(null)}
-            className={`px-4 py-2 rounded-full text-xs font-bold cursor-pointer ${
+            className={`px-4 py-2 text-xs font-bold cursor-pointer rounded-full ${
               !selectedTag
                 ? "bg-[#50577A] text-white"
                 : "bg-[#f3f4f6] text-[#333]"
@@ -115,7 +119,7 @@ const Competition = () => {
             <button
               key={tag}
               onClick={() => setSelectedTag(tag)}
-              className={`px-4 py-2 rounded-full text-xs font-bold cursor-pointer ${
+              className={`px-4 py-2 text-xs font-bold cursor-pointer rounded-full ${
                 selectedTag === tag
                   ? "bg-[#50577A] text-white"
                   : "bg-[#f3f4f6] text-[#333]"
@@ -127,9 +131,9 @@ const Competition = () => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredEvents.map((event) => (
+          {filteredCompetitions.map((competition) => (
             <div
-              key={event.id}
+              key={competition.id}
               className={`w-full border border-white rounded-lg p-4 shadow transition transform hover:shadow-lg hover:bg-white hover:text-[var(--warna1-color)] group ${
                 isDissolving
                   ? "opacity-0 transition-opacity duration-500 ease-in-out"
@@ -139,8 +143,8 @@ const Competition = () => {
               <div className="relative mb-4">
                 <div className="overflow-hidden rounded-lg">
                   <img
-                    src={event.image}
-                    alt={event.title}
+                    src={competition.image}
+                    alt={competition.title}
                     className="w-full h-[230px] object-cover transition duration-300 ease-in-out transform scale-110 hover:brightness-55 hover:scale-100"
                     loading="lazy" // Lazy loading
                   />
@@ -148,14 +152,14 @@ const Competition = () => {
               </div>
 
               <h3 className="text-base font-bold pointer-events-none">
-                {event.title}
+                {competition.title}
               </h3>
               <p className="mt-1 text-xs pointer-events-none">
-                {event.description}
+                {competition.description}
               </p>
 
               <div className="mt-3 flex flex-wrap gap-2">
-                {event.tags.map((tag, index) => (
+                {competition.tags.map((tag, index) => (
                   <span
                     key={index}
                     className={`text-xs px-2 py-1 rounded-full ${
@@ -171,10 +175,10 @@ const Competition = () => {
                 ))}
               </div>
 
-              {/* Button View Event */}
+              {/* Button View Competition */}
               <div className="mt-4 text-center group relative">
                 <button className="w-full px-4 py-2 bg-[#474E68] text-white rounded-lg cursor-pointer shadow-xl hover:bg-[#6B728E] hover:shadow-lg transition-all duration-300">
-                  View Event
+                  View Competition
                   <span
                     className="absolute right-4 opacity-0 transform translate-x-[-20px] group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
                     style={{ fontSize: "1.2rem" }}

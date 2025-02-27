@@ -1,6 +1,6 @@
-import DataAutomationImage from "../../../../assets/images/Pantai.png"; // Replace with your specific image
+import OrganizationImage from "../../../../assets/images/Pantai.png";
 import { useState, useEffect } from "react";
-import { FiArrowRight } from "react-icons/fi"; // Import arrow icon
+import { FiArrowRight } from "react-icons/fi"; // Import icon arrow
 import ScrollToTopButton from "../../../../components/ScrollToTopButton/scrolltotopbutton";
 
 const committees = [
@@ -8,33 +8,39 @@ const committees = [
     id: 1,
     title: "Data Automation Research Group",
     description:
-      "A research group focused on the automation of data processes, enhancing efficiency and precision in data analytics workflows.",
-    image: DataAutomationImage,
+      "A global group dedicated to advancing research in data automation and machine learning, promoting innovation and collaboration among data automation experts.",
+    image: OrganizationImage,
     tags: ["Committee", "Data Automation", "Research"],
   },
   {
     id: 2,
-    title: "AI-Powered Automation Coalition",
+    title: "Automation for Good Coalition",
     description:
-      "A coalition of organizations working to integrate artificial intelligence with data automation systems to optimize business operations.",
-    image: DataAutomationImage,
-    tags: ["Committee", "AI", "Data Automation", "Business"],
+      "A coalition of organizations focused on using data automation to solve global challenges such as climate change, healthcare, and education.",
+    image: OrganizationImage,
+    tags: ["Committee", "Data Automation", "Social Impact"],
   },
   {
     id: 3,
-    title: "Data Workflow Optimization Forum",
+    title: "Data Automation Ethics and Governance Forum",
     description:
-      "A forum discussing strategies for automating data workflows, focusing on improving performance and streamlining processes.",
-    image: DataAutomationImage,
-    tags: ["Committee", "Data Workflow", "Optimization"],
+      "An interdisciplinary forum focusing on the ethical implications of data automation, governance, and regulatory frameworks.",
+    image: OrganizationImage,
+    tags: ["Committee", "Automation Ethics", "Governance"],
   },
   {
     id: 4,
-    title: "Robotic Process Automation Hub",
+    title: "Automation Startups and Innovation Hub",
     description:
-      "An innovation hub for exploring the integration of robotics with data automation processes, enabling seamless automation of business tasks.",
-    image: DataAutomationImage,
-    tags: ["Committee", "Innovation"],
+      "An initiative to foster innovation in the data automation startup ecosystem, connecting entrepreneurs, investors, and professionals in the automation field.",
+    image: OrganizationImage,
+    tags: [
+      "Committee",
+      "Automation Startups",
+      "Innovation",
+      "Entrepreneurship",
+      "Automation",
+    ],
   },
 ];
 
@@ -99,10 +105,10 @@ const DataAutomation = () => {
       </div>
 
       <div className="w-full max-w-6xl mx-auto p-6 border border-white rounded-2xl shadow-md flex flex-col items-center">
-        <div className="flex justify-start gap-4 mb-6 rounded-full bg-[#f3f4f6] p-2">
+        <div className="flex flex-wrap gap-4 mb-6">
           <button
             onClick={() => setSelectedTag(null)}
-            className={`px-4 py-2 rounded-full text-xs font-bold cursor-pointer ${
+            className={`px-4 py-2 text-xs font-bold cursor-pointer rounded-full ${
               !selectedTag
                 ? "bg-[#50577A] text-white"
                 : "bg-[#f3f4f6] text-[#333]"
@@ -115,7 +121,7 @@ const DataAutomation = () => {
             <button
               key={tag}
               onClick={() => setSelectedTag(tag)}
-              className={`px-4 py-2 rounded-full text-xs font-bold cursor-pointer ${
+              className={`px-4 py-2 text-xs font-bold cursor-pointer rounded-full ${
                 selectedTag === tag
                   ? "bg-[#50577A] text-white"
                   : "bg-[#f3f4f6] text-[#333]"

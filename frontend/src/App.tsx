@@ -25,9 +25,9 @@ import GraphicDesign from "./components/Projects/BeyondData/GraphicDesign/graphi
 
 /* CERTIFICATE */
 import Competition from "./components/Certificate/Competition/competition";
-import SeminarWorkshop from "./components/Certificate/Seminar&Workshop/seminar&workshop";
-import LicenseCertification from "./components/Certificate/License&Certification/license&certification";
-import CommitteeOrganization from "./components/Certificate/Committee&Organization/committee&organization";
+import SeminarWorkshop from "./components/Certificate/Seminar-Workshop/seminar-workshop";
+import LicenseCertification from "./components/Certificate/License-Certification/license-certification";
+import CommitteeOrganization from "./components/Certificate/Committee-Organization/committee-organization";
 
 const App: React.FC = () => {
   return (

@@ -1,40 +1,40 @@
-import WebDevelopmentImage from "../../../../assets/images/Pantai.png"; // Replace with your specific image
+import OrganizationImage from "../../../../assets/images/Pantai.png";
 import { useState, useEffect } from "react";
-import { FiArrowRight } from "react-icons/fi"; // Import arrow icon
+import { FiArrowRight } from "react-icons/fi"; // Import icon arrow
 import ScrollToTopButton from "../../../../components/ScrollToTopButton/scrolltotopbutton";
 
 const committees = [
   {
     id: 1,
-    title: "Frontend Development Group",
+    title: "Web Development Research Group",
     description:
-      "A group dedicated to mastering the art of frontend web development, focusing on creating beautiful, responsive, and user-friendly interfaces using modern frameworks and technologies.",
-    image: WebDevelopmentImage,
-    tags: ["Committee", "Frontend", "Web Development", "UI/UX"],
+      "A research group dedicated to exploring innovative web technologies, focusing on front-end and back-end development to build dynamic and responsive websites.",
+    image: OrganizationImage,
+    tags: ["Committee", "Web Development", "Front-End", "Back-End", "Research"],
   },
   {
     id: 2,
-    title: "Backend Development Coalition",
+    title: "Full Stack Development Coalition",
     description:
-      "A coalition of developers focused on building robust, scalable, and efficient backend systems, utilizing the latest tools and technologies to power modern web applications.",
-    image: WebDevelopmentImage,
-    tags: ["Committee", "Backend", "Web Development", "API"],
+      "A coalition of developers and companies working together to promote full-stack development technologies, fostering knowledge sharing and innovation in web development.",
+    image: OrganizationImage,
+    tags: ["Committee", "Full Stack", "Web Development", "Tech Community"],
   },
   {
     id: 3,
-    title: "Full-Stack Development Forum",
+    title: "Web Accessibility and Usability Forum",
     description:
-      "An interdisciplinary forum for discussing and building full-stack web applications, combining the best of frontend and backend development to create seamless, end-to-end solutions.",
-    image: WebDevelopmentImage,
-    tags: ["Committee", "Full-Stack", "Integration"],
+      "An interdisciplinary forum focused on making web applications accessible to all users, with an emphasis on design, usability, and inclusive web practices.",
+    image: OrganizationImage,
+    tags: ["Committee", "Web Accessibility", "Usability", "Tech Inclusion"],
   },
   {
     id: 4,
-    title: "Web Development Innovation Hub",
+    title: "Web Development Startups Hub",
     description:
-      "A hub for innovation in the web development space, bringing together developers, designers, and entrepreneurs to create the next generation of web applications with cutting-edge technologies.",
-    image: WebDevelopmentImage,
-    tags: ["Committee", "Web Development"],
+      "A startup hub for aspiring web developers and entrepreneurs, focusing on the latest web technologies and fostering innovation in the web development space.",
+    image: OrganizationImage,
+    tags: ["Committee", "Web Startups", "Innovation", "Web Development"],
   },
 ];
 
@@ -99,10 +99,10 @@ const WebDevelopment = () => {
       </div>
 
       <div className="w-full max-w-6xl mx-auto p-6 border border-white rounded-2xl shadow-md flex flex-col items-center">
-        <div className="flex justify-start gap-4 mb-6 rounded-full bg-[#f3f4f6] p-2">
+        <div className="flex flex-wrap gap-4 mb-6">
           <button
             onClick={() => setSelectedTag(null)}
-            className={`px-4 py-2 rounded-full text-xs font-bold cursor-pointer ${
+            className={`px-4 py-2 text-xs font-bold cursor-pointer rounded-full ${
               !selectedTag
                 ? "bg-[#50577A] text-white"
                 : "bg-[#f3f4f6] text-[#333]"
@@ -115,7 +115,7 @@ const WebDevelopment = () => {
             <button
               key={tag}
               onClick={() => setSelectedTag(tag)}
-              className={`px-4 py-2 rounded-full text-xs font-bold cursor-pointer ${
+              className={`px-4 py-2 text-xs font-bold cursor-pointer rounded-full ${
                 selectedTag === tag
                   ? "bg-[#50577A] text-white"
                   : "bg-[#f3f4f6] text-[#333]"

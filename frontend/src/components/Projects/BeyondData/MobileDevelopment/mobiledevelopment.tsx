@@ -1,6 +1,6 @@
-import MobileDevelopmentImage from "../../../../assets/images/Pantai.png"; // Replace with your specific image
+import OrganizationImage from "../../../../assets/images/Pantai.png";
 import { useState, useEffect } from "react";
-import { FiArrowRight } from "react-icons/fi"; // Import arrow icon
+import { FiArrowRight } from "react-icons/fi"; // Import icon arrow
 import ScrollToTopButton from "../../../../components/ScrollToTopButton/scrolltotopbutton";
 
 const committees = [
@@ -8,38 +8,33 @@ const committees = [
     id: 1,
     title: "Mobile App Development Research Group",
     description:
-      "A group focused on developing cutting-edge mobile applications across platforms, from iOS to Android, using the latest technologies.",
-    image: MobileDevelopmentImage,
-    tags: ["Committee", "Mobile Development", "App Development", "Technology"],
+      "A global group dedicated to advancing research in mobile app development, exploring innovative mobile solutions and user-centric design.",
+    image: OrganizationImage,
+    tags: ["Committee", "Mobile Development", "App Development"],
   },
   {
     id: 2,
-    title: "Cross-Platform Mobile Development Coalition",
+    title: "Mobile Solutions for Social Impact Coalition",
     description:
-      "A coalition aimed at creating cross-platform mobile apps, allowing businesses and developers to build once and deploy everywhere.",
-    image: MobileDevelopmentImage,
-    tags: [
-      "Committee",
-      "Mobile Development",
-      "Cross-Platform",
-      "App Development",
-    ],
+      "A coalition of organizations focused on using mobile app development to address global challenges such as healthcare, education, and social services.",
+    image: OrganizationImage,
+    tags: ["Committee", "Mobile Development", "Social Impact"],
   },
   {
     id: 3,
-    title: "Mobile User Interface Design Forum",
+    title: "Mobile UX/UI Design Forum",
     description:
-      "A forum for mobile designers to explore the principles of user interface design, focusing on usability and fluid experiences for mobile devices.",
-    image: MobileDevelopmentImage,
-    tags: ["Committee", "UI Design"],
+      "An interdisciplinary forum exploring mobile user experience and interface design, focusing on the importance of intuitive design and usability.",
+    image: OrganizationImage,
+    tags: ["Committee", "Mobile Design", "UX/UI", "User Experience"],
   },
   {
     id: 4,
-    title: "Mobile Game Development Hub",
+    title: "Mobile Development Innovation and Startups Hub",
     description:
-      "A creative hub for developers to explore mobile game development, using frameworks like Unity, Cocos2d, and Unreal Engine for immersive experiences.",
-    image: MobileDevelopmentImage,
-    tags: ["Committee", "Mobile Games"],
+      "An initiative to foster innovation in the mobile app startup ecosystem, connecting developers, entrepreneurs, and investors in the field.",
+    image: OrganizationImage,
+    tags: ["Committee", "Mobile Startups", "Innovation", "App Development"],
   },
 ];
 
@@ -104,10 +99,10 @@ const MobileDevelopment = () => {
       </div>
 
       <div className="w-full max-w-6xl mx-auto p-6 border border-white rounded-2xl shadow-md flex flex-col items-center">
-        <div className="flex justify-start gap-4 mb-6 rounded-full bg-[#f3f4f6] p-2">
+        <div className="flex flex-wrap gap-4 mb-6">
           <button
             onClick={() => setSelectedTag(null)}
-            className={`px-4 py-2 rounded-full text-xs font-bold cursor-pointer ${
+            className={`px-4 py-2 text-xs font-bold cursor-pointer rounded-full ${
               !selectedTag
                 ? "bg-[#50577A] text-white"
                 : "bg-[#f3f4f6] text-[#333]"
@@ -120,7 +115,7 @@ const MobileDevelopment = () => {
             <button
               key={tag}
               onClick={() => setSelectedTag(tag)}
-              className={`px-4 py-2 rounded-full text-xs font-bold cursor-pointer ${
+              className={`px-4 py-2 text-xs font-bold cursor-pointer rounded-full ${
                 selectedTag === tag
                   ? "bg-[#50577A] text-white"
                   : "bg-[#f3f4f6] text-[#333]"

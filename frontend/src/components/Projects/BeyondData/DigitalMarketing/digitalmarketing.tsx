@@ -1,6 +1,6 @@
-import DigitalMarketingImage from "../../../../assets/images/Pantai.png"; // Replace with your specific image
+import OrganizationImage from "../../../../assets/images/Pantai.png";
 import { useState, useEffect } from "react";
-import { FiArrowRight } from "react-icons/fi"; // Import arrow icon
+import { FiArrowRight } from "react-icons/fi"; // Import icon arrow
 import ScrollToTopButton from "../../../../components/ScrollToTopButton/scrolltotopbutton";
 
 const committees = [
@@ -8,33 +8,39 @@ const committees = [
     id: 1,
     title: "Digital Marketing Research Group",
     description:
-      "A group dedicated to advancing digital marketing strategies, focusing on SEO, content marketing, and data analytics.",
-    image: DigitalMarketingImage,
-    tags: ["Digital Marketing", "SEO"],
+      "A global group dedicated to advancing research in digital marketing techniques, strategies, and analytics, promoting innovation and collaboration among digital marketing experts.",
+    image: OrganizationImage,
+    tags: ["Committee", "Digital Marketing", "Research"],
   },
   {
     id: 2,
-    title: "Social Media Marketing Coalition",
+    title: "Marketing for Good Coalition",
     description:
-      "A coalition that focuses on using social media platforms to promote products, services, and brands through targeted advertising and engagement strategies.",
-    image: DigitalMarketingImage,
-    tags: ["Social Media", "Advertising"],
+      "A coalition of organizations focused on using digital marketing to solve global challenges such as climate change, healthcare, and education.",
+    image: OrganizationImage,
+    tags: ["Committee", "Digital Marketing", "Social Impact"],
   },
   {
     id: 3,
-    title: "Content Marketing Forum",
+    title: "Digital Marketing Ethics and Governance Forum",
     description:
-      "A forum where content marketers gather to share strategies and tools for creating valuable, engaging content that drives brand awareness and conversions.",
-    image: DigitalMarketingImage,
-    tags: ["Content Marketing", "Strategy", "Branding"],
+      "An interdisciplinary forum focusing on the ethical implications of digital marketing, privacy issues, and regulatory frameworks in the industry.",
+    image: OrganizationImage,
+    tags: ["Committee", "Marketing Ethics", "Governance"],
   },
   {
     id: 4,
-    title: "Influencer Marketing Hub",
+    title: "Digital Marketing Startups and Innovation Hub",
     description:
-      "An initiative focused on leveraging influencer partnerships to drive marketing campaigns and boost brand visibility.",
-    image: DigitalMarketingImage,
-    tags: ["Branding", "Campaigns"],
+      "An initiative to foster innovation in the digital marketing startup ecosystem, connecting entrepreneurs, investors, and professionals in the digital marketing field.",
+    image: OrganizationImage,
+    tags: [
+      "Committee",
+      "Marketing Startups",
+      "Innovation",
+      "Entrepreneurship",
+      "Digital Marketing",
+    ],
   },
 ];
 
@@ -99,10 +105,10 @@ const DigitalMarketing = () => {
       </div>
 
       <div className="w-full max-w-6xl mx-auto p-6 border border-white rounded-2xl shadow-md flex flex-col items-center">
-        <div className="flex justify-start gap-4 mb-6 rounded-full bg-[#f3f4f6] p-2">
+        <div className="flex flex-wrap gap-4 mb-6">
           <button
             onClick={() => setSelectedTag(null)}
-            className={`px-4 py-2 rounded-full text-xs font-bold cursor-pointer ${
+            className={`px-4 py-2 text-xs font-bold cursor-pointer rounded-full ${
               !selectedTag
                 ? "bg-[#50577A] text-white"
                 : "bg-[#f3f4f6] text-[#333]"
@@ -115,7 +121,7 @@ const DigitalMarketing = () => {
             <button
               key={tag}
               onClick={() => setSelectedTag(tag)}
-              className={`px-4 py-2 rounded-full text-xs font-bold cursor-pointer ${
+              className={`px-4 py-2 text-xs font-bold cursor-pointer rounded-full ${
                 selectedTag === tag
                   ? "bg-[#50577A] text-white"
                   : "bg-[#f3f4f6] text-[#333]"
