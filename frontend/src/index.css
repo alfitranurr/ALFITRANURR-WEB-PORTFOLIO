@@ -39,7 +39,7 @@ body {
   }
 }
 
-/* CSS untuk transisi dissolve */
+/* CSS for dissolve transition */
 .dissolve-enter {
   opacity: 0;
   transition: opacity 0.5s ease-in-out;

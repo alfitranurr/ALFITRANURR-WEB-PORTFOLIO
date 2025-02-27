@@ -88,9 +88,10 @@ const NavbarMobile: React.FC = () => {
           } z-[9999]`}
         >
           <div className="flex justify-between items-center">
-            <div className="text-white text-lg font-semibold">
+            <div className="text-white text-lg font-semibold ml-auto border-b-2 border-white">
               Ramdhani's Portfolio
             </div>
+
             {/* Close button */}
             <button className="text-white" onClick={toggleMenu}>
               <svg
@@ -113,7 +114,7 @@ const NavbarMobile: React.FC = () => {
           {/* Navigation links */}
           <ul className="space-y-4 text-left mt-8 mb-8">
             {/* HOME */}
-            <li className="text-xs text-white relative group">
+            <li className="text-sm text-white relative group">
               <button
                 onClick={() => {
                   handleSetActive("/"); // Set active page to "/"
@@ -135,7 +136,7 @@ const NavbarMobile: React.FC = () => {
             </li>
 
             {/* ABOUT ME */}
-            <li className="text-xs text-white relative group">
+            <li className="text-sm text-white relative group">
               <button
                 onClick={() => {
                   handleSetActive("about-me");
@@ -157,7 +158,7 @@ const NavbarMobile: React.FC = () => {
             </li>
 
             {/* EDUCATION */}
-            <li className="text-xs text-white relative group">
+            <li className="text-sm text-white relative group">
               <button
                 onClick={() => {
                   handleSetActive("education");
@@ -179,7 +180,7 @@ const NavbarMobile: React.FC = () => {
             </li>
 
             {/* EXPERIENCE */}
-            <li className="text-xs text-white relative group">
+            <li className="text-sm text-white relative group">
               <button
                 onClick={() => {
                   handleSetActive("experience");
@@ -201,7 +202,7 @@ const NavbarMobile: React.FC = () => {
             </li>
 
             {/* PROJECTS */}
-            <li className="text-xs text-white relative group">
+            <li className="text-sm text-white relative group">
               <button
                 onClick={() => {
                   handleSetActive("projects");
@@ -223,7 +224,7 @@ const NavbarMobile: React.FC = () => {
             </li>
 
             {/* CERTIFICATE */}
-            <li className="text-xs text-white relative group">
+            <li className="text-sm text-white relative group">
               <button
                 onClick={() => {
                   handleSetActive("certificate");
@@ -245,7 +246,7 @@ const NavbarMobile: React.FC = () => {
             </li>
 
             {/* CONTACT */}
-            <li className="text-xs text-white relative group">
+            <li className="text-sm text-white relative group">
               <button
                 onClick={() => {
                   handleSetActive("contact");
