@@ -1,48 +1,7 @@
-import OrganizationImage from "../../../../assets/images/Pantai.png";
 import { useState, useEffect } from "react";
 import { FiArrowRight } from "react-icons/fi"; // Import icon arrow
 import ScrollToTopButton from "../../../../components/ScrollToTopButton/scrolltotopbutton";
-
-const committees = [
-  {
-    id: 1,
-    title: "Data Automation Research Group",
-    description:
-      "A global group dedicated to advancing research in data automation and machine learning, promoting innovation and collaboration among data automation experts.",
-    image: OrganizationImage,
-    tags: ["Committee", "Data Automation", "Research"],
-  },
-  {
-    id: 2,
-    title: "Automation for Good Coalition",
-    description:
-      "A coalition of organizations focused on using data automation to solve global challenges such as climate change, healthcare, and education.",
-    image: OrganizationImage,
-    tags: ["Committee", "Data Automation", "Social Impact"],
-  },
-  {
-    id: 3,
-    title: "Data Automation Ethics and Governance Forum",
-    description:
-      "An interdisciplinary forum focusing on the ethical implications of data automation, governance, and regulatory frameworks.",
-    image: OrganizationImage,
-    tags: ["Committee", "Automation Ethics", "Governance"],
-  },
-  {
-    id: 4,
-    title: "Automation Startups and Innovation Hub",
-    description:
-      "An initiative to foster innovation in the data automation startup ecosystem, connecting entrepreneurs, investors, and professionals in the automation field.",
-    image: OrganizationImage,
-    tags: [
-      "Committee",
-      "Automation Startups",
-      "Innovation",
-      "Entrepreneurship",
-      "Automation",
-    ],
-  },
-];
+import { dataautomation } from "../../../../database/Projects/Data/dataautomation";
 
 const tagColors = ["bg-[#50577A]", "bg-[#6B728E]"];
 
@@ -52,11 +11,13 @@ const DataAutomation = () => {
   const [showScroll, setShowScroll] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false); // State to manage loading
 
-  const uniqueTags = [...new Set(committees.flatMap((event) => event.tags))];
+  const uniqueTags = [
+    ...new Set(dataautomation.flatMap((event) => event.tags)),
+  ];
 
   const filteredCommittees = selectedTag
-    ? committees.filter((event) => event.tags.includes(selectedTag))
-    : committees;
+    ? dataautomation.filter((event) => event.tags.includes(selectedTag))
+    : dataautomation;
 
   useEffect(() => {
     const timer = setTimeout(() => {

@@ -1,48 +1,7 @@
-import OrganizationImage from "../../../../assets/images/Pantai.png";
 import { useState, useEffect } from "react";
 import { FiArrowRight } from "react-icons/fi"; // Import icon arrow
 import ScrollToTopButton from "../../../../components/ScrollToTopButton/scrolltotopbutton";
-
-const committees = [
-  {
-    id: 1,
-    title: "Data Mining Research Group",
-    description:
-      "A global group dedicated to advancing research in data mining techniques and methodologies, promoting innovation and collaboration among data mining experts.",
-    image: OrganizationImage,
-    tags: ["Committee", "Data Mining", "Research"],
-  },
-  {
-    id: 2,
-    title: "Data Mining for Good Coalition",
-    description:
-      "A coalition of organizations focused on using data mining to solve global challenges such as climate change, healthcare, and education.",
-    image: OrganizationImage,
-    tags: ["Committee", "Data Mining", "Social Impact"],
-  },
-  {
-    id: 3,
-    title: "Data Mining Ethics and Governance Forum",
-    description:
-      "An interdisciplinary forum focusing on the ethical implications of data mining, governance, and regulatory frameworks.",
-    image: OrganizationImage,
-    tags: ["Committee", "Mining Ethics", "Governance"],
-  },
-  {
-    id: 4,
-    title: "Data Mining Startups and Innovation Hub",
-    description:
-      "An initiative to foster innovation in the data mining startup ecosystem, connecting entrepreneurs, investors, and professionals in the mining field.",
-    image: OrganizationImage,
-    tags: [
-      "Committee",
-      "Mining Startups",
-      "Innovation",
-      "Entrepreneurship",
-      "Data Mining",
-    ],
-  },
-];
+import { datamining } from "../../../../database/Projects/Data/datamining";
 
 const tagColors = ["bg-[#50577A]", "bg-[#6B728E]"];
 
@@ -52,11 +11,11 @@ const DataMining = () => {
   const [showScroll, setShowScroll] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false); // State to manage loading
 
-  const uniqueTags = [...new Set(committees.flatMap((event) => event.tags))];
+  const uniqueTags = [...new Set(datamining.flatMap((event) => event.tags))];
 
   const filteredCommittees = selectedTag
-    ? committees.filter((event) => event.tags.includes(selectedTag))
-    : committees;
+    ? datamining.filter((event) => event.tags.includes(selectedTag))
+    : datamining;
 
   useEffect(() => {
     const timer = setTimeout(() => {

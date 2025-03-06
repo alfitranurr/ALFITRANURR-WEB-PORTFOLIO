@@ -1,42 +1,7 @@
-import OrganizationImage from "../../../../assets/images/Pantai.png";
 import { useState, useEffect } from "react";
 import { FiArrowRight } from "react-icons/fi"; // Import icon arrow
 import ScrollToTopButton from "../../../../components/ScrollToTopButton/scrolltotopbutton";
-
-const committees = [
-  {
-    id: 1,
-    title: "Data Visualization Research Group",
-    description:
-      "A global group dedicated to advancing research in data visualization techniques and methodologies, promoting innovation and collaboration among data visualization experts.",
-    image: OrganizationImage,
-    tags: ["Infographic"],
-  },
-  {
-    id: 2,
-    title: "Data Visualization for Good Coalition",
-    description:
-      "A coalition of organizations focused on using data visualization to solve global challenges such as climate change, healthcare, and education.",
-    image: OrganizationImage,
-    tags: ["Dashboard"],
-  },
-  {
-    id: 3,
-    title: "Data Visualization Ethics and Governance Forum",
-    description:
-      "An interdisciplinary forum focusing on the ethical implications of data visualization, governance, and regulatory frameworks.",
-    image: OrganizationImage,
-    tags: ["Infographic"],
-  },
-  {
-    id: 4,
-    title: "Data Visualization Startups and Innovation Hub",
-    description:
-      "An initiative to foster innovation in the data visualization startup ecosystem, connecting entrepreneurs, investors, and professionals in the field.",
-    image: OrganizationImage,
-    tags: ["Infographic"],
-  },
-];
+import { datavisualization } from "../../../../database/Projects/Data/datavisualization";
 
 const tagColors = ["bg-[#50577A]", "bg-[#6B728E]"];
 
@@ -46,11 +11,11 @@ const DataVisualization = () => {
   const [showScroll, setShowScroll] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false); // State to manage loading
 
-  const uniqueTags = [...new Set(committees.flatMap((event) => event.tags))];
+  const uniqueTags = [...new Set(datavisualization.flatMap((event) => event.tags))];
 
   const filteredCommittees = selectedTag
-    ? committees.filter((event) => event.tags.includes(selectedTag))
-    : committees;
+    ? datavisualization.filter((event) => event.tags.includes(selectedTag))
+    : datavisualization;
 
   useEffect(() => {
     const timer = setTimeout(() => {

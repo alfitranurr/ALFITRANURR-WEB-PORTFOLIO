@@ -1,48 +1,7 @@
-import OrganizationImage from "../../../../assets/images/Pantai.png";
 import { useState, useEffect } from "react";
 import { FiArrowRight } from "react-icons/fi"; // Import icon arrow
 import ScrollToTopButton from "../../../../components/ScrollToTopButton/scrolltotopbutton";
-
-const committees = [
-  {
-    id: 1,
-    title: "Data Analytics Research Group",
-    description:
-      "A global group dedicated to advancing research in data analytics and machine learning, promoting innovation and collaboration among data science experts.",
-    image: OrganizationImage,
-    tags: ["Committee", "Data Analytics", "Research"],
-  },
-  {
-    id: 2,
-    title: "Data for Good Coalition",
-    description:
-      "A coalition of organizations focused on using data to solve global challenges such as climate change, healthcare, and education.",
-    image: OrganizationImage,
-    tags: ["Committee", "Data Analytics", "Social Impact"],
-  },
-  {
-    id: 3,
-    title: "Data Ethics and Governance Forum",
-    description:
-      "An interdisciplinary forum focusing on the ethical implications of data use, governance, and regulatory frameworks.",
-    image: OrganizationImage,
-    tags: ["Committee", "Data Ethics", "Governance"],
-  },
-  {
-    id: 4,
-    title: "Data Startups and Innovation Hub",
-    description:
-      "An initiative to foster innovation in the data startup ecosystem, connecting entrepreneurs, investors, and professionals in the data science field.",
-    image: OrganizationImage,
-    tags: [
-      "Committee",
-      "Data Startups",
-      "Innovation",
-      "Entrepreneurship",
-      "Data",
-    ],
-  },
-];
+import { dataanalytic } from "../../../../database/Projects/Data/dataanalytic";
 
 const tagColors = ["bg-[#50577A]", "bg-[#6B728E]"];
 
@@ -52,11 +11,11 @@ const DataAnalytics = () => {
   const [showScroll, setShowScroll] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false); // State to manage loading
 
-  const uniqueTags = [...new Set(committees.flatMap((event) => event.tags))];
+  const uniqueTags = [...new Set(dataanalytic.flatMap((event) => event.tags))];
 
   const filteredCommittees = selectedTag
-    ? committees.filter((event) => event.tags.includes(selectedTag))
-    : committees;
+    ? dataanalytic.filter((event) => event.tags.includes(selectedTag))
+    : dataanalytic;
 
   useEffect(() => {
     const timer = setTimeout(() => {

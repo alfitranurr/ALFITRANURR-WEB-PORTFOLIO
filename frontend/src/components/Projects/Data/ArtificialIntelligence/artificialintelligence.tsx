@@ -1,42 +1,7 @@
-import OrganizationImage from "../../../../assets/images/Pantai.png";
 import { useState, useEffect } from "react";
 import { FiArrowRight } from "react-icons/fi"; // Import icon arrow
 import ScrollToTopButton from "../../../../components/ScrollToTopButton/scrolltotopbutton";
-
-const committees = [
-  {
-    id: 1,
-    title: "Artificial Intelligence Research Group",
-    description:
-      "A global group dedicated to advancing research in AI and machine learning, promoting innovation and collaboration among AI experts.",
-    image: OrganizationImage,
-    tags: ["Committee", "Artificial Intelligence", "AI Research"],
-  },
-  {
-    id: 2,
-    title: "AI for Good Coalition",
-    description:
-      "A coalition of organizations focused on using AI to solve global challenges such as climate change, healthcare, and education.",
-    image: OrganizationImage,
-    tags: ["Committee", "Artificial Intelligence", "Social Impact"],
-  },
-  {
-    id: 3,
-    title: "AI Ethics and Policy Forum",
-    description:
-      "An interdisciplinary forum focusing on the ethical implications of artificial intelligence, AI governance, and regulatory frameworks.",
-    image: OrganizationImage,
-    tags: ["Committee", "AI Ethics", "Policy"],
-  },
-  {
-    id: 4,
-    title: "AI Startups and Innovation Hub",
-    description:
-      "An initiative to foster innovation in the AI startup ecosystem, connecting entrepreneurs, investors, and professionals in the AI field.",
-    image: OrganizationImage,
-    tags: ["Committee", "AI Startups", "Innovation", "Entrepreneurship", "AI"],
-  },
-];
+import { artificialintelligence } from "../../../../database/Projects/Data/artificialintelligence";
 
 const tagColors = ["bg-[#50577A]", "bg-[#6B728E]"];
 
@@ -46,11 +11,11 @@ const ArtificialIntelligence = () => {
   const [showScroll, setShowScroll] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false); // State to manage loading
 
-  const uniqueTags = [...new Set(committees.flatMap((event) => event.tags))];
+  const uniqueTags = [...new Set(artificialintelligence.flatMap((event) => event.tags))];
 
   const filteredCommittees = selectedTag
-    ? committees.filter((event) => event.tags.includes(selectedTag))
-    : committees;
+    ? artificialintelligence.filter((event) => event.tags.includes(selectedTag))
+    : artificialintelligence;
 
   useEffect(() => {
     const timer = setTimeout(() => {
