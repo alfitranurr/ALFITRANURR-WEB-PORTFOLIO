@@ -1,7 +1,7 @@
-import LogoAzkaGroup from "../../assets/images/Logo Azka Group.png";
-import LogoMetadari from "../../assets/images/Logo Metadari.png";
-import LogoINDEF from "../../assets/images/Logo INDEF.png";
-import LogoMySkill from "../../assets/images/Logo MySkill.png";
+import LogoAzkaGroup from "../../assets/images/Experience/Professional/Logo Azka Group.png";
+import LogoMetadari from "../../assets/images/Experience/Professional/Logo Metadari.png";
+import LogoINDEF from "../../assets/images/Experience/Professional/Logo INDEF.png";
+import LogoMySkill from "../../assets/images/Experience/Professional/Logo MySkill.png";
 
 const cardsData = [
   {

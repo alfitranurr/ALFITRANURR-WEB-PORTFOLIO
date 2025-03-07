@@ -1,8 +1,8 @@
 // src/pages/education.tsx
-import LogoUMM from "../assets/images/Logo UMM Color.png";
-import LogoIsyKarima from "../assets/images/Logo Isy Karima.png";
-import LogoAlMuqoddasah from "../assets/images/Logo Al Muqoddasah.png";
-import LogoSDMuhammadiyah from "../assets/images/Logo SD Muhammadiyah Ponorogo.png";
+import LogoUMM from "../assets/images/Education/Logo UMM Color.png";
+import LogoIsyKarima from "../assets/images/Education/Logo Isy Karima.png";
+import LogoAlMuqoddasah from "../assets/images/Education/Logo Al Muqoddasah.png";
+import LogoSDMuhammadiyah from "../assets/images/Education/Logo SD Muhammadiyah Ponorogo.png";
 
 const educationData = [
   {

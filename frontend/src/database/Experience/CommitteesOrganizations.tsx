@@ -1,9 +1,9 @@
-import LogoDSCUMM from "../../assets/images/Logo DSC UMM.png";
-import LogoSDGsUMM from "../../assets/images/Logo SDGs UMM.png";
-import LogoJDD from "../../assets/images/Logo JDD.png";
-import LogoBEMFTUMM from "../../assets/images/Logo BEM FT UMM.png";
-import LogoRK from "../../assets/images/Logo Rumah Kepemimpinan.png";
-import LogoHMIF from "../../assets/images/Logo HMIF UMM.png";
+import LogoDSCUMM from "../../assets/images/Experience/CommitteeOrganization/Logo DSC UMM.png";
+import LogoSDGsUMM from "../../assets/images/Experience/CommitteeOrganization/Logo SDGs UMM.png";
+import LogoJDD from "../../assets/images/Experience/CommitteeOrganization/Logo JDD.png";
+import LogoBEMFTUMM from "../../assets/images/Experience/CommitteeOrganization/Logo BEM FT UMM.png";
+import LogoRK from "../../assets/images/Experience/CommitteeOrganization/Logo Rumah Kepemimpinan.png";
+import LogoHMIF from "../../assets/images/Experience/CommitteeOrganization/Logo HMIF UMM.png";
 
 const cardsData = [
   {
