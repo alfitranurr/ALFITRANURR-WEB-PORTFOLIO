@@ -3,7 +3,7 @@ import LogoMetadari from "../../assets/images/Experience/Professional/Logo Metad
 import LogoINDEF from "../../assets/images/Experience/Professional/Logo INDEF.png";
 import LogoMySkill from "../../assets/images/Experience/Professional/Logo MySkill.png";
 
-const cardsData = [
+const Professional = [
   {
     id: 1,
     logo: LogoAzkaGroup,
@@ -53,4 +53,4 @@ const cardsData = [
   },
 ];
 
-export default cardsData;
+export default Professional;

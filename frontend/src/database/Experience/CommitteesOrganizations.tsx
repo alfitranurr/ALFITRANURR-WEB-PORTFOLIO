@@ -5,7 +5,7 @@ import LogoBEMFTUMM from "../../assets/images/Experience/CommitteeOrganization/L
 import LogoRK from "../../assets/images/Experience/CommitteeOrganization/Logo Rumah Kepemimpinan.png";
 import LogoHMIF from "../../assets/images/Experience/CommitteeOrganization/Logo HMIF UMM.png";
 
-const cardsData = [
+const CommitteeOrganization = [
   {
     id: 1,
     logo: LogoRK,
@@ -72,4 +72,4 @@ const cardsData = [
   },
 ];
 
-export default cardsData;
+export default CommitteeOrganization;
