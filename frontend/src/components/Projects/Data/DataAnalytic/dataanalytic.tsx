@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { FiArrowRight } from "react-icons/fi"; // Import icon arrow
 import ScrollToTopButton from "../../../../components/ScrollToTopButton/scrolltotopbutton";
+
+// Import data for Data Analytics
 import { dataanalytic } from "../../../../database/Projects/Data/dataanalytic";
 
 const tagColors = ["bg-[#50577A]", "bg-[#6B728E]"];
@@ -136,17 +138,27 @@ const DataAnalytics = () => {
                 ))}
               </div>
 
-              {/* Button View Committee */}
-              <div className="mt-4 text-center group relative">
-                <button className="w-full px-4 py-2 bg-[#474E68] text-white rounded-lg cursor-pointer shadow-xl hover:bg-[#6B728E] hover:shadow-lg transition-all duration-300">
-                  View Committee
-                  <span
-                    className="absolute right-4 opacity-0 transform translate-x-[-20px] group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
-                    style={{ fontSize: "1.2rem" }}
-                  >
-                    <FiArrowRight />
-                  </span>
-                </button>
+              {/* Buttons Section */}
+              <div className="mt-4 flex flex-col gap-2">
+                {committee.buttons?.map((button, index) => (
+                  <div key={index} className="text-center group relative">
+                    <a
+                      href={button.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <button className="w-full px-4 py-2 bg-[#474E68] text-white rounded-lg cursor-pointer shadow-xl hover:bg-[#6B728E] hover:shadow-lg transition-all duration-300">
+                        {button.text}
+                        <span
+                          className="absolute right-4 opacity-0 transform translate-x-[-20px] group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
+                          style={{ fontSize: "1.2rem" }}
+                        >
+                          <FiArrowRight />
+                        </span>
+                      </button>
+                    </a>
+                  </div>
+                ))}
               </div>
             </div>
           ))}

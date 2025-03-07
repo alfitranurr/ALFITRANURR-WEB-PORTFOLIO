@@ -8,6 +8,16 @@ export const datavisualization = [
       "A global group dedicated to advancing research in data visualization techniques and methodologies, promoting innovation and collaboration among data visualization experts.",
     image: OrganizationImage,
     tags: ["Infographic"],
+    buttons: [
+      {
+        text: "View Committee",
+        link: "https://drive.google.com/drive/folders/1-4R1VSKn6FQnBoxEx4ZwyvFTyP970WQj?usp=sharing", // Adjust the link accordingly
+      },
+      {
+        text: "View Project",
+        link: "/projects/data-visualization-research-group", // Adjust the link accordingly
+      },
+    ],
   },
   {
     id: 2,
@@ -16,6 +26,16 @@ export const datavisualization = [
       "A coalition of organizations focused on using data visualization to solve global challenges such as climate change, healthcare, and education.",
     image: OrganizationImage,
     tags: ["Dashboard"],
+    buttons: [
+      {
+        text: "View Committee",
+        link: "/committee/data-visualization-for-good", // Adjust the link accordingly
+      },
+      {
+        text: "View Project",
+        link: "/projects/data-visualization-for-good-coalition", // Adjust the link accordingly
+      },
+    ],
   },
   {
     id: 3,
@@ -24,6 +44,16 @@ export const datavisualization = [
       "An interdisciplinary forum focusing on the ethical implications of data visualization, governance, and regulatory frameworks.",
     image: OrganizationImage,
     tags: ["Infographic"],
+    buttons: [
+      {
+        text: "View Committee",
+        link: "/committee/data-visualization-ethics-governance", // Adjust the link accordingly
+      },
+      {
+        text: "View Project",
+        link: "/projects/data-visualization-ethics-governance-forum", // Adjust the link accordingly
+      },
+    ],
   },
   {
     id: 4,
@@ -32,6 +62,16 @@ export const datavisualization = [
       "An initiative to foster innovation in the data visualization startup ecosystem, connecting entrepreneurs, investors, and professionals in the field.",
     image: OrganizationImage,
     tags: ["Infographic"],
+    buttons: [
+      {
+        text: "View Committee",
+        link: "/committee/data-visualization-startups-innovation", // Adjust the link accordingly
+      },
+      {
+        text: "View Project",
+        link: "/projects/data-visualization-startups-innovation-hub", // Adjust the link accordingly
+      },
+    ],
   },
 ];
 
