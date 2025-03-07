@@ -1,42 +1,9 @@
-import OrganizationImage from "../../../../assets/images/Pantai.png";
 import { useState, useEffect } from "react";
 import { FiArrowRight } from "react-icons/fi"; // Import icon arrow
 import ScrollToTopButton from "../../../../components/ScrollToTopButton/scrolltotopbutton";
 
-const committees = [
-  {
-    id: 1,
-    title: "Web Development Research Group",
-    description:
-      "A research group dedicated to exploring innovative web technologies, focusing on front-end and back-end development to build dynamic and responsive websites.",
-    image: OrganizationImage,
-    tags: ["Committee", "Web Development", "Front-End", "Back-End", "Research"],
-  },
-  {
-    id: 2,
-    title: "Full Stack Development Coalition",
-    description:
-      "A coalition of developers and companies working together to promote full-stack development technologies, fostering knowledge sharing and innovation in web development.",
-    image: OrganizationImage,
-    tags: ["Committee", "Full Stack", "Web Development", "Tech Community"],
-  },
-  {
-    id: 3,
-    title: "Web Accessibility and Usability Forum",
-    description:
-      "An interdisciplinary forum focused on making web applications accessible to all users, with an emphasis on design, usability, and inclusive web practices.",
-    image: OrganizationImage,
-    tags: ["Committee", "Web Accessibility", "Usability", "Tech Inclusion"],
-  },
-  {
-    id: 4,
-    title: "Web Development Startups Hub",
-    description:
-      "A startup hub for aspiring web developers and entrepreneurs, focusing on the latest web technologies and fostering innovation in the web development space.",
-    image: OrganizationImage,
-    tags: ["Committee", "Web Startups", "Innovation", "Web Development"],
-  },
-];
+// Import webdevelopment data
+import { webdevelopment } from "../../../../database/Projects/BeyondData/webdevelopment";
 
 const tagColors = ["bg-[#50577A]", "bg-[#6B728E]"];
 
@@ -46,11 +13,13 @@ const WebDevelopment = () => {
   const [showScroll, setShowScroll] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false); // State to manage loading
 
-  const uniqueTags = [...new Set(committees.flatMap((event) => event.tags))];
+  const uniqueTags = [
+    ...new Set(webdevelopment.flatMap((event) => event.tags)),
+  ];
 
   const filteredCommittees = selectedTag
-    ? committees.filter((event) => event.tags.includes(selectedTag))
-    : committees;
+    ? webdevelopment.filter((event) => event.tags.includes(selectedTag))
+    : webdevelopment;
 
   useEffect(() => {
     const timer = setTimeout(() => {
