@@ -1,42 +1,7 @@
-import OrganizationImage from "../../../../assets/images/Pantai.png";
 import { useState, useEffect } from "react";
 import { FiArrowRight } from "react-icons/fi"; // Import icon arrow
 import ScrollToTopButton from "../../../../components/ScrollToTopButton/scrolltotopbutton";
-
-const committees = [
-  {
-    id: 1,
-    title: "Mobile App Development Research Group",
-    description:
-      "A global group dedicated to advancing research in mobile app development, exploring innovative mobile solutions and user-centric design.",
-    image: OrganizationImage,
-    tags: ["Committee", "Mobile Development", "App Development"],
-  },
-  {
-    id: 2,
-    title: "Mobile Solutions for Social Impact Coalition",
-    description:
-      "A coalition of organizations focused on using mobile app development to address global challenges such as healthcare, education, and social services.",
-    image: OrganizationImage,
-    tags: ["Committee", "Mobile Development", "Social Impact"],
-  },
-  {
-    id: 3,
-    title: "Mobile UX/UI Design Forum",
-    description:
-      "An interdisciplinary forum exploring mobile user experience and interface design, focusing on the importance of intuitive design and usability.",
-    image: OrganizationImage,
-    tags: ["Committee", "Mobile Design", "UX/UI", "User Experience"],
-  },
-  {
-    id: 4,
-    title: "Mobile Development Innovation and Startups Hub",
-    description:
-      "An initiative to foster innovation in the mobile app startup ecosystem, connecting developers, entrepreneurs, and investors in the field.",
-    image: OrganizationImage,
-    tags: ["Committee", "Mobile Startups", "Innovation", "App Development"],
-  },
-];
+import mobiledevelopment from "../../../../database/Projects/BeyondData/mobiledevelopment";
 
 const tagColors = ["bg-[#50577A]", "bg-[#6B728E]"];
 
@@ -46,11 +11,13 @@ const MobileDevelopment = () => {
   const [showScroll, setShowScroll] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false); // State to manage loading
 
-  const uniqueTags = [...new Set(committees.flatMap((event) => event.tags))];
+  const uniqueTags = [
+    ...new Set(mobiledevelopment.flatMap((event) => event.tags)),
+  ];
 
   const filteredCommittees = selectedTag
-    ? committees.filter((event) => event.tags.includes(selectedTag))
-    : committees;
+    ? mobiledevelopment.filter((event) => event.tags.includes(selectedTag))
+    : mobiledevelopment;
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -171,17 +138,27 @@ const MobileDevelopment = () => {
                 ))}
               </div>
 
-              {/* Button View Committee */}
-              <div className="mt-4 text-center group relative">
-                <button className="w-full px-4 py-2 bg-[#474E68] text-white rounded-lg cursor-pointer shadow-xl hover:bg-[#6B728E] hover:shadow-lg transition-all duration-300">
-                  View Committee
-                  <span
-                    className="absolute right-4 opacity-0 transform translate-x-[-20px] group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
-                    style={{ fontSize: "1.2rem" }}
-                  >
-                    <FiArrowRight />
-                  </span>
-                </button>
+              {/* Buttons Section */}
+              <div className="mt-4 flex flex-col gap-2">
+                {committee.buttons.map((button, index) => (
+                  <div key={index} className="text-center group relative">
+                    <a
+                      href={button.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <button className="w-full px-4 py-2 bg-[#474E68] text-white rounded-lg cursor-pointer shadow-xl hover:bg-[#6B728E] hover:shadow-lg transition-all duration-300">
+                        {button.text}
+                        <span
+                          className="absolute right-4 opacity-0 transform translate-x-[-20px] group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
+                          style={{ fontSize: "1.2rem" }}
+                        >
+                          <FiArrowRight />
+                        </span>
+                      </button>
+                    </a>
+                  </div>
+                ))}
               </div>
             </div>
           ))}

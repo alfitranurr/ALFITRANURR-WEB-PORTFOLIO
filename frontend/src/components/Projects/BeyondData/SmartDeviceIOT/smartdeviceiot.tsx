@@ -1,42 +1,7 @@
-import OrganizationImage from "../../../../assets/images/Pantai.png";
 import { useState, useEffect } from "react";
 import { FiArrowRight } from "react-icons/fi"; // Import icon arrow
 import ScrollToTopButton from "../../../../components/ScrollToTopButton/scrolltotopbutton";
-
-const committees = [
-  {
-    id: 1,
-    title: "IoT for Smart Devices Research Group",
-    description:
-      "A research group dedicated to exploring innovative solutions for IoT (Internet of Things) in smart devices, focusing on connectivity, automation, and security.",
-    image: OrganizationImage,
-    tags: ["Committee", "IoT", "Smart Devices", "Connectivity", "Automation"],
-  },
-  {
-    id: 2,
-    title: "Smart Home Solutions Coalition",
-    description:
-      "A coalition of companies and researchers working to develop smart home technologies that enhance living comfort, security, and energy efficiency through IoT.",
-    image: OrganizationImage,
-    tags: ["Committee", "Smart Home", "IoT Solutions", "Technology"],
-  },
-  {
-    id: 3,
-    title: "IoT Security and Privacy Forum",
-    description:
-      "An interdisciplinary forum focused on the security and privacy challenges in IoT systems, providing insights on best practices and emerging trends.",
-    image: OrganizationImage,
-    tags: ["Committee", "IoT Security", "Privacy", "Tech Governance"],
-  },
-  {
-    id: 4,
-    title: "Smart Device Innovation and Startups Hub",
-    description:
-      "A hub for innovators and entrepreneurs in the smart device IoT space, fostering collaboration and growth for startups and businesses in the smart tech industry.",
-    image: OrganizationImage,
-    tags: ["Committee", "IoT Startups", "Innovation", "Smart Devices"],
-  },
-];
+import smartdeviceiot from "../../../../database/Projects/BeyondData/smartdeviceiot";
 
 const tagColors = ["bg-[#50577A]", "bg-[#6B728E]"];
 
@@ -46,11 +11,11 @@ const SmartDeviceIoT = () => {
   const [showScroll, setShowScroll] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false); // State to manage loading
 
-  const uniqueTags = [...new Set(committees.flatMap((event) => event.tags))];
+  const uniqueTags = [...new Set(smartdeviceiot.flatMap((event) => event.tags))];
 
   const filteredCommittees = selectedTag
-    ? committees.filter((event) => event.tags.includes(selectedTag))
-    : committees;
+    ? smartdeviceiot.filter((event) => event.tags.includes(selectedTag))
+    : smartdeviceiot;
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -171,17 +136,27 @@ const SmartDeviceIoT = () => {
                 ))}
               </div>
 
-              {/* Button View Committee */}
-              <div className="mt-4 text-center group relative">
-                <button className="w-full px-4 py-2 bg-[#474E68] text-white rounded-lg cursor-pointer shadow-xl hover:bg-[#6B728E] hover:shadow-lg transition-all duration-300">
-                  View Committee
-                  <span
-                    className="absolute right-4 opacity-0 transform translate-x-[-20px] group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
-                    style={{ fontSize: "1.2rem" }}
-                  >
-                    <FiArrowRight />
-                  </span>
-                </button>
+              {/* Buttons Section */}
+              <div className="mt-4 flex flex-col gap-2">
+                {committee.buttons.map((button, index) => (
+                  <div key={index} className="text-center group relative">
+                    <a
+                      href={button.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <button className="w-full px-4 py-2 bg-[#474E68] text-white rounded-lg cursor-pointer shadow-xl hover:bg-[#6B728E] hover:shadow-lg transition-all duration-300">
+                        {button.text}
+                        <span
+                          className="absolute right-4 opacity-0 transform translate-x-[-20px] group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
+                          style={{ fontSize: "1.2rem" }}
+                        >
+                          <FiArrowRight />
+                        </span>
+                      </button>
+                    </a>
+                  </div>
+                ))}
               </div>
             </div>
           ))}
