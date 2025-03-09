@@ -9,14 +9,16 @@ const tagColors = ["bg-[#50577A]", "bg-[#6B728E]"];
 
 const GraphicDesign = () => {
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
+  const [displayedTag, setDisplayedTag] = useState<string | null>(null);
   const [isDissolving, setIsDissolving] = useState(false);
   const [showScroll, setShowScroll] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false); // State to manage loading
 
   const uniqueTags = [...new Set(graphicdesign.flatMap((event) => event.tags))];
 
-  const filteredCommittees = selectedTag
-    ? graphicdesign.filter((event) => event.tags.includes(selectedTag))
+  // Use displayedTag for filtering content instead of selectedTag
+  const filteredCommittees = displayedTag
+    ? graphicdesign.filter((event) => event.tags.includes(displayedTag))
     : graphicdesign;
 
   useEffect(() => {
@@ -40,11 +42,20 @@ const GraphicDesign = () => {
     };
   }, []); // Empty dependency array so this effect runs once after initial render
 
+  // Modified animation flow
   useEffect(() => {
+    // Start dissolve animation (fade out)
     setIsDissolving(true);
+
+    // After animation completes, update displayed content and fade back in
     const timeout = setTimeout(() => {
+      // Update displayed tag (and thus content) after fade out
+      setDisplayedTag(selectedTag);
+
+      // Then fade back in
       setIsDissolving(false);
-    }, 500);
+    }, 500); // Match this to your CSS transition duration
+
     return () => clearTimeout(timeout);
   }, [selectedTag]);
 
@@ -93,15 +104,15 @@ const GraphicDesign = () => {
           ))}
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div
+          className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 transition-opacity duration-500 ease-in-out ${
+            isDissolving ? "opacity-0" : "opacity-100"
+          }`}
+        >
           {filteredCommittees.map((committee) => (
             <div
               key={committee.id}
-              className={`w-full border border-white rounded-lg p-4 shadow transition transform hover:shadow-lg hover:bg-gray-200 hover:text-[var(--warna1-color)] group ${
-                isDissolving
-                  ? "opacity-0 transition-opacity duration-500 ease-in-out"
-                  : "opacity-100 transition-opacity duration-500 ease-in-out"
-              }`}
+              className="w-full border border-white rounded-lg p-4 shadow transition transform hover:shadow-lg hover:bg-gray-200 hover:text-[var(--warna1-color)] group"
             >
               <div className="relative mb-4">
                 <div className="overflow-hidden rounded-lg">

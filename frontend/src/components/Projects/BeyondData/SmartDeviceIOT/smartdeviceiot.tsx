@@ -10,14 +10,12 @@ const SmartDeviceIoT = () => {
   const [isDissolving, setIsDissolving] = useState(false);
   const [showScroll, setShowScroll] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false); // State to manage loading
+  const [displayedCommittees, setDisplayedCommittees] =
+    useState(smartdeviceiot);
 
   const uniqueTags = [
     ...new Set(smartdeviceiot.flatMap((event) => event.tags)),
   ];
-
-  const filteredCommittees = selectedTag
-    ? smartdeviceiot.filter((event) => event.tags.includes(selectedTag))
-    : smartdeviceiot;
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -40,13 +38,26 @@ const SmartDeviceIoT = () => {
     };
   }, []); // Empty dependency array so this effect runs once after initial render
 
-  useEffect(() => {
+  // Handle tag selection and animation
+  const handleTagChange = (tag: string | null) => {
+    // First dissolve the current content
     setIsDissolving(true);
-    const timeout = setTimeout(() => {
-      setIsDissolving(false);
-    }, 500);
-    return () => clearTimeout(timeout);
-  }, [selectedTag]);
+
+    // After the dissolve animation is complete, update the filtered content
+    setTimeout(() => {
+      const filteredContent = tag
+        ? smartdeviceiot.filter((event) => event.tags.includes(tag))
+        : smartdeviceiot;
+
+      setDisplayedCommittees(filteredContent);
+      setSelectedTag(tag);
+
+      // Allow a short delay for the content to update, then remove the dissolving effect
+      setTimeout(() => {
+        setIsDissolving(false);
+      }, 50);
+    }, 500); // This should match the duration of your dissolve animation
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -68,7 +79,7 @@ const SmartDeviceIoT = () => {
       <div className="w-full max-w-6xl mx-auto p-6 border border-white rounded-2xl shadow-md flex flex-col items-center">
         <div className="flex flex-wrap gap-4 mb-6">
           <button
-            onClick={() => setSelectedTag(null)}
+            onClick={() => handleTagChange(null)}
             className={`px-4 py-2 text-xs font-bold cursor-pointer rounded-full ${
               !selectedTag
                 ? "bg-[#50577A] text-white"
@@ -81,7 +92,7 @@ const SmartDeviceIoT = () => {
           {uniqueTags.map((tag) => (
             <button
               key={tag}
-              onClick={() => setSelectedTag(tag)}
+              onClick={() => handleTagChange(tag)}
               className={`px-4 py-2 text-xs font-bold cursor-pointer rounded-full ${
                 selectedTag === tag
                   ? "bg-[#50577A] text-white"
@@ -94,7 +105,7 @@ const SmartDeviceIoT = () => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredCommittees.map((committee) => (
+          {displayedCommittees.map((committee) => (
             <div
               key={committee.id}
               className={`w-full border border-white rounded-lg p-4 shadow transition transform hover:shadow-lg hover:bg-gray-200 hover:text-[var(--warna1-color)] group ${

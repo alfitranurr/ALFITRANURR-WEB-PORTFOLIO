@@ -7,6 +7,7 @@ const tagColors = ["bg-[#50577A]", "bg-[#6B728E]"];
 
 const Competition = () => {
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
+  const [displayedTag, setDisplayedTag] = useState<string | null>(null);
   const [isDissolving, setIsDissolving] = useState(false);
   const [showScroll, setShowScroll] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false); // State to manage loading
@@ -15,9 +16,10 @@ const Competition = () => {
     ...new Set(competitions.flatMap((competition) => competition.tags)),
   ];
 
-  const filteredCompetitions = selectedTag
+  // This now uses displayedTag instead of selectedTag for filtering
+  const filteredCompetitions = displayedTag
     ? competitions.filter((competition) =>
-        competition.tags.includes(selectedTag)
+        competition.tags.includes(displayedTag)
       )
     : competitions;
 
@@ -42,13 +44,27 @@ const Competition = () => {
     };
   }, []); // Empty dependency array so this effect runs once after initial render
 
+  // This effect handles the tag change animation sequence
   useEffect(() => {
-    setIsDissolving(true);
-    const timeout = setTimeout(() => {
-      setIsDissolving(false);
-    }, 500);
-    return () => clearTimeout(timeout);
-  }, [selectedTag]);
+    if (selectedTag !== displayedTag) {
+      // Step 1: Start dissolve animation
+      setIsDissolving(true);
+
+      // Step 2: Wait for dissolve to complete before changing displayed content
+      const changeContentTimeout = setTimeout(() => {
+        setDisplayedTag(selectedTag);
+
+        // Step 3: Wait a tiny bit then start fade-in animation
+        const fadeInTimeout = setTimeout(() => {
+          setIsDissolving(false);
+        }, 50);
+
+        return () => clearTimeout(fadeInTimeout);
+      }, 500); // This should match your dissolve animation duration
+
+      return () => clearTimeout(changeContentTimeout);
+    }
+  }, [selectedTag, displayedTag]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -72,7 +88,7 @@ const Competition = () => {
           <button
             onClick={() => setSelectedTag(null)}
             className={`px-4 py-2 text-xs font-bold cursor-pointer rounded-full ${
-              !selectedTag
+              !displayedTag
                 ? "bg-[#50577A] text-white"
                 : "bg-[#f3f4f6] text-[#333]"
             } hover:bg-[#50577A] hover:text-white`}
@@ -85,7 +101,7 @@ const Competition = () => {
               key={tag}
               onClick={() => setSelectedTag(tag)}
               className={`px-4 py-2 text-xs font-bold cursor-pointer rounded-full ${
-                selectedTag === tag
+                displayedTag === tag
                   ? "bg-[#50577A] text-white"
                   : "bg-[#f3f4f6] text-[#333]"
               } hover:bg-[#50577A] hover:text-white`}

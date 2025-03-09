@@ -9,6 +9,7 @@ const tagColors = ["bg-[#50577A]", "bg-[#6B728E]"];
 
 const ArtificialIntelligence = () => {
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
+  const [displayedTag, setDisplayedTag] = useState<string | null>(null);
   const [isDissolving, setIsDissolving] = useState(false);
   const [showScroll, setShowScroll] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false); // State to manage loading
@@ -17,8 +18,11 @@ const ArtificialIntelligence = () => {
     ...new Set(artificialintelligence.flatMap((event) => event.tags)),
   ];
 
-  const filteredCommittees = selectedTag
-    ? artificialintelligence.filter((event) => event.tags.includes(selectedTag))
+  // Use displayedTag for filtering instead of selectedTag
+  const filteredCommittees = displayedTag
+    ? artificialintelligence.filter((event) =>
+        event.tags.includes(displayedTag)
+      )
     : artificialintelligence;
 
   useEffect(() => {
@@ -42,13 +46,25 @@ const ArtificialIntelligence = () => {
     };
   }, []); // Empty dependency array so this effect runs once after initial render
 
+  // New effect for handling the animation sequence
   useEffect(() => {
-    setIsDissolving(true);
-    const timeout = setTimeout(() => {
-      setIsDissolving(false);
-    }, 500);
-    return () => clearTimeout(timeout);
-  }, [selectedTag]);
+    if (selectedTag !== displayedTag) {
+      // First step: trigger dissolve animation
+      setIsDissolving(true);
+
+      // Second step: after animation completes, update the displayed content
+      const timeout = setTimeout(() => {
+        setDisplayedTag(selectedTag);
+
+        // Third step: after updating content, fade back in
+        setTimeout(() => {
+          setIsDissolving(false);
+        }, 50);
+      }, 500); // This should match your dissolution animation duration
+
+      return () => clearTimeout(timeout);
+    }
+  }, [selectedTag, displayedTag]);
 
   useEffect(() => {
     window.scrollTo(0, 0);

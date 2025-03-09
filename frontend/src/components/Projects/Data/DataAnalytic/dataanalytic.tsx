@@ -9,14 +9,16 @@ const tagColors = ["bg-[#50577A]", "bg-[#6B728E]"];
 
 const DataAnalytics = () => {
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
+  const [displayedTag, setDisplayedTag] = useState<string | null>(null);
   const [isDissolving, setIsDissolving] = useState(false);
   const [showScroll, setShowScroll] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false); // State to manage loading
 
   const uniqueTags = [...new Set(dataanalytic.flatMap((event) => event.tags))];
 
-  const filteredCommittees = selectedTag
-    ? dataanalytic.filter((event) => event.tags.includes(selectedTag))
+  // Using displayedTag for filtering instead of selectedTag
+  const filteredCommittees = displayedTag
+    ? dataanalytic.filter((event) => event.tags.includes(displayedTag))
     : dataanalytic;
 
   useEffect(() => {
@@ -40,13 +42,25 @@ const DataAnalytics = () => {
     };
   }, []); // Empty dependency array so this effect runs once after initial render
 
+  // Handle tag changes with proper animation sequence
   useEffect(() => {
-    setIsDissolving(true);
-    const timeout = setTimeout(() => {
-      setIsDissolving(false);
-    }, 500);
-    return () => clearTimeout(timeout);
-  }, [selectedTag]);
+    if (selectedTag !== displayedTag) {
+      // Start dissolving animation
+      setIsDissolving(true);
+
+      // After dissolve animation completes, update the displayed content
+      const timeout = setTimeout(() => {
+        setDisplayedTag(selectedTag);
+
+        // Then after a short delay, fade the new content in
+        setTimeout(() => {
+          setIsDissolving(false);
+        }, 50);
+      }, 500); // This should match your dissolve animation duration
+
+      return () => clearTimeout(timeout);
+    }
+  }, [selectedTag, displayedTag]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -54,7 +68,7 @@ const DataAnalytics = () => {
 
   return (
     <section
-      id="dataanalytics"
+      id="dataanalytic"
       className={`mt-[-20px] px-4 transition-all duration-1000 transform ${
         isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
       }`}
