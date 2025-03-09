@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import ProgressBar from "../components/ProgressBar/progressBar";
 
 const NavbarMobile: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   const [activePage, setActivePage] = useState<string>("");
-  const [scrollProgress, setScrollProgress] = useState<number>(0);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -31,30 +31,11 @@ const NavbarMobile: React.FC = () => {
     setActivePage(location.pathname);
   }, [location]);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollTop = window.scrollY;
-      const docHeight =
-        document.documentElement.scrollHeight - window.innerHeight;
-      const scrollPercent = (scrollTop / docHeight) * 100;
-      setScrollProgress(scrollPercent);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   return (
     <div>
       <nav className="bg-[#474E68] p-4 shadow-lg fixed top-0 left-0 w-full z-[9999] mb-10">
-        {/* Progress Bar */}
-        <div
-          className="fixed top-0 left-0 right-0 h-0.5 bg-white z-[10000] transition-all duration-800"
-          style={{ width: `${scrollProgress}%` }}
-        ></div>
+        {/* Progress Bar - now using the imported component */}
+        <ProgressBar className="z-[10000]" />
 
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           {/* Hamburger button */}
