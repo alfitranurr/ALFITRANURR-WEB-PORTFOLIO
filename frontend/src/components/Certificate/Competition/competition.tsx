@@ -99,7 +99,7 @@ const Competition = () => {
           {filteredCompetitions.map((competition) => (
             <div
               key={competition.id}
-              className={`w-full border border-white rounded-lg p-4 shadow transition transform hover:shadow-lg hover:bg-gray-300 hover:text-[var(--warna1-color)] group ${
+              className={`w-full border border-white rounded-lg p-4 shadow transition transform hover:shadow-lg hover:bg-gray-200 hover:text-[var(--warna1-color)] group ${
                 isDissolving
                   ? "opacity-0 transition-opacity duration-500 ease-in-out"
                   : "opacity-100 transition-opacity duration-500 ease-in-out"
@@ -110,7 +110,8 @@ const Competition = () => {
                   <img
                     src={competition.image}
                     alt={competition.title}
-                    className="w-full h-[230px] object-cover transition duration-300 ease-in-out transform scale-110 hover:brightness-80 hover:scale-100"
+                    className="w-full h-[230px] object-cover transition duration-300 ease-in-out transform scale-110 hover:brightness-90 hover:scale-100"
+                    style={{ objectPosition: "top" }} // Menampilkan gambar dari atas
                     loading="lazy" // Lazy loading
                   />
                 </div>

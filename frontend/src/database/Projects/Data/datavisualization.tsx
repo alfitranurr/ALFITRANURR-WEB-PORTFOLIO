@@ -1,57 +1,64 @@
-import OrganizationImage from "../../../assets/images/Pantai.png";
+{
+  /* INFOGRAPHIC */
+}
+import UB_4C from "../../../assets/images/Projects/Data/DataVisualization/Infographic - FunTech_Resiliensi Telekomunikasi.png";
+import AnavaUGM from "../../../assets/images/Projects/Data/DataVisualization/Infographic - KIS_Karya_KIS0000029_Datatouille.png";
+import SIC_INDICATION from "../../../assets/images/Projects/Data/DataVisualization/Infographic - SIC INDICATION.png";
+
+{
+  /* DASHBOARD */
+}
+import Tokopedei from "../../../assets/images/Projects/Data/DataVisualization/Dashboard - Tokopedei Transaction Dashboard.png";
 
 export const datavisualization = [
   {
     id: 1,
-    title: "Data Visualization Research Group",
+    title:
+      "Infographic on Telecommunication Resilience in Indonesia as a Catalyst for a Golden Indonesia 2045",
     description:
-      "A global group dedicated to advancing research in data visualization techniques and methodologies, promoting innovation and collaboration among data visualization experts.",
-    image: OrganizationImage,
+      "This project is an infographic work created in an infographic competition held by 4C Universitas Brawijaya to enliven the anniversary event of the Faculty of Computer Science. This work discusses how strengthening telecommunication resilience can prevent internet access gaps in Indonesia, in order to ensure the achievement of the Indonesian Golden Society 5.0 by 2045.",
+    image: UB_4C,
     tags: ["Infographic"],
     buttons: [
       {
-        text: "View Committee",
-        link: "https://drive.google.com/drive/folders/1-4R1VSKn6FQnBoxEx4ZwyvFTyP970WQj?usp=sharing", // Adjust the link accordingly
+        text: "View Infographic",
+        link: "https://drive.google.com/file/d/1H-YmJmlP993wHPBWztEs8DDXmbC_D4rO/view?usp=sharing",
       },
       {
-        text: "View Project",
-        link: "/projects/data-visualization-research-group", // Adjust the link accordingly
+        text: "Get Report",
+        link: "https://drive.google.com/file/d/1FdGGRbPn9LLtQ3umWmbEzznQZZE2O9oh/view?usp=sharing",
       },
     ],
   },
   {
     id: 2,
-    title: "Data Visualization for Good Coalition",
+    title: "ANAVA#19 FMIPA UGM Infographic on Sexual Violence in Indonesia",
     description:
-      "A coalition of organizations focused on using data visualization to solve global challenges such as climate change, healthcare, and education.",
-    image: OrganizationImage,
-    tags: ["Dashboard"],
+      "This project is an infographic work created in the Statistics Infographics (KIS) competition which is held by ANAVA #19 Gadjah Mada University every year. This work explains the portrait of sexual violence in Indonesia, including data on the distribution of cases, perpetrators, psychological impacts, and preventive measures needed to overcome this problem.",
+    image: AnavaUGM,
+    tags: ["Infographic"],
     buttons: [
       {
-        text: "View Committee",
-        link: "/committee/data-visualization-for-good", // Adjust the link accordingly
+        text: "View Infographic",
+        link: "https://drive.google.com/file/d/11ieQu427JrUevZJoa4hEE1o0KXSjxlxs/view?usp=sharing",
       },
       {
-        text: "View Project",
-        link: "/projects/data-visualization-for-good-coalition", // Adjust the link accordingly
+        text: "Get Report",
+        link: "https://drive.google.com/file/d/1EGVAcbsDojLPwgwfOSs5sRBn22BXahkL/view?usp=sharing",
       },
     ],
   },
   {
     id: 3,
-    title: "Data Visualization Ethics and Governance Forum",
+    title: "Infographics of Online Shopping Consumer Behavior Trends",
     description:
-      "An interdisciplinary forum focusing on the ethical implications of data visualization, governance, and regulatory frameworks.",
-    image: OrganizationImage,
+      "This project is an infographic work created in the infographic competition (SIC INDICATION) entered into by HMIF Muhammadiyah University of Malang to enliven the Informatics Engineering Department Anniversary event. This work presents an analysis of consumer behavior trends in online shopping by gender, including the top 3 purchase categories to the relationship between browsing activity and purchase frequency.",
+    image: SIC_INDICATION,
     tags: ["Infographic"],
     buttons: [
       {
-        text: "View Committee",
-        link: "/committee/data-visualization-ethics-governance", // Adjust the link accordingly
-      },
-      {
-        text: "View Project",
-        link: "/projects/data-visualization-ethics-governance-forum", // Adjust the link accordingly
+        text: "View Infographic",
+        link: "https://drive.google.com/file/d/1UmkqoM7wfDw2kc62xLB9MM_1x4J0gvZ9/view?usp=sharing",
       },
     ],
   },
@@ -60,16 +67,12 @@ export const datavisualization = [
     title: "Data Visualization Startups and Innovation Hub",
     description:
       "An initiative to foster innovation in the data visualization startup ecosystem, connecting entrepreneurs, investors, and professionals in the field.",
-    image: OrganizationImage,
-    tags: ["Infographic"],
+    image: Tokopedei,
+    tags: ["Dashboard"],
     buttons: [
       {
-        text: "View Committee",
-        link: "/committee/data-visualization-startups-innovation", // Adjust the link accordingly
-      },
-      {
-        text: "View Project",
-        link: "/projects/data-visualization-startups-innovation-hub", // Adjust the link accordingly
+        text: "View Dashboard",
+        link: "https://lookerstudio.google.com/embed/u/0/reporting/87503293-f941-47e7-8626-2e9f8d64955a/page/H8h4D",
       },
     ],
   },

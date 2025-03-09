@@ -11,7 +11,9 @@ const SmartDeviceIoT = () => {
   const [showScroll, setShowScroll] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false); // State to manage loading
 
-  const uniqueTags = [...new Set(smartdeviceiot.flatMap((event) => event.tags))];
+  const uniqueTags = [
+    ...new Set(smartdeviceiot.flatMap((event) => event.tags)),
+  ];
 
   const filteredCommittees = selectedTag
     ? smartdeviceiot.filter((event) => event.tags.includes(selectedTag))
@@ -95,7 +97,7 @@ const SmartDeviceIoT = () => {
           {filteredCommittees.map((committee) => (
             <div
               key={committee.id}
-              className={`w-full border border-white rounded-lg p-4 shadow transition transform hover:shadow-lg hover:bg-gray-300 hover:text-[var(--warna1-color)] group ${
+              className={`w-full border border-white rounded-lg p-4 shadow transition transform hover:shadow-lg hover:bg-gray-200 hover:text-[var(--warna1-color)] group ${
                 isDissolving
                   ? "opacity-0 transition-opacity duration-500 ease-in-out"
                   : "opacity-100 transition-opacity duration-500 ease-in-out"
@@ -106,7 +108,8 @@ const SmartDeviceIoT = () => {
                   <img
                     src={committee.image}
                     alt={committee.title}
-                    className="w-full h-[230px] object-cover transition duration-300 ease-in-out transform scale-110 hover:brightness-80 hover:scale-100"
+                    className="w-full h-[230px] object-cover transition duration-300 ease-in-out transform scale-110 hover:brightness-90 hover:scale-100"
+                    style={{ objectPosition: "top" }} // Menampilkan gambar dari atas
                     loading="lazy" // Lazy loading
                   />
                 </div>
