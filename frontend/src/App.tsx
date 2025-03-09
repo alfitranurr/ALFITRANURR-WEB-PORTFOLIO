@@ -7,7 +7,7 @@ import Footer from "./main/footer";
 import NavbarMobile from "./mobile/navbar_mobile";
 import FooterMobile from "./mobile/footer_mobile";
 import Home from "./pages/home";
-import AlertInitially from "./components/Alerts/alertInitially";
+// import AlertInitially from "./components/Alerts/alertInitially";
 
 /* DATA */
 import DataVisualization from "./components/Projects/Data/DataVisualization/datavisualization";
@@ -46,7 +46,7 @@ const App: React.FC = () => {
         {/* ROUTES FOR THE MAIN CONTENT */}
         <div className="flex-grow relative">
           {/* SHOW THE ALERT INITIALLY */}
-          <AlertInitially />
+          {/* <AlertInitially /> */}
           <Routes>
             {/* MAIN PAGE */}
             <Route path="/" element={<Home />} />

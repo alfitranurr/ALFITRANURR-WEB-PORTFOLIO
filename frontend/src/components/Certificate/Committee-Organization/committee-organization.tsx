@@ -1,42 +1,7 @@
-import OrganizationImage from "../../../assets/images/Pantai.png";
 import { useState, useEffect } from "react";
 import { FiArrowRight } from "react-icons/fi"; // Import icon arrow
 import ScrollToTopButton from "../../ScrollToTopButton/scrolltotopbutton";
-
-const committees = [
-  {
-    id: 1,
-    title: "Organization Management Committee",
-    description:
-      "A committee dedicated to managing the structure and processes of the organization, ensuring smooth operations and high member engagement.",
-    image: OrganizationImage,
-    tags: ["Committee", "Organization Management", "Leadership", "Strategy"],
-  },
-  {
-    id: 2,
-    title: "Event Planning Committee",
-    description:
-      "A team focused on organizing and executing events, from small workshops to large conferences, ensuring seamless planning and execution.",
-    image: OrganizationImage,
-    tags: ["Committee", "Event Planning", "Logistics", "Teamwork"],
-  },
-  {
-    id: 3,
-    title: "Public Relations and Communications Committee",
-    description:
-      "A group that handles the external communications, public relations strategies, and branding of the organization to maintain a positive public image.",
-    image: OrganizationImage,
-    tags: ["Committee", "Public Relations", "Communications", "Branding"],
-  },
-  {
-    id: 4,
-    title: "Membership and Recruitment Committee",
-    description:
-      "A committee focused on expanding the organization's membership, recruiting new members, and maintaining strong engagement with current members.",
-    image: OrganizationImage,
-    tags: ["Committee", "Membership", "Recruitment", "Community Building"],
-  },
-];
+import committees from "../../../database/Certificate/Committee-Organization";
 
 const tagColors = ["bg-[#50577A]", "bg-[#6B728E]"];
 
@@ -94,7 +59,7 @@ const CommitteeOrganization = () => {
     >
       <div className="w-full max-w-6xl mx-auto p-6 border border-white rounded-2xl shadow-md mb-4">
         <h1 className="text-3xl font-semibold text-white text-center">
-          COMMITTEE & ORGANIZATION CERTIFICATES 
+          COMMITTEE & ORGANIZATION CERTIFICATES
         </h1>
       </div>
 
@@ -130,7 +95,7 @@ const CommitteeOrganization = () => {
           {filteredCommittees.map((committee) => (
             <div
               key={committee.id}
-              className={`w-full border border-white rounded-lg p-4 shadow transition transform hover:shadow-lg hover:bg-white hover:text-[var(--warna1-color)] group ${
+              className={`w-full border border-white rounded-lg p-4 shadow transition transform hover:shadow-lg hover:bg-gray-200 hover:text-[var(--warna1-color)] group ${
                 isDissolving
                   ? "opacity-0 transition-opacity duration-500 ease-in-out"
                   : "opacity-100 transition-opacity duration-500 ease-in-out"
@@ -141,7 +106,8 @@ const CommitteeOrganization = () => {
                   <img
                     src={committee.image}
                     alt={committee.title}
-                    className="w-full h-[230px] object-cover transition duration-300 ease-in-out transform scale-110 hover:brightness-55 hover:scale-100"
+                    className="w-full h-[230px] object-cover transition duration-300 ease-in-out transform scale-110 hover:brightness-90 hover:scale-100"
+                    style={{ objectPosition: "top" }} // Menampilkan gambar dari atas
                     loading="lazy" // Lazy loading
                   />
                 </div>
@@ -171,17 +137,27 @@ const CommitteeOrganization = () => {
                 ))}
               </div>
 
-              {/* Button View Committee */}
-              <div className="mt-4 text-center group relative">
-                <button className="w-full px-4 py-2 bg-[#474E68] text-white rounded-lg cursor-pointer shadow-xl hover:bg-[#6B728E] hover:shadow-lg transition-all duration-300">
-                  View Committee
-                  <span
-                    className="absolute right-4 opacity-0 transform translate-x-[-20px] group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
-                    style={{ fontSize: "1.2rem" }}
-                  >
-                    <FiArrowRight />
-                  </span>
-                </button>
+              {/* Buttons Section */}
+              <div className="mt-4 flex flex-col gap-2">
+                {committee.buttons?.map((button, index) => (
+                  <div key={index} className="text-center group relative">
+                    <a
+                      href={button.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <button className="w-full px-4 py-2 bg-[#474E68] text-white rounded-lg cursor-pointer shadow-xl hover:bg-[#6B728E] hover:shadow-lg transition-all duration-300">
+                        {button.text}
+                        <span
+                          className="absolute right-4 opacity-0 transform translate-x-[-20px] group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
+                          style={{ fontSize: "1.2rem" }}
+                        >
+                          <FiArrowRight />
+                        </span>
+                      </button>
+                    </a>
+                  </div>
+                ))}
               </div>
             </div>
           ))}

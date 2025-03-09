@@ -14,10 +14,60 @@ import ScrollToTopButton from "../components/ScrollToTopButton/scrolltotopbutton
 const Home: React.FC = () => {
   const [showScroll, setShowScroll] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [sectionVisibility, setSectionVisibility] = useState({
+    about: false,
+    techStacks: false,
+    mapCard: false,
+    education: false,
+    experience: false,
+    projects: false,
+    certificate: false,
+    contact: false,
+  });
 
   useEffect(() => {
+    // Set isLoaded after a short delay
     const timer = setTimeout(() => {
       setIsLoaded(true);
+
+      // Sequence the section animations
+      const sectionTimers = [
+        setTimeout(
+          () => setSectionVisibility((prev) => ({ ...prev, about: true })),
+          300
+        ),
+        setTimeout(
+          () => setSectionVisibility((prev) => ({ ...prev, techStacks: true })),
+          400
+        ),
+        setTimeout(
+          () => setSectionVisibility((prev) => ({ ...prev, mapCard: true })),
+          500
+        ),
+        setTimeout(
+          () => setSectionVisibility((prev) => ({ ...prev, education: true })),
+          600
+        ),
+        setTimeout(
+          () => setSectionVisibility((prev) => ({ ...prev, experience: true })),
+          700
+        ),
+        setTimeout(
+          () => setSectionVisibility((prev) => ({ ...prev, projects: true })),
+          800
+        ),
+        setTimeout(
+          () =>
+            setSectionVisibility((prev) => ({ ...prev, certificate: true })),
+          900
+        ),
+        setTimeout(
+          () => setSectionVisibility((prev) => ({ ...prev, contact: true })),
+          1000
+        ),
+      ];
+
+      return () => sectionTimers.forEach((timer) => clearTimeout(timer));
     }, 100);
 
     const handleScroll = () => {
@@ -46,8 +96,29 @@ const Home: React.FC = () => {
     "Digital Marketing Enthusiast",
   ];
 
+  // Reusable transition style
+
+  interface TransitionStyle {
+    opacity: number;
+    transform: string;
+    transition: string;
+  }
+
+  const getTransitionStyle = (isVisible: boolean): TransitionStyle => ({
+    opacity: isVisible ? 1 : 0,
+    transform: isVisible ? "translateY(0)" : "translateY(30px)",
+    transition: "opacity 0.8s ease-out, transform 0.8s ease-out",
+  });
+
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen relative">
+    <div
+      className="flex flex-col justify-center items-center min-h-screen relative"
+      style={{
+        opacity: isLoaded ? 1 : 0,
+        transform: isLoaded ? "translateY(0)" : "translateY(50px)",
+        transition: "opacity 1s ease-out, transform 1s ease-out",
+      }}
+    >
       {/* ==================== TOP SECTION ====================*/}
       <TopSection name={name} />
       {/* ==================== POLICE LINE ==================== */}
@@ -56,17 +127,22 @@ const Home: React.FC = () => {
       {/* ABOUT ME */}
       <section
         id="about-me"
-        className="scroll-margin-top-16"
+        className="scroll-margin-top-16 w-full"
         style={{
           position: "relative",
+          ...getTransitionStyle(sectionVisibility.about),
         }}
       >
         <AboutMe />
       </section>
       {/* TECH STACKS */}
-      <TechStacks />
+      <div style={getTransitionStyle(sectionVisibility.techStacks)}>
+        <TechStacks />
+      </div>
       {/* MAP CARD */}
-      <MapCard />
+      <div style={getTransitionStyle(sectionVisibility.mapCard)}>
+        <MapCard />
+      </div>
       {/* WRAP EDUCATION & EXPERIENCE IN A FLEX CONTAINER */}
       <div
         className="flex flex-col md:flex-row justify-between space-y-8 md:space-y-0 md:space-x-8 mt-8"
@@ -79,6 +155,7 @@ const Home: React.FC = () => {
           style={{
             position: "relative",
             flex: 1,
+            ...getTransitionStyle(sectionVisibility.education),
           }}
         >
           <Education />
@@ -91,6 +168,7 @@ const Home: React.FC = () => {
           style={{
             position: "relative",
             flex: 1,
+            ...getTransitionStyle(sectionVisibility.experience),
           }}
         >
           <Experience />
@@ -102,6 +180,7 @@ const Home: React.FC = () => {
         className="scroll-margin-top-16"
         style={{
           position: "relative",
+          ...getTransitionStyle(sectionVisibility.projects),
         }}
       >
         <Projects />
@@ -112,6 +191,7 @@ const Home: React.FC = () => {
         className="scroll-margin-top-16"
         style={{
           position: "relative",
+          ...getTransitionStyle(sectionVisibility.certificate),
         }}
       >
         <Certificate />
@@ -122,12 +202,13 @@ const Home: React.FC = () => {
         className="scroll-margin-top-16"
         style={{
           position: "relative",
+          ...getTransitionStyle(sectionVisibility.contact),
         }}
       >
         <Contact />
       </section>
       {/* ==================== SCROLL TO TOP BUTTON ==================== */}
-      <ScrollToTopButton showScroll={showScroll} />{" "}
+      <ScrollToTopButton showScroll={showScroll} />
     </div>
   );
 };

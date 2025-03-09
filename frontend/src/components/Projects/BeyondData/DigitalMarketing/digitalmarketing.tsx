@@ -1,48 +1,9 @@
-import OrganizationImage from "../../../../assets/images/Pantai.png";
 import { useState, useEffect } from "react";
 import { FiArrowRight } from "react-icons/fi"; // Import icon arrow
 import ScrollToTopButton from "../../../../components/ScrollToTopButton/scrolltotopbutton";
 
-const committees = [
-  {
-    id: 1,
-    title: "Digital Marketing Research Group",
-    description:
-      "A global group dedicated to advancing research in digital marketing techniques, strategies, and analytics, promoting innovation and collaboration among digital marketing experts.",
-    image: OrganizationImage,
-    tags: ["Committee", "Digital Marketing", "Research"],
-  },
-  {
-    id: 2,
-    title: "Marketing for Good Coalition",
-    description:
-      "A coalition of organizations focused on using digital marketing to solve global challenges such as climate change, healthcare, and education.",
-    image: OrganizationImage,
-    tags: ["Committee", "Digital Marketing", "Social Impact"],
-  },
-  {
-    id: 3,
-    title: "Digital Marketing Ethics and Governance Forum",
-    description:
-      "An interdisciplinary forum focusing on the ethical implications of digital marketing, privacy issues, and regulatory frameworks in the industry.",
-    image: OrganizationImage,
-    tags: ["Committee", "Marketing Ethics", "Governance"],
-  },
-  {
-    id: 4,
-    title: "Digital Marketing Startups and Innovation Hub",
-    description:
-      "An initiative to foster innovation in the digital marketing startup ecosystem, connecting entrepreneurs, investors, and professionals in the digital marketing field.",
-    image: OrganizationImage,
-    tags: [
-      "Committee",
-      "Marketing Startups",
-      "Innovation",
-      "Entrepreneurship",
-      "Digital Marketing",
-    ],
-  },
-];
+// Import digital marketing data
+import { digitalmarketing } from "../../../../database/Projects/BeyondData/digitalmarketing";
 
 const tagColors = ["bg-[#50577A]", "bg-[#6B728E]"];
 
@@ -52,11 +13,13 @@ const DigitalMarketing = () => {
   const [showScroll, setShowScroll] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false); // State to manage loading
 
-  const uniqueTags = [...new Set(committees.flatMap((event) => event.tags))];
+  const uniqueTags = [
+    ...new Set(digitalmarketing.flatMap((event) => event.tags)),
+  ];
 
   const filteredCommittees = selectedTag
-    ? committees.filter((event) => event.tags.includes(selectedTag))
-    : committees;
+    ? digitalmarketing.filter((event) => event.tags.includes(selectedTag))
+    : digitalmarketing;
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -136,7 +99,7 @@ const DigitalMarketing = () => {
           {filteredCommittees.map((committee) => (
             <div
               key={committee.id}
-              className={`w-full border border-white rounded-lg p-4 shadow transition transform hover:shadow-lg hover:bg-white hover:text-[var(--warna1-color)] group ${
+              className={`w-full border border-white rounded-lg p-4 shadow transition transform hover:shadow-lg hover:bg-gray-200 hover:text-[var(--warna1-color)] group ${
                 isDissolving
                   ? "opacity-0 transition-opacity duration-500 ease-in-out"
                   : "opacity-100 transition-opacity duration-500 ease-in-out"
@@ -147,7 +110,8 @@ const DigitalMarketing = () => {
                   <img
                     src={committee.image}
                     alt={committee.title}
-                    className="w-full h-[230px] object-cover transition duration-300 ease-in-out transform scale-110 hover:brightness-55 hover:scale-100"
+                    className="w-full h-[230px] object-cover transition duration-300 ease-in-out transform scale-110 hover:brightness-90 hover:scale-100"
+                    style={{ objectPosition: "top" }} // Menampilkan gambar dari atas
                     loading="lazy" // Lazy loading
                   />
                 </div>
@@ -177,17 +141,27 @@ const DigitalMarketing = () => {
                 ))}
               </div>
 
-              {/* Button View Committee */}
-              <div className="mt-4 text-center group relative">
-                <button className="w-full px-4 py-2 bg-[#474E68] text-white rounded-lg cursor-pointer shadow-xl hover:bg-[#6B728E] hover:shadow-lg transition-all duration-300">
-                  View Committee
-                  <span
-                    className="absolute right-4 opacity-0 transform translate-x-[-20px] group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
-                    style={{ fontSize: "1.2rem" }}
-                  >
-                    <FiArrowRight />
-                  </span>
-                </button>
+              {/* Buttons Section */}
+              <div className="mt-4 flex flex-col gap-2">
+                {committee.buttons?.map((button, index) => (
+                  <div key={index} className="text-center group relative">
+                    <a
+                      href={button.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <button className="w-full px-4 py-2 bg-[#474E68] text-white rounded-lg cursor-pointer shadow-xl hover:bg-[#6B728E] hover:shadow-lg transition-all duration-300">
+                        {button.text}
+                        <span
+                          className="absolute right-4 opacity-0 transform translate-x-[-20px] group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
+                          style={{ fontSize: "1.2rem" }}
+                        >
+                          <FiArrowRight />
+                        </span>
+                      </button>
+                    </a>
+                  </div>
+                ))}
               </div>
             </div>
           ))}

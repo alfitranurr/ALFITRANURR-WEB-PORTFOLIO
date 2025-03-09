@@ -1,42 +1,7 @@
-import OrganizationImage from "../../../assets/images/Pantai.png";
 import { useState, useEffect } from "react";
 import { FiArrowRight } from "react-icons/fi"; // Import icon arrow
-import ScrollToTopButton from "../../ScrollToTopButton/scrolltotopbutton";
-
-const licenses = [
-  {
-    id: 1,
-    title: "Certified Ethical Hacker (CEH)",
-    description:
-      "A certification that focuses on ethical hacking skills, including penetration testing, network security, and risk management, ideal for professionals seeking careers in cybersecurity.",
-    image: OrganizationImage,
-    tags: ["Certification", "Cybersecurity", "Ethical Hacking", "IT"],
-  },
-  {
-    id: 2,
-    title: "Project Management Professional (PMP)",
-    description:
-      "A globally recognized certification for project management professionals that demonstrates your skills and expertise in leading projects and teams.",
-    image: OrganizationImage,
-    tags: ["Certification", "Project Management", "Leadership", "Business"],
-  },
-  {
-    id: 3,
-    title: "Google Analytics Certification",
-    description:
-      "A certification program for mastering Google Analytics, enabling you to track and analyze website traffic, understand audience behavior, and improve online marketing strategies.",
-    image: OrganizationImage,
-    tags: ["Certification", "Analytics", "Digital Marketing", "Google"],
-  },
-  {
-    id: 4,
-    title: "Certified Public Accountant (CPA)",
-    description:
-      "A certification for accounting professionals that is recognized worldwide, demonstrating expertise in accounting principles, taxation, and financial reporting.",
-    image: OrganizationImage,
-    tags: ["Certification", "Accounting", "Finance", "Taxation"],
-  },
-];
+import ScrollToTopButton from "../../../components/ScrollToTopButton/scrolltotopbutton";
+import licenses from "../../../database/Certificate/License-Certification"; // Assuming this points to the correct data file
 
 const tagColors = ["bg-[#50577A]", "bg-[#6B728E]"];
 
@@ -130,7 +95,7 @@ const LicenseCertification = () => {
           {filteredLicenses.map((license) => (
             <div
               key={license.id}
-              className={`w-full border border-white rounded-lg p-4 shadow transition transform hover:shadow-lg hover:bg-white hover:text-[var(--warna1-color)] group ${
+              className={`w-full border border-white rounded-lg p-4 shadow transition transform hover:shadow-lg hover:bg-gray-200 hover:text-[var(--warna1-color)] group ${
                 isDissolving
                   ? "opacity-0 transition-opacity duration-500 ease-in-out"
                   : "opacity-100 transition-opacity duration-500 ease-in-out"
@@ -141,7 +106,8 @@ const LicenseCertification = () => {
                   <img
                     src={license.image}
                     alt={license.title}
-                    className="w-full h-[230px] object-cover transition duration-300 ease-in-out transform scale-110 hover:brightness-55 hover:scale-100"
+                    className="w-full h-[230px] object-cover transition duration-300 ease-in-out transform scale-110 hover:brightness-90 hover:scale-100"
+                    style={{ objectPosition: "top" }} // Menampilkan gambar dari atas
                     loading="lazy" // Lazy loading
                   />
                 </div>
@@ -171,17 +137,27 @@ const LicenseCertification = () => {
                 ))}
               </div>
 
-              {/* Button View License */}
-              <div className="mt-4 text-center group relative">
-                <button className="w-full px-4 py-2 bg-[#474E68] text-white rounded-lg cursor-pointer shadow-xl hover:bg-[#6B728E] hover:shadow-lg transition-all duration-300">
-                  View License
-                  <span
-                    className="absolute right-4 opacity-0 transform translate-x-[-20px] group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
-                    style={{ fontSize: "1.2rem" }}
-                  >
-                    <FiArrowRight />
-                  </span>
-                </button>
+              {/* Buttons Section */}
+              <div className="mt-4 flex flex-col gap-2">
+                {license.buttons?.map((button, index) => (
+                  <div key={index} className="text-center group relative">
+                    <a
+                      href={button.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <button className="w-full px-4 py-2 bg-[#474E68] text-white rounded-lg cursor-pointer shadow-xl hover:bg-[#6B728E] hover:shadow-lg transition-all duration-300">
+                        {button.text}
+                        <span
+                          className="absolute right-4 opacity-0 transform translate-x-[-20px] group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
+                          style={{ fontSize: "1.2rem" }}
+                        >
+                          <FiArrowRight />
+                        </span>
+                      </button>
+                    </a>
+                  </div>
+                ))}
               </div>
             </div>
           ))}

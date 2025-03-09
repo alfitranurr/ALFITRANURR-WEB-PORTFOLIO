@@ -1,42 +1,7 @@
-import OrganizationImage from "../../../assets/images/Pantai.png";
 import { useState, useEffect } from "react";
 import { FiArrowRight } from "react-icons/fi"; // Import icon arrow
 import ScrollToTopButton from "../../../components/ScrollToTopButton/scrolltotopbutton";
-
-const seminars = [
-  {
-    id: 1,
-    title: "Data Science Workshop",
-    description:
-      "A hands-on workshop that explores the fundamental techniques in data science, including machine learning, data visualization, and statistical analysis.",
-    image: OrganizationImage,
-    tags: ["Seminar", "Data Science", "Machine Learning", "Workshop"],
-  },
-  {
-    id: 2,
-    title: "Digital Marketing Mastery",
-    description:
-      "An intensive seminar focused on building digital marketing strategies for business growth, exploring SEO, content marketing, and social media advertising.",
-    image: OrganizationImage,
-    tags: ["Seminar", "Digital Marketing", "SEO", "Social Media"],
-  },
-  {
-    id: 3,
-    title: "Artificial Intelligence Fundamentals",
-    description:
-      "A beginner-friendly seminar covering the basics of AI and its applications in various industries like healthcare, finance, and manufacturing.",
-    image: OrganizationImage,
-    tags: ["Seminar", "AI", "Artificial Intelligence", "Tech"],
-  },
-  {
-    id: 4,
-    title: "Blockchain and Cryptocurrency Workshop",
-    description:
-      "A hands-on workshop diving into blockchain technology, cryptocurrency, and their potential in revolutionizing industries like finance and supply chain.",
-    image: OrganizationImage,
-    tags: ["Seminar", "Blockchain", "Cryptocurrency", "Tech"],
-  },
-];
+import seminars from "../../../database/Certificate/Seminar-Workshop"; // Assuming this points to the correct data file
 
 const tagColors = ["bg-[#50577A]", "bg-[#6B728E]"];
 
@@ -130,7 +95,7 @@ const SeminarWorkshop = () => {
           {filteredSeminars.map((seminar) => (
             <div
               key={seminar.id}
-              className={`w-full border border-white rounded-lg p-4 shadow transition transform hover:shadow-lg hover:bg-white hover:text-[var(--warna1-color)] group ${
+              className={`w-full border border-white rounded-lg p-4 shadow transition transform hover:shadow-lg hover:bg-gray-200 hover:text-[var(--warna1-color)] group ${
                 isDissolving
                   ? "opacity-0 transition-opacity duration-500 ease-in-out"
                   : "opacity-100 transition-opacity duration-500 ease-in-out"
@@ -141,7 +106,8 @@ const SeminarWorkshop = () => {
                   <img
                     src={seminar.image}
                     alt={seminar.title}
-                    className="w-full h-[230px] object-cover transition duration-300 ease-in-out transform scale-110 hover:brightness-55 hover:scale-100"
+                    className="w-full h-[230px] object-cover transition duration-300 ease-in-out transform scale-110 hover:brightness-90 hover:scale-100"
+                    style={{ objectPosition: "top" }} // Menampilkan gambar dari atas
                     loading="lazy" // Lazy loading
                   />
                 </div>
@@ -171,17 +137,27 @@ const SeminarWorkshop = () => {
                 ))}
               </div>
 
-              {/* Button View Seminar */}
-              <div className="mt-4 text-center group relative">
-                <button className="w-full px-4 py-2 bg-[#474E68] text-white rounded-lg cursor-pointer shadow-xl hover:bg-[#6B728E] hover:shadow-lg transition-all duration-300">
-                  View Seminar
-                  <span
-                    className="absolute right-4 opacity-0 transform translate-x-[-20px] group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
-                    style={{ fontSize: "1.2rem" }}
-                  >
-                    <FiArrowRight />
-                  </span>
-                </button>
+              {/* Buttons Section */}
+              <div className="mt-4 flex flex-col gap-2">
+                {seminar.buttons?.map((button, index) => (
+                  <div key={index} className="text-center group relative">
+                    <a
+                      href={button.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <button className="w-full px-4 py-2 bg-[#474E68] text-white rounded-lg cursor-pointer shadow-xl hover:bg-[#6B728E] hover:shadow-lg transition-all duration-300">
+                        {button.text}
+                        <span
+                          className="absolute right-4 opacity-0 transform translate-x-[-20px] group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300"
+                          style={{ fontSize: "1.2rem" }}
+                        >
+                          <FiArrowRight />
+                        </span>
+                      </button>
+                    </a>
+                  </div>
+                ))}
               </div>
             </div>
           ))}

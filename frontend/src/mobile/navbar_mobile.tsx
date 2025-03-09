@@ -88,7 +88,7 @@ const NavbarMobile: React.FC = () => {
           } z-[9999]`}
         >
           <div className="flex justify-between items-center">
-            <div className="text-white text-lg font-semibold ml-auto border-b-2 border-white">
+            <div className="text-white text-lg font-semibold border-b-2 border-white">
               Ramdhani's Portfolio
             </div>
 
@@ -119,6 +119,7 @@ const NavbarMobile: React.FC = () => {
                 onClick={() => {
                   handleSetActive("/"); // Set active page to "/"
                   handleNavigateToTop(); // Scroll to the top
+                  window.location.href = "/"; // Ensure the user is directed to the homepage
                 }}
                 className={`hover:text-white transition-all duration-300 transform ${
                   activePage === "/" ? "text-white" : "text-white"
