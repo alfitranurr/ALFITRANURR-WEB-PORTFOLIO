@@ -2,26 +2,20 @@ import * as React from "react";
 import { useState, useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { animateScroll as scroll } from "react-scroll";
+import ProgressBar from "../components/ProgressBar/progressBar";
 
 const Navbar: React.FC = () => {
   const location = useLocation();
   const [activePage, setActivePage] = useState<string>(location.pathname);
-  const [scrollProgress, setScrollProgress] = useState<number>(0);
 
   // Update active page on location change
   useEffect(() => {
     setActivePage(location.pathname);
   }, [location]);
 
-  // Handle scroll progress
+  // If scrolled to the top, set active page to "HOME"
   const handleScroll = () => {
-    const totalHeight =
-      document.documentElement.scrollHeight - window.innerHeight;
     const scrollPosition = window.scrollY;
-    const progress = (scrollPosition / totalHeight) * 100;
-    setScrollProgress(progress);
-
-    // If scrolled to the top, set active page to "HOME"
     if (scrollPosition === 0) {
       setActivePage("/");
     }
@@ -72,10 +66,7 @@ const Navbar: React.FC = () => {
   return (
     <>
       {/* PROGRESS BAR */}
-      <div
-        className="fixed top-0 left-0 right-0 h-0.5 bg-white z-20 transition-all duration-800"
-        style={{ width: `${scrollProgress}%` }}
-      ></div>
+      <ProgressBar />
 
       {/* NAVBAR */}
       <nav className="bg-[var(--warna1-color)] p-4 shadow-xl rounded-4xl mt-4 mb max-w-3xl mx-auto fixed top-0 left-0 right-0 z-[1]">
