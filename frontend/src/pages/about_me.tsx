@@ -1,4 +1,3 @@
-// src/pages/about_me.tsx
 const AboutMe = () => {
   return (
     <section id="about-me" className="flex justify-center mt-6 px-4 pt-[60px]">
@@ -26,7 +25,7 @@ const AboutMe = () => {
             href="https://drive.google.com/file/d/1V4Y25IxtnVF95nSm0oc-fJ28I9UZIxsP/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-6 py-2 text-xs text-white font-semibold rounded-xl shadow-md text-center transition duration-300 bg-[var(--warna2-color)] hover:bg-white hover:text-[var(--warna2-color)] hover:border hover:border-[var(--warna2-color)] hover:transform-none hover:scale-100"
+            className="px-6 py-2 text-xs text-white font-semibold rounded-xl shadow-md text-center transition duration-300 bg-[var(--warna2-color)] border border-transparent hover:bg-white hover:text-[var(--warna2-color)] hover:border-[var(--warna2-color)]"
           >
             <i>Al Fitra Nur Ramadhani's Resume</i>
           </a>
