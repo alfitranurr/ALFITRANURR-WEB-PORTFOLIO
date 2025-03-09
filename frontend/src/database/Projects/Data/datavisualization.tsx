@@ -64,9 +64,9 @@ export const datavisualization = [
   },
   {
     id: 4,
-    title: "Data Visualization Startups and Innovation Hub",
+    title: "Tokopedei Transaction Performance Review Dashboard",
     description:
-      "An initiative to foster innovation in the data visualization startup ecosystem, connecting entrepreneurs, investors, and professionals in the field.",
+      "This is the Transaction Dashboard for Tokopedei, a dummy store created as part of the Fullstack Data Analysis Bootcamp assignment at MySkill. The dashboard was developed using Looker Studio and consists of two pages. It features visualizations of Sales & Profit Performance (All Time), Top Sales by Category, Top Sales by Payment Method, to Transaction Summary Table.",
     image: Tokopedei,
     tags: ["Dashboard"],
     buttons: [
