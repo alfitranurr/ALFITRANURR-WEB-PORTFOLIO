@@ -38,32 +38,32 @@ const Home: React.FC = () => {
         ),
         setTimeout(
           () => setSectionVisibility((prev) => ({ ...prev, techStacks: true })),
-          400
+          350
         ),
         setTimeout(
           () => setSectionVisibility((prev) => ({ ...prev, mapCard: true })),
-          500
+          400
         ),
         setTimeout(
           () => setSectionVisibility((prev) => ({ ...prev, education: true })),
-          600
+          450
         ),
         setTimeout(
           () => setSectionVisibility((prev) => ({ ...prev, experience: true })),
-          700
+          500
         ),
         setTimeout(
           () => setSectionVisibility((prev) => ({ ...prev, projects: true })),
-          800
+          550
         ),
         setTimeout(
           () =>
             setSectionVisibility((prev) => ({ ...prev, certificate: true })),
-          900
+          600
         ),
         setTimeout(
           () => setSectionVisibility((prev) => ({ ...prev, contact: true })),
-          1000
+          650
         ),
       ];
 

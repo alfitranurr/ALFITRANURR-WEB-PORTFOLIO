@@ -8,6 +8,7 @@ const tagColors = ["bg-[#50577A]", "bg-[#6B728E]"];
 
 const DataVisualization = () => {
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
+  const [displayedTag, setDisplayedTag] = useState<string | null>(null);
   const [isDissolving, setIsDissolving] = useState(false);
   const [showScroll, setShowScroll] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false); // State to manage loading
@@ -16,8 +17,9 @@ const DataVisualization = () => {
     ...new Set(datavisualization.flatMap((event) => event.tags)),
   ];
 
-  const filteredCommittees = selectedTag
-    ? datavisualization.filter((event) => event.tags.includes(selectedTag))
+  // Using displayedTag for filtering instead of selectedTag
+  const filteredCommittees = displayedTag
+    ? datavisualization.filter((event) => event.tags.includes(displayedTag))
     : datavisualization;
 
   useEffect(() => {
@@ -41,13 +43,25 @@ const DataVisualization = () => {
     };
   }, []); // Empty dependency array so this effect runs once after initial render
 
+  // Handle tag changes with proper animation sequence
   useEffect(() => {
-    setIsDissolving(true);
-    const timeout = setTimeout(() => {
-      setIsDissolving(false);
-    }, 500);
-    return () => clearTimeout(timeout);
-  }, [selectedTag]);
+    if (selectedTag !== displayedTag) {
+      // Start dissolving animation
+      setIsDissolving(true);
+
+      // After dissolve animation completes, update the displayed content
+      const timeout = setTimeout(() => {
+        setDisplayedTag(selectedTag);
+
+        // Then after a short delay, fade the new content in
+        setTimeout(() => {
+          setIsDissolving(false);
+        }, 50);
+      }, 500); // This should match your dissolve animation duration
+
+      return () => clearTimeout(timeout);
+    }
+  }, [selectedTag, displayedTag]);
 
   useEffect(() => {
     window.scrollTo(0, 0);

@@ -1,6 +1,4 @@
-// src/pages/experience.tsx
-
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import ProfessionalExperienceCard from "../components/Experience/ProfessionalExperienceCard";
 import CommitteesOrganizationsCard from "../components/Experience/CommitteesOrganizationsCard";
 
@@ -8,10 +6,28 @@ const Experience = () => {
   const [activeTab, setActiveTab] = useState<"professional" | "committees">(
     "professional"
   );
+  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [displayedTab, setDisplayedTab] = useState<
+    "professional" | "committees"
+  >("professional");
 
   const handleTabClick = (tab: "professional" | "committees") => {
-    setActiveTab(tab);
+    if (tab !== activeTab) {
+      setIsTransitioning(true);
+      setTimeout(() => {
+        setActiveTab(tab);
+        setDisplayedTab(tab);
+        setTimeout(() => {
+          setIsTransitioning(false);
+        }, 50);
+      }, 300);
+    }
   };
+
+  useEffect(() => {
+    // Initialize the displayed content
+    setDisplayedTab(activeTab);
+  }, []);
 
   return (
     <section
@@ -36,7 +52,7 @@ const Experience = () => {
               activeTab === "professional"
                 ? "bg-white text-[var(--base-color)] rounded-full shadow-md"
                 : "text-gray-300 hover:bg-gray-500 rounded-full"
-            } transition-all duration-200 ease-in-out mx-2`}
+            } transition-all duration-300 ease-in-out mx-2`}
           >
             Professional Experience
           </button>
@@ -48,19 +64,29 @@ const Experience = () => {
               activeTab === "committees"
                 ? "bg-white text-[var(--base-color)] rounded-full shadow-md"
                 : "text-gray-300 hover:bg-gray-500 rounded-full"
-            } transition-all duration-200 ease-in-out mx-2`}
+            } transition-all duration-300 ease-in-out mx-2`}
           >
             Committee & Organization
           </button>
         </div>
       </div>
 
-      {/* CONDITIONAL RENDERING BASED ON SELECTED TAB */}
-      {activeTab === "professional" ? (
-        <ProfessionalExperienceCard />
-      ) : (
-        <CommitteesOrganizationsCard />
-      )}
+      {/* CONTENT CONTAINER WITH SMOOTH TRANSITION */}
+      <div className="w-full overflow-hidden">
+        <div
+          className={`w-full transition-all duration-300 ease-in-out ${
+            isTransitioning
+              ? "opacity-0 transform translate-y-4"
+              : "opacity-100 transform translate-y-0"
+          }`}
+        >
+          {displayedTab === "professional" ? (
+            <ProfessionalExperienceCard />
+          ) : (
+            <CommitteesOrganizationsCard />
+          )}
+        </div>
+      </div>
     </section>
   );
 };
