@@ -8,7 +8,7 @@ const Certificate = () => {
       id="certificate"
       className="flex justify-center mt-6 px-4 pt-[60px]"
     >
-      <div className="w-full max-w-screen-xl mx-auto p-8 border border-white rounded-2xl shadow-md flex flex-col items-center">
+      <div className="w-full max-w-6xl mx-auto p-8 border border-white rounded-2xl shadow-md flex flex-col items-center">
         <h1 className="text-lg font-semibold text-white text-center mb-4">
           MY CERTIFICATES
         </h1>
