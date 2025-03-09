@@ -1,3 +1,4 @@
+import LogoKimiaFarma from "../../assets/images/Experience/Professional/Logo Kimia Farma.png";
 import LogoAzkaGroup from "../../assets/images/Experience/Professional/Logo Azka Group.png";
 import LogoMetadari from "../../assets/images/Experience/Professional/Logo Metadari.png";
 import LogoINDEF from "../../assets/images/Experience/Professional/Logo INDEF.png";
@@ -6,6 +7,15 @@ import LogoMySkill from "../../assets/images/Experience/Professional/Logo MySkil
 const Professional = [
   {
     id: 1,
+    logo: LogoKimiaFarma,
+    title: "Big Data Analytics",
+    company: "Kimia Farma x Rakamin Academy",
+    duration: "Mar 2025 - April 2025",
+    location: "Work From Home (WFH)",
+    description: ["• ", "• ", "• "],
+  },
+  {
+    id: 2,
     logo: LogoAzkaGroup,
     title: "Web Development • Data Automation • Graphic Design",
     company: "CV. Indo Azka Konsultan",
@@ -18,7 +28,7 @@ const Professional = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     logo: LogoMetadari,
     title: "Data Analyst",
     company: "Digital Art and Information (DARI)",
@@ -30,7 +40,7 @@ const Professional = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     logo: LogoINDEF,
     title: "Enumerator",
     company: "Institute for Development of Economics and Finance (INDEF)",
@@ -41,7 +51,7 @@ const Professional = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     logo: LogoMySkill,
     title: "Data Analysis : Fullstack Intensive Bootcamp",
     company: "MySkill",
