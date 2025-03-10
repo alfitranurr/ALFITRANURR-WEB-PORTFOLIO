@@ -70,21 +70,24 @@ const Home: React.FC = () => {
       return () => sectionTimers.forEach((timer) => clearTimeout(timer));
     }, 100);
 
-    const handleScroll = () => {
-      if (window.scrollY > 50) {
+    // Function to check scroll position and update state
+    const checkScrollTop = () => {
+      if (!showScroll && window.scrollY > 100) {
         setShowScroll(true);
-      } else {
+      } else if (showScroll && window.scrollY <= 100) {
         setShowScroll(false);
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    // Add scroll event listener
+    window.addEventListener("scroll", checkScrollTop);
 
+    // Clean up
     return () => {
       clearTimeout(timer);
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", checkScrollTop);
     };
-  }, []);
+  }, [showScroll]);
 
   const name = "Al Fitra Nur Ramadhani";
 
@@ -97,7 +100,6 @@ const Home: React.FC = () => {
   ];
 
   // Reusable transition style
-
   interface TransitionStyle {
     opacity: number;
     transform: string;
@@ -111,103 +113,110 @@ const Home: React.FC = () => {
   });
 
   return (
-    <div
-      className="flex flex-col justify-center items-center min-h-screen relative"
-      style={{
-        opacity: isLoaded ? 1 : 0,
-        transform: isLoaded ? "translateY(0)" : "translateY(50px)",
-        transition: "opacity 1s ease-out, transform 1s ease-out",
-      }}
-    >
-      {/* ==================== TOP SECTION ====================*/}
-      <TopSection name={name} />
-      {/* ==================== POLICE LINE ==================== */}
-      <PoliceLine items={items} isLoaded={isLoaded} />
-      {/* ==================== SECTION ==================== */}
-      {/* ABOUT ME */}
-      <section
-        id="about-me"
-        className="scroll-margin-top-16 w-full"
-        style={{
-          position: "relative",
-          ...getTransitionStyle(sectionVisibility.about),
-        }}
-      >
-        <AboutMe />
-      </section>
-      {/* TECH STACKS */}
-      <div style={getTransitionStyle(sectionVisibility.techStacks)}>
-        <TechStacks />
-      </div>
-      {/* MAP CARD */}
-      <div style={getTransitionStyle(sectionVisibility.mapCard)}>
-        <MapCard />
-      </div>
-      {/* WRAP EDUCATION & EXPERIENCE IN A FLEX CONTAINER */}
+    <div className="overflow-x-hidden w-full">
       <div
-        className="flex flex-col md:flex-row justify-between space-y-8 md:space-y-0 md:space-x-8 mt-8"
-        style={{ maxWidth: "1130px", width: "90%", margin: "0 auto" }}
+        className="flex flex-col justify-center items-center min-h-screen relative max-w-full"
+        style={{
+          opacity: isLoaded ? 1 : 0,
+          transform: isLoaded ? "translateY(0)" : "translateY(50px)",
+          transition: "opacity 1s ease-out, transform 1s ease-out",
+        }}
       >
-        {/* EDUCATION */}
+        {/* ==================== TOP SECTION ====================*/}
+        <TopSection name={name} />
+        {/* ==================== POLICE LINE ==================== */}
+        <PoliceLine items={items} isLoaded={isLoaded} />
+        {/* ==================== SECTION ==================== */}
+        {/* ABOUT ME */}
         <section
-          id="education"
-          className="scroll-margin-top-16"
+          id="about-me"
+          className="scroll-margin-top-16 w-full"
           style={{
             position: "relative",
-            flex: 1,
-            ...getTransitionStyle(sectionVisibility.education),
+            ...getTransitionStyle(sectionVisibility.about),
           }}
         >
-          <Education />
+          <AboutMe />
         </section>
+        {/* TECH STACKS */}
+        <div
+          className="w-full"
+          style={getTransitionStyle(sectionVisibility.techStacks)}
+        >
+          <TechStacks />
+        </div>
+        {/* MAP CARD */}
+        <div
+          className="w-full"
+          style={getTransitionStyle(sectionVisibility.mapCard)}
+        >
+          <MapCard />
+        </div>
+        {/* WRAP EDUCATION & EXPERIENCE IN A FLEX CONTAINER */}
+        <div
+          className="flex flex-col md:flex-row justify-between w-full md:space-y-0 md:space-x-4 mt-8 px-4"
+          style={{ maxWidth: "1180px", margin: "0 auto" }}
+        >
+          {/* EDUCATION */}
+          <section
+            id="education"
+            className="scroll-margin-top-16 w-full md:w-1/2"
+            style={{
+              position: "relative",
+              ...getTransitionStyle(sectionVisibility.education),
+            }}
+          >
+            <Education />
+          </section>
 
-        {/* EXPERIENCE */}
+          {/* EXPERIENCE */}
+          <section
+            id="experience"
+            className="scroll-margin-top-16 w-full md:w-1/2 mt-8 md:mt-0"
+            style={{
+              position: "relative",
+              ...getTransitionStyle(sectionVisibility.experience),
+            }}
+          >
+            <Experience />
+          </section>
+        </div>
+        {/* PROJECTS */}
         <section
-          id="experience"
-          className="scroll-margin-top-16"
+          id="projects"
+          className="scroll-margin-top-16 w-full"
           style={{
             position: "relative",
-            flex: 1,
-            ...getTransitionStyle(sectionVisibility.experience),
+            ...getTransitionStyle(sectionVisibility.projects),
           }}
         >
-          <Experience />
+          <Projects />
+        </section>
+        {/* CERTIFICATE */}
+        <section
+          id="certificate"
+          className="scroll-margin-top-16 w-full"
+          style={{
+            position: "relative",
+            ...getTransitionStyle(sectionVisibility.certificate),
+          }}
+        >
+          <Certificate />
+        </section>
+        {/* CONTACT */}
+        <section
+          id="contact"
+          className="scroll-margin-top-16 w-full"
+          style={{
+            position: "relative",
+            ...getTransitionStyle(sectionVisibility.contact),
+          }}
+        >
+          <Contact />
         </section>
       </div>
-      {/* PROJECTS */}
-      <section
-        id="projects"
-        className="scroll-margin-top-16"
-        style={{
-          position: "relative",
-          ...getTransitionStyle(sectionVisibility.projects),
-        }}
-      >
-        <Projects />
-      </section>
-      {/* CERTIFICATE */}
-      <section
-        id="certificate"
-        className="scroll-margin-top-16"
-        style={{
-          position: "relative",
-          ...getTransitionStyle(sectionVisibility.certificate),
-        }}
-      >
-        <Certificate />
-      </section>
-      {/* CONTACT */}
-      <section
-        id="contact"
-        className="scroll-margin-top-16"
-        style={{
-          position: "relative",
-          ...getTransitionStyle(sectionVisibility.contact),
-        }}
-      >
-        <Contact />
-      </section>
-      {/* ==================== SCROLL TO TOP BUTTON ==================== */}
+
+      {/* SCROLL TO TOP BUTTON */}
       <ScrollToTopButton showScroll={showScroll} />
     </div>
   );

@@ -65,6 +65,16 @@ const Projects = () => {
               Discover hidden patterns and insights in large datasets.
             </p>
           </Link>
+
+          <Link
+            to="/components/Projects/Data/DataModelingSimulation/datamodelingsimulation"
+            className="max-w-[250px] w-full border border-white rounded-lg p-4 shadow transition transform hover:scale-95 hover:shadow-lg hover:cursor-pointer hover:bg-white hover:text-[var(--warna1-color)]"
+          >
+            <h3 className="text-base font-bold">Data Modeling & Simulation</h3>
+            <p className="mt-1 text-xs">
+              Build predictive models and simulate complex systems.
+            </p>
+          </Link>
         </div>
 
         {/* ====================================== BEYOND DATA ====================================== */}

@@ -15,6 +15,7 @@ import ArtificialIntelligence from "./components/Projects/Data/ArtificialIntelli
 import DataAutomation from "./components/Projects/Data/DataAutomation/dataautomation";
 import DataAnalytics from "./components/Projects/Data/DataAnalytic/dataanalytic";
 import DataMining from "./components/Projects/Data/DataMining/datamining";
+import DataModelingSimulation from "./components/Projects/Data/DataModelingSimulation/datamodelingsimulation";
 
 /* BEYOND DATA */
 import DigitalMarketing from "./components/Projects/BeyondData/DigitalMarketing/digitalmarketing";
@@ -70,6 +71,10 @@ const App: React.FC = () => {
             <Route
               path="/components/Projects/Data/DataMining/datamining"
               element={<DataMining />}
+            />
+            <Route
+              path="/components/Projects/Data/DataModelingSimulation/datamodelingsimulation"
+              element={<DataModelingSimulation />}
             />
             {/* BEYOND DATA PROJECTS */}
             <Route
