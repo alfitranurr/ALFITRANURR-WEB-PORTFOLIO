@@ -22,12 +22,8 @@ const licenses: License[] = [
     tags: ["Certification", "Cybersecurity", "Ethical Hacking", "IT"],
     buttons: [
       {
-        text: "View Certification",
-        link: "/licenses/ethical-hacker", // Adjust this URL based on the real path
-      },
-      {
-        text: "View Project",
-        link: "/projects/ethical-hacker", // Adjust this URL based on the real path
+        text: "View Certificate",
+        link: "/licenses/ethical-hacker", 
       },
     ],
   },
@@ -40,12 +36,8 @@ const licenses: License[] = [
     tags: ["Certification", "Project Management", "Leadership", "Business"],
     buttons: [
       {
-        text: "View Certification",
-        link: "/licenses/project-management-professional", // Adjust this URL based on the real path
-      },
-      {
-        text: "View Project",
-        link: "/projects/project-management-professional", // Adjust this URL based on the real path
+        text: "View Certificate",
+        link: "/licenses/project-management-professional", 
       },
     ],
   },
@@ -58,12 +50,8 @@ const licenses: License[] = [
     tags: ["Certification", "Analytics", "Digital Marketing", "Google"],
     buttons: [
       {
-        text: "View Certification",
-        link: "/licenses/google-analytics", // Adjust this URL based on the real path
-      },
-      {
-        text: "View Project",
-        link: "/projects/google-analytics", // Adjust this URL based on the real path
+        text: "View Certificate",
+        link: "/licenses/google-analytics",
       },
     ],
   },
@@ -76,12 +64,8 @@ const licenses: License[] = [
     tags: ["Certification", "Accounting", "Finance", "Taxation"],
     buttons: [
       {
-        text: "View Certification",
-        link: "/licenses/public-accountant", // Adjust this URL based on the real path
-      },
-      {
-        text: "View Project",
-        link: "/projects/public-accountant", // Adjust this URL based on the real path
+        text: "View Certificate",
+        link: "/licenses/public-accountant", 
       },
     ],
   },
