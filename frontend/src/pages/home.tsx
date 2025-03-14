@@ -109,7 +109,7 @@ const Home: React.FC = () => {
       { ref: contactRef, id: "contact" },
     ];
 
-    refs.forEach(({ ref, id }) => {
+    refs.forEach(({ ref }) => {
       if (ref.current) {
         sectionObserver.observe(ref.current);
       }
