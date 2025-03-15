@@ -133,6 +133,7 @@ const Home: React.FC = () => {
     "Data Analyst",
     "Data Engineering",
     "Data Scientist",
+    "Bussiness Intelligence Analyst",
     "Digital Marketing Enthusiast",
   ];
 
