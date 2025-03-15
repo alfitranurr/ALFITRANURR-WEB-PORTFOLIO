@@ -51,49 +51,59 @@ const techStacksInfinite = [...Array(4)].flatMap(() => techStacks);
 
 const InfiniteScroll = () => {
   return (
-    <div className="bg-[var(--base-color)] w-full p-4 rounded-xl shadow-md text-white max-w-6xl mx-auto mt-6 overflow-hidden flex flex-col items-center text-center">
-      <h2 className="text-lg font-semibold text-center mb-6 w-full">
-        Tech Stacks That I Have Used
-      </h2>
+    <section
+      id="tech-stacks"
+      className="flex justify-center mt-6 px-4 pt-[20px]"
+    >
+      <div className="max-w-6xl w-full p-4 overflow-hidden flex flex-col items-center text-center mx-auto">
+        <h2 className="text-lg font-semibold text-center mb-6 w-full">
+          Tech Stacks That I Have Used
+        </h2>
 
-      <div className="relative w-full overflow-hidden flex flex-col items-center">
-        {[0, 1, 2].map((row) => (
-          <motion.div
-            key={row}
-            className="flex space-x-4 mb-3"
-            animate={{
-              x: row === 0 ? [0, -1000] : row === 1 ? [0, 2000] : [0, -1500],
-            }}
-            transition={{
-              ease: "linear",
-              repeat: Infinity,
-              duration: 60,
-            }}
-            style={{
-              display: "flex",
-              flexWrap: "nowrap",
-              willChange: "transform",
-            }}
-          >
-            {/* Limiting the number of items rendered per row */}
-            {techStacksInfinite.map((tech, index) => (
-              <div
-                key={index}
-                className="flex items-center justify-center space-x-1 rounded-full px-4 py-2 border-2 border-gray-500 transition-all hover:border-white"
-                style={{
-                  display: "inline-flex",
-                  whiteSpace: "nowrap",
-                  minWidth: "auto",
-                }}
-              >
-                <div className="text-3xl">{tech.icon}</div>
-                <span className="text-xs">{tech.name}</span>
-              </div>
-            ))}
-          </motion.div>
-        ))}
+        <div className="relative w-full overflow-hidden flex flex-col items-center">
+          {/* Left edge gradient brush */}
+          <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-[var(--base-color)] to-transparent z-10"></div>
+
+          {/* Right edge gradient brush */}
+          <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-[var(--base-color)] to-transparent z-10"></div>
+
+          {[0, 1, 2].map((row) => (
+            <motion.div
+              key={row}
+              className="flex space-x-4 mb-3"
+              animate={{
+                x: row === 0 ? [0, -1000] : row === 1 ? [0, 2000] : [0, -1500],
+              }}
+              transition={{
+                ease: "linear",
+                repeat: Infinity,
+                duration: 60,
+              }}
+              style={{
+                display: "flex",
+                flexWrap: "nowrap",
+                willChange: "transform",
+              }}
+            >
+              {techStacksInfinite.map((tech, index) => (
+                <div
+                  key={index}
+                  className="flex items-center justify-center space-x-1 rounded-full px-4 py-2 border-2 border-gray-500 transition-all hover:border-white"
+                  style={{
+                    display: "inline-flex",
+                    whiteSpace: "nowrap",
+                    minWidth: "auto",
+                  }}
+                >
+                  <div className="text-3xl">{tech.icon}</div>
+                  <span className="text-xs">{tech.name}</span>
+                </div>
+              ))}
+            </motion.div>
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
