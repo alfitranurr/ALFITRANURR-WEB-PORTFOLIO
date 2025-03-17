@@ -1,11 +1,13 @@
 import * as React from "react";
 import { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { animateScroll as scroll } from "react-scroll";
+
 import ProgressBar from "../components/ProgressBar/progressBar";
 
 const Navbar: React.FC = () => {
   const location = useLocation();
+  const navigate = useNavigate();
   const [activePage, setActivePage] = useState<string>(location.pathname);
 
   // Update active page on location change
@@ -28,10 +30,20 @@ const Navbar: React.FC = () => {
     };
   }, []);
 
-  // Function to handle section change when clicking links
-  const handleSetActive = (section: string) => {
-    setActivePage(section);
-    document.getElementById(section)?.scrollIntoView({ behavior: "smooth" });
+  // Function to handle section navigation
+  const handleSetActive = (sectionId: string) => {
+    setActivePage(sectionId);
+
+    // If not on Home page, navigate to Home first, then scroll to section
+    if (location.pathname !== "/") {
+      navigate("/", { state: { scrollTo: sectionId } });
+    } else {
+      // If already on home page, just scroll to the section
+      const sectionElement = document.getElementById(sectionId);
+      if (sectionElement) {
+        sectionElement.scrollIntoView({ behavior: "smooth" });
+      }
+    }
   };
 
   // Function to handle section visibility on scroll
@@ -59,8 +71,31 @@ const Navbar: React.FC = () => {
     };
   }, []);
 
+  // Check for scrollTo state when component mounts or updates
+  useEffect(() => {
+    const state = location.state as { scrollTo?: string } | null;
+    if (state && state.scrollTo) {
+      // Small delay to ensure the component is fully rendered
+      setTimeout(() => {
+        const sectionToScrollTo = document.getElementById(
+          state.scrollTo as string
+        );
+        if (sectionToScrollTo) {
+          sectionToScrollTo.scrollIntoView({ behavior: "smooth" });
+          // Clear the state to prevent scrolling again on subsequent renders
+          navigate("/", { replace: true });
+        }
+      }, 100);
+    }
+  }, [location.state, navigate]);
+
   const handleNavigateToTop = () => {
+    // Navigate to home page if not already there
+    if (location.pathname !== "/") {
+      navigate("/");
+    }
     scroll.scrollToTop({ duration: 500, smooth: "easeInOutQuad" });
+    setActivePage("/");
   };
 
   return (
@@ -74,12 +109,11 @@ const Navbar: React.FC = () => {
           <ul className="flex space-x-10">
             {/* HOME */}
             <li className="text-xs text-white relative group">
-              <Link
-                to="/"
+              <button
+                onClick={handleNavigateToTop}
                 className={`hover:text-white transition-all duration-300 transform ${
                   activePage === "/" ? "text-white" : ""
                 }`}
-                onClick={handleNavigateToTop}
               >
                 HOME
                 <span
@@ -89,7 +123,7 @@ const Navbar: React.FC = () => {
                       : "group-hover:w-full group-hover:left-0"
                   }`}
                 ></span>
-              </Link>
+              </button>
             </li>
 
             {/* ABOUT ME */}
@@ -130,12 +164,12 @@ const Navbar: React.FC = () => {
               </button>
             </li>
 
-            {/* PROFESSIONAL */}
+            {/* EXPERIENCE */}
             <li className="text-xs text-white relative group">
               <button
                 onClick={() => handleSetActive("experience")}
                 className={`hover:text-white transition-all duration-300 transform cursor-pointer ${
-                  activePage === "professional" ? "text-white" : "text-white"
+                  activePage === "experience" ? "text-white" : "text-white"
                 }`}
               >
                 EXPERIENCE
