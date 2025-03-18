@@ -16,7 +16,7 @@ const graphicdesign = [
     buttons: [
       {
         text: "View Design",
-        link: "https://drive.google.com/file/d/1Df-5SnrroIm5MVzpyFE5JItX5wZpg_lK/view?usp=sharing",
+        link: "https://drive.google.com/file/d/1DqL3tRZIdVcoZCLPQPKjDoHAERVVJIny/view?usp=drive_link",
       },
     ],
   },
