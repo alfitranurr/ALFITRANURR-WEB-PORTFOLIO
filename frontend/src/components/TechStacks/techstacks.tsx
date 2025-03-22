@@ -56,9 +56,9 @@ const InfiniteScroll = () => {
       className="flex justify-center mt-6 px-4 pt-[20px]"
     >
       <div className="max-w-6xl w-full p-4 overflow-hidden flex flex-col items-center text-center mx-auto">
-        <h2 className="text-lg font-semibold text-center mb-6 w-full">
+        <h1 className="text-lg font-semibold text-center mb-6 w-full">
           Tech Stacks That I Have Used
-        </h2>
+        </h1>
 
         <div className="relative w-full overflow-hidden flex flex-col items-center">
           {/* Left edge gradient brush */}

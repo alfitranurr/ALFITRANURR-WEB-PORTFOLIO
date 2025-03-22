@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
-import PMMKarangkates from "../../assets/images/Certificate/CommitteeOrganization/Certificate - PMM 101 Karangkates - 2024-1.png";
 
 interface TopSectionProps {
   name: string;
@@ -43,7 +42,7 @@ const TopSection: React.FC<TopSectionProps> = ({ name, profileImage }) => {
         }
 
         // Pause for 2 seconds after the name is fully displayed
-        await new Promise((resolve) => setTimeout(resolve, 2000)); // 2000ms = 2 seconds
+        await new Promise((resolve) => setTimeout(resolve, 3000)); // 2000ms = 2 seconds
 
         // Hide each letter from right to left
         for (let i = allLetters.length - 1; i >= 0; i--) {
@@ -77,15 +76,25 @@ const TopSection: React.FC<TopSectionProps> = ({ name, profileImage }) => {
       {/* Bingkai Foto Lingkaran */}
       <div className="mb-6 flex justify-center">
         <motion.div
-          className="w-36 h-36 rounded-full overflow-hidden border-4 border-white"
+          className="w-36 h-36 rounded-full overflow-hidden border-4 border-white bg-gray-200"
           whileHover={{ scale: 1.05 }}
           transition={{ type: "spring", stiffness: 300, damping: 20 }}
         >
-          <img
-            src={profileImage || PMMKarangkates}
-            alt="Profile"
-            className="w-full h-full object-cover"
-          />
+          {profileImage ? (
+            <img
+              src={profileImage}
+              alt="Profile"
+              className="w-full h-full object-cover"
+            />
+          ) : (
+            <svg
+              className="w-full h-full text-gray-500"
+              fill="currentColor"
+              viewBox="0 0 24 15"
+            >
+              <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+            </svg>
+          )}
         </motion.div>
       </div>
 
