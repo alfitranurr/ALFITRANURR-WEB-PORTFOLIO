@@ -1,81 +1,100 @@
-import OrganizationImage from "../../../assets/images/Pantai.png";
+import AzkaGroupBali from "../../../assets/images/Projects/BeyondData/GraphicDesign/Azka Group - Flyer Azka Group Goes to Bali.png";
+import PMM101TelurAsin from "../../../assets/images/Projects/BeyondData/GraphicDesign/PMM 101 Karangkates - Brosur UMKM Telur Asin DAS.png";
+import PMM101Metaverse from "../../../assets/images/Projects/BeyondData/GraphicDesign/PMM 101 Karangkates - Metaverse Poster.png";
+import RKDoaKhotmilRaker1 from "../../../assets/images/Projects/BeyondData/GraphicDesign/Rumah Kepemimpinan - Doa Khotmil Quran & Rapat Kerja Kabinet.png";
+import SDGsIsraMiraj from "../../../assets/images/Projects/BeyondData/GraphicDesign/SDGs UMM - Isra Miraj 14146 H.png";
+import SDGsPilar1 from "../../../assets/images/Projects/BeyondData/GraphicDesign/SDGs UMM - Pilar 1 (No Poverty).png";
+import SDGsUASGanjil from "../../../assets/images/Projects/BeyondData/GraphicDesign/SDGs UMM - Ujian Akhir Semester.png";
 
 const graphicdesign = [
   {
     id: 1,
-    title: "Graphic Design Research Group",
-    description:
-      "A global group dedicated to advancing research in graphic design, exploring innovative techniques, and promoting creativity among graphic design experts.",
-    image: OrganizationImage,
-    tags: ["Committee", "Graphic Design", "Research"],
+    title: "Azka Group - Flyer Azka Group Goes to Bali",
+    description: "",
+    image: AzkaGroupBali,
+    tags: [""],
     buttons: [
       {
-        text: "View Committee",
-        link: "https://drive.google.com/drive/folders/1-4R1VSKn6FQnBoxEx4ZwyvFTyP970WQj?usp=sharing", // Adjust the link accordingly
-      },
-      {
-        text: "View Project",
-        link: "/projects/graphic-design-research", // Adjust the link accordingly
+        text: "View Design",
+        link: "https://drive.google.com/file/d/1DqL3tRZIdVcoZCLPQPKjDoHAERVVJIny/view?usp=drive_link",
       },
     ],
   },
   {
     id: 2,
-    title: "Design for Social Impact Coalition",
-    description:
-      "A coalition of organizations focused on using graphic design to solve global challenges such as education, environmental sustainability, and social justice.",
-    image: OrganizationImage,
-    tags: ["Committee", "Graphic Design", "Social Impact"],
+    title: "PMM 101 Karangkates - Brosur UMKM Telur Asin DAS",
+    description: "",
+    image: PMM101TelurAsin,
+    tags: [""],
     buttons: [
       {
-        text: "View Committee",
-        link: "/committee/social-impact", // Adjust the link accordingly
-      },
-      {
-        text: "View Project",
-        link: "/projects/social-impact", // Adjust the link accordingly
+        text: "View Design",
+        link: "https://drive.google.com/file/d/1-JNjMpronIJgtpALul7OSJ8gp6bygZIQ/view?usp=drive_link",
       },
     ],
   },
   {
     id: 3,
-    title: "Design Ethics and Visual Culture Forum",
-    description:
-      "An interdisciplinary forum discussing the ethical implications of graphic design, the influence of visual culture, and its impact on society.",
-    image: OrganizationImage,
-    tags: ["Committee", "Design Ethics", "Visual Culture"],
+    title: "PMM 101 Karangkates - Metaverse Poster",
+    description: "",
+    image: PMM101Metaverse,
+    tags: [""],
     buttons: [
       {
-        text: "View Committee",
-        link: "/committee/design-ethics", // Adjust the link accordingly
-      },
-      {
-        text: "View Project",
-        link: "/projects/design-ethics", // Adjust the link accordingly
+        text: "View Design",
+        link: "https://drive.google.com/file/d/1PWRNFrkuhVh043aQ4LfMJmdIGLv1ktAd/view?usp=drive_link",
       },
     ],
   },
   {
     id: 4,
-    title: "Graphic Design Innovation and Startups Hub",
-    description:
-      "An initiative to foster innovation in the graphic design startup ecosystem, connecting designers, entrepreneurs, and professionals in the field.",
-    image: OrganizationImage,
-    tags: [
-      "Committee",
-      "Design Startups",
-      "Innovation",
-      "Entrepreneurship",
-      "Graphic Design",
-    ],
+    title: "Rumah Kepemimpinan - Doa Khotmil Quran & Rapat Kerja Kabinet",
+    description: "",
+    image: RKDoaKhotmilRaker1,
+    tags: [""],
     buttons: [
       {
-        text: "View Committee",
-        link: "/committee/design-startups", // Adjust the link accordingly
+        text: "View Design",
+        link: "https://drive.google.com/file/d/1HzOSPnIV_O4MGI2D1MPpPHT0IAbAPYy1/view?usp=drive_link",
       },
+    ],
+  },
+  {
+    id: 5,
+    title: "SDGs UMM - Isra Miraj 14146 H",
+    description: "",
+    image: SDGsIsraMiraj,
+    tags: [""],
+    buttons: [
       {
-        text: "View Project",
-        link: "/projects/design-startups", // Adjust the link accordingly
+        text: "View Design",
+        link: "https://drive.google.com/file/d/1m-bL5Zw19qOlIQnmuJ4_nplZpiI0qMmn/view?usp=drive_link",
+      },
+    ],
+  },
+  {
+    id: 6,
+    title: "SDGs UMM - Pilar 1 (No Poverty)",
+    description: "",
+    image: SDGsPilar1,
+    tags: [""],
+    buttons: [
+      {
+        text: "View Design",
+        link: "https://drive.google.com/file/d/1SrcAbdZRqddgQqsWS_e25WoDhE0IINyY/view?usp=drive_link",
+      },
+    ],
+  },
+  {
+    id: 7,
+    title: "SDGs UMM - Ujian Akhir Semester",
+    description: "",
+    image: SDGsUASGanjil,
+    tags: [""],
+    buttons: [
+      {
+        text: "View Design",
+        link: "https://drive.google.com/file/d/1Hj0v2aTqF-hpnfspNTcR4OaZ1nVWpqJ6/view?usp=drive_link",
       },
     ],
   },
