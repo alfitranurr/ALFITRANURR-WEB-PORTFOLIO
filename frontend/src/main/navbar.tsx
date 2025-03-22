@@ -111,7 +111,7 @@ const Navbar: React.FC = () => {
             <li className="text-xs text-white relative group">
               <button
                 onClick={handleNavigateToTop}
-                className={`hover:text-white transition-all duration-300 transform ${
+                className={`hover:text-white transition-all duration-300 transform cursor-pointer ${
                   activePage === "/" ? "text-white" : ""
                 }`}
               >
