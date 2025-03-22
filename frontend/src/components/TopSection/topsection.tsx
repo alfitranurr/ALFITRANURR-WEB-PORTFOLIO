@@ -72,7 +72,7 @@ const TopSection: React.FC<TopSectionProps> = ({ name, profileImage }) => {
   }, [controls, name]);
 
   return (
-    <div className="text-center text-white mt-28">
+    <div className="text-center text-white mt-27">
       {/* Bingkai Foto Lingkaran */}
       <div className="mb-6 flex justify-center">
         <motion.div
