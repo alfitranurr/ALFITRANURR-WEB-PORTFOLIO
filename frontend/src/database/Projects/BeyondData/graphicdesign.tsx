@@ -12,7 +12,7 @@ const graphicdesign = [
     title: "Azka Group - Flyer Azka Group Goes to Bali",
     description: "",
     image: AzkaGroupBali,
-    tags: [],
+    tags: [""],
     buttons: [
       {
         text: "View Design",
@@ -25,7 +25,7 @@ const graphicdesign = [
     title: "PMM 101 Karangkates - Brosur UMKM Telur Asin DAS",
     description: "",
     image: PMM101TelurAsin,
-    tags: [],
+    tags: [""],
     buttons: [
       {
         text: "View Design",
@@ -38,7 +38,7 @@ const graphicdesign = [
     title: "PMM 101 Karangkates - Metaverse Poster",
     description: "",
     image: PMM101Metaverse,
-    tags: [],
+    tags: [""],
     buttons: [
       {
         text: "View Design",
@@ -51,7 +51,7 @@ const graphicdesign = [
     title: "Rumah Kepemimpinan - Doa Khotmil Quran & Rapat Kerja Kabinet",
     description: "",
     image: RKDoaKhotmilRaker1,
-    tags: [],
+    tags: [""],
     buttons: [
       {
         text: "View Design",
@@ -64,7 +64,7 @@ const graphicdesign = [
     title: "SDGs UMM - Isra Miraj 14146 H",
     description: "",
     image: SDGsIsraMiraj,
-    tags: [],
+    tags: [""],
     buttons: [
       {
         text: "View Design",
@@ -77,7 +77,7 @@ const graphicdesign = [
     title: "SDGs UMM - Pilar 1 (No Poverty)",
     description: "",
     image: SDGsPilar1,
-    tags: [],
+    tags: [""],
     buttons: [
       {
         text: "View Design",
@@ -90,7 +90,7 @@ const graphicdesign = [
     title: "SDGs UMM - Ujian Akhir Semester",
     description: "",
     image: SDGsUASGanjil,
-    tags: [],
+    tags: [""],
     buttons: [
       {
         text: "View Design",
