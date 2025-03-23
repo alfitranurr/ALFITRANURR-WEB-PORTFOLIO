@@ -3,78 +3,57 @@ import OrganizationImage from "../../../assets/images/Pantai.png";
 export const dataModelingSimulation = [
   {
     id: 1,
-    title: "Data Modeling Research Group",
+    title: "Bank Queue Simulation",
     description:
       "A global community focused on advancing the field of data modeling, exploring new methodologies and tools to model complex systems and data structures.",
     image: OrganizationImage,
-    tags: ["Committee", "Data Modeling", "Research"],
+    tags: [""],
     buttons: [
       {
-        text: "View Committee",
-        link: "https://drive.google.com/drive/folders/1-4R1VSKn6FQnBoxEx4ZwyvFTyP970WQj?usp=sharing", // Adjust the link accordingly
-      },
-      {
         text: "View Project",
-        link: "/projects/data-modeling-research-group", // Adjust the link accordingly
+        link: "https://github.com/alfitranurr/DATA-MODELING-AND-SIMULATION/tree/master/BankQueueSimulation",
       },
     ],
   },
   {
     id: 2,
-    title: "Data Modeling for Sustainable Development Coalition",
+    title: "Call Centre Queue Simulation",
     description:
       "A coalition of experts and organizations leveraging data modeling techniques to solve pressing global challenges such as sustainability, resource management, and urban development.",
     image: OrganizationImage,
-    tags: ["Committee", "Data Modeling", "Sustainability"],
+    tags: [""],
     buttons: [
       {
-        text: "View Committee",
-        link: "/committee/data-modeling-for-sustainable-development", // Adjust the link accordingly
-      },
-      {
         text: "View Project",
-        link: "/projects/data-modeling-sustainable-development-coalition", // Adjust the link accordingly
+        link: "https://github.com/alfitranurr/DATA-MODELING-AND-SIMULATION/tree/master/Call%20Centre%20Queue%20Simulation",
       },
     ],
   },
   {
     id: 3,
-    title: "Data Modeling Ethics and Regulation Forum",
+    title: "Concert Ticket System Booking System",
     description:
       "An interdisciplinary forum exploring the ethical implications and governance of data modeling, focusing on privacy, security, and regulatory frameworks.",
     image: OrganizationImage,
-    tags: ["Committee", "Data Modeling Ethics", "Regulation"],
+    tags: [""],
     buttons: [
       {
-        text: "View Committee",
-        link: "/committee/data-modeling-ethics-regulation", // Adjust the link accordingly
-      },
-      {
         text: "View Project",
-        link: "/projects/data-modeling-ethics-regulation-forum", // Adjust the link accordingly
+        link: "https://github.com/alfitranurr/DATA-MODELING-AND-SIMULATION/tree/master/ConcertTicketBookingSystem",
       },
     ],
   },
   {
     id: 4,
-    title: "Data Modeling Startups and Innovation Hub",
+    title: "Monte Carlo Simulation",
     description:
       "An initiative designed to connect innovators, entrepreneurs, and investors within the data modeling ecosystem, fostering groundbreaking projects and new ventures.",
     image: OrganizationImage,
-    tags: [
-      "Committee",
-      "Data Modeling Startups",
-      "Innovation",
-      "Entrepreneurship",
-    ],
+    tags: [""],
     buttons: [
       {
-        text: "View Committee",
-        link: "/committee/data-modeling-startups-innovation", // Adjust the link accordingly
-      },
-      {
         text: "View Project",
-        link: "/projects/data-modeling-startups-innovation-hub", // Adjust the link accordingly
+        link: "https://github.com/alfitranurr/DATA-MODELING-AND-SIMULATION/tree/master/MonteCarloSimulation",
       },
     ],
   },
