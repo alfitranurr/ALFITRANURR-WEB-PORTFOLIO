@@ -126,7 +126,7 @@ const licenses: License[] = [
     description:
       "A certification for accounting professionals that is recognized worldwide, demonstrating expertise in accounting principles, taxation, and financial reporting.",
     image: FLSPUMM,
-    tags: ["National"],
+    tags: ["Local"],
     buttons: [
       {
         text: "View Certificate",
