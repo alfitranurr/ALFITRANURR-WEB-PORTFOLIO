@@ -1,11 +1,11 @@
-import OrganizationImage from "../../../assets/images/Projects/BeyondData/mobiledevelopment/ElMovie.png";
+import ElMovie from "../../../assets/images/Projects/BeyondData/mobiledevelopment/ElMovie.png";
 
 const mobiledevelopment = [
   {
     id: 1,
     title: "ElMovie",
     description: "",
-    image: OrganizationImage,
+    image: ElMovie,
     tags: ["Flutter"],
     buttons: [
       {

@@ -7,8 +7,7 @@ export const dataModelingSimulation = [
   {
     id: 1,
     title: "Bank Queue Simulation",
-    description:
-      "A global community focused on advancing the field of data modeling, exploring new methodologies and tools to model complex systems and data structures.",
+    description: "",
     image: BankQueueSimulation,
     tags: [""],
     buttons: [
@@ -21,8 +20,7 @@ export const dataModelingSimulation = [
   {
     id: 2,
     title: "Call Centre Queue Simulation",
-    description:
-      "A coalition of experts and organizations leveraging data modeling techniques to solve pressing global challenges such as sustainability, resource management, and urban development.",
+    description: "",
     image: CallCentreQueueSimulation,
     tags: [""],
     buttons: [
@@ -35,8 +33,7 @@ export const dataModelingSimulation = [
   {
     id: 3,
     title: "Concert Ticket System Booking Simulation",
-    description:
-      "An interdisciplinary forum exploring the ethical implications and governance of data modeling, focusing on privacy, security, and regulatory frameworks.",
+    description: "",
     image: ConcertTicketSimulation,
     tags: [""],
     buttons: [
@@ -49,8 +46,7 @@ export const dataModelingSimulation = [
   {
     id: 4,
     title: "Monte Carlo Simulation",
-    description:
-      "An initiative designed to connect innovators, entrepreneurs, and investors within the data modeling ecosystem, fostering groundbreaking projects and new ventures.",
+    description: "",
     image: MonteCarloSimulation,
     tags: [""],
     buttons: [
