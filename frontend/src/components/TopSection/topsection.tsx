@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
+import ProfileIMG from "../../assets/images/Heading/Logo Web Portfolio.png"; // Import the image
 
 interface TopSectionProps {
   name: string;
-  profileImage?: string;
+  profileImage?: string; // This can remain optional
 }
 
 // Variants for typewriter animation
@@ -13,7 +14,10 @@ const letterVariants = {
   exit: { opacity: 0, x: 20 }, // Exit to the right
 };
 
-const TopSection: React.FC<TopSectionProps> = ({ name, profileImage }) => {
+const TopSection: React.FC<TopSectionProps> = ({
+  name,
+  profileImage = ProfileIMG,
+}) => {
   const controls = useAnimation();
 
   useEffect(() => {
