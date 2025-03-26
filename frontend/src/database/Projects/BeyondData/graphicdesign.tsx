@@ -2,6 +2,7 @@ import AzkaGroupBali from "../../../assets/images/Projects/BeyondData/GraphicDes
 import PMM101TelurAsin from "../../../assets/images/Projects/BeyondData/GraphicDesign/PMM 101 Karangkates - Brosur UMKM Telur Asin DAS.png";
 import PMM101Metaverse from "../../../assets/images/Projects/BeyondData/GraphicDesign/PMM 101 Karangkates - Metaverse Poster.png";
 import RKDoaKhotmilRaker1 from "../../../assets/images/Projects/BeyondData/GraphicDesign/Rumah Kepemimpinan - Doa Khotmil Quran & Rapat Kerja Kabinet.png";
+import RKDoaKhotmilRaker2 from "../../../assets/images/Projects/BeyondData/GraphicDesign/Rumah Kepemimpinan - Doa Khotmil Quran & Rapat Kerja Kabinet Part 2.png";
 import SDGsIsraMiraj from "../../../assets/images/Projects/BeyondData/GraphicDesign/SDGs UMM - Isra Miraj 14146 H.png";
 import SDGsPilar1 from "../../../assets/images/Projects/BeyondData/GraphicDesign/SDGs UMM - Pilar 1 (No Poverty).png";
 import SDGsUASGanjil from "../../../assets/images/Projects/BeyondData/GraphicDesign/SDGs UMM - Ujian Akhir Semester.png";
@@ -61,6 +62,20 @@ const graphicdesign = [
   },
   {
     id: 5,
+    title:
+      "Rumah Kepemimpinan - Doa Khotmil Quran & Rapat Kerja Kabinet Part 2",
+    description: "",
+    image: RKDoaKhotmilRaker2,
+    tags: [""],
+    buttons: [
+      {
+        text: "View Design",
+        link: "https://drive.google.com/file/d/1Zyq0vr2bhWn44gdzhY9MLaqCwDS1ToKW/view?usp=sharing",
+      },
+    ],
+  },
+  {
+    id: 6,
     title: "SDGs UMM - Isra Miraj 14146 H",
     description: "",
     image: SDGsIsraMiraj,
@@ -73,7 +88,7 @@ const graphicdesign = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     title: "SDGs UMM - Pilar 1 (No Poverty)",
     description: "",
     image: SDGsPilar1,
@@ -86,7 +101,7 @@ const graphicdesign = [
     ],
   },
   {
-    id: 7,
+    id: 8,
     title: "SDGs UMM - Ujian Akhir Semester",
     description: "",
     image: SDGsUASGanjil,

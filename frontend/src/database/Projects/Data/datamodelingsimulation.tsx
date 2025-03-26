@@ -34,7 +34,7 @@ export const dataModelingSimulation = [
   },
   {
     id: 3,
-    title: "Concert Ticket System Booking System Simulation",
+    title: "Concert Ticket System Booking Simulation",
     description:
       "An interdisciplinary forum exploring the ethical implications and governance of data modeling, focusing on privacy, security, and regulatory frameworks.",
     image: ConcertTicketSimulation,
