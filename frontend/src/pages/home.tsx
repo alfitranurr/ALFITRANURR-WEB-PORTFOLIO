@@ -63,7 +63,7 @@ const Home: React.FC = () => {
 
         {/* ==================== SECTIONS ==================== */}
         {/* ABOUT ME */}
-        <section id="about-me" className="mt-16 w-full scroll-mt-16">
+        <section id="about-me" className="mt-16 w-full">
           <AboutMe />
         </section>
 
@@ -80,31 +80,28 @@ const Home: React.FC = () => {
         {/* WRAP EDUCATION & EXPERIENCE IN A FLEX CONTAINER */}
         <div className="flex flex-col md:flex-row justify-between w-full md:space-y-0 md:space-x-4 mt-8 px-4 max-w-[1180px] mx-auto">
           {/* EDUCATION */}
-          <section id="education" className="scroll-mt-16 w-full md:w-1/2">
+          <section id="education" className="w-full md:w-1/2">
             <Education />
           </section>
 
           {/* EXPERIENCE */}
-          <section
-            id="experience"
-            className="scroll-mt-16 w-full md:w-1/2 mt-8 md:mt-0"
-          >
+          <section id="experience" className="w-full md:w-1/2 mt-8 md:mt-0">
             <Experience />
           </section>
         </div>
 
         {/* PROJECTS */}
-        <section id="projects" className="scroll-mt-16 w-full">
+        <section id="projects" className="w-full">
           <Projects />
         </section>
 
         {/* CERTIFICATE */}
-        <section id="certificate" className="scroll-mt-16 w-full">
+        <section id="certificate" className="w-full">
           <Certificate />
         </section>
 
         {/* CONTACT */}
-        <section id="contact" className="scroll-mt-16 w-full">
+        <section id="contact" className="w-full">
           <Contact />
         </section>
       </div>
