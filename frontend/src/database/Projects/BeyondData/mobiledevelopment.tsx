@@ -1,4 +1,4 @@
-import ElMovie from "../../../assets/images/Projects/BeyondData/mobiledevelopment/ElMovie.png";
+import ElMovie from "../../../assets/images/Projects/BeyondData/MobileDevelopment/ElMovie.png";
 
 const mobiledevelopment = [
   {
