@@ -1,12 +1,12 @@
 import YoutubeDanantara from "../../../assets/images/Projects/Data/DataAnalytic/Youtube - Danantara.png";
-import GooglePlayStore from "../../../assets/images/Projects/Data/DataAnalytic/Google - Google Play Store.jpg";
-import TiktokKaburAjaDulu from "../../../assets/images/Projects/Data/DataAnalytic/Tiktok - KaburAjaDulu.png";
+import GooglePlayStore from "../../../assets/images/Projects/Data/DataAnalytic/Google - Google Play Store.png";
+import TiktokKaburAjaDulu from "../../../assets/images/Projects/Data/DataAnalytic/Tiktok - Kabur Aja Dulu.png";
 
 export const dataanalytic = [
   {
     id: 1,
     title:
-      "Sentiment Analysis of Indonesian Citizens' Tiktok Comments on Kabur Aja Dulu",
+      "Sentiment Analysis of Indonesian Citizens' Tiktok Comments on #KaburAjaDulu",
     description: "",
     image: TiktokKaburAjaDulu,
     tags: ["Tiktok"],
