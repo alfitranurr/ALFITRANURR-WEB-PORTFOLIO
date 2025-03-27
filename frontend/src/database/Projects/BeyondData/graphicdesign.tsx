@@ -6,10 +6,24 @@ import RKDoaKhotmilRaker2 from "../../../assets/images/Projects/BeyondData/Graph
 import SDGsIsraMiraj from "../../../assets/images/Projects/BeyondData/GraphicDesign/SDGs UMM - Isra Miraj 14146 H.png";
 import SDGsPilar1 from "../../../assets/images/Projects/BeyondData/GraphicDesign/SDGs UMM - Pilar 1 (No Poverty).png";
 import SDGsUASGanjil from "../../../assets/images/Projects/BeyondData/GraphicDesign/SDGs UMM - Ujian Akhir Semester.png";
+import SDGsEidAlFitr1446H from "../../../assets/images/Projects/BeyondData/GraphicDesign/SDGs UMM - Happy Eid Al-Fitr 1446 H.png";
 
 const graphicdesign = [
   {
     id: 1,
+    title: "SDGs UMM - Happi Eid Mubarak (Eid Al-Fitr) 1446 H",
+    description: "",
+    image: SDGsEidAlFitr1446H,
+    tags: [""],
+    buttons: [
+      {
+        text: "View Design",
+        link: "https://drive.google.com/file/d/11G-GiFzDS6vnsQm-2eeXsYkzzgGyBc0s/view?usp=sharing",
+      },
+    ],
+  },
+  {
+    id: 2,
     title: "Azka Group - Flyer Azka Group Goes to Bali",
     description: "",
     image: AzkaGroupBali,
@@ -22,7 +36,7 @@ const graphicdesign = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     title: "PMM 101 Karangkates - Brosur UMKM Telur Asin DAS",
     description: "",
     image: PMM101TelurAsin,
@@ -35,7 +49,7 @@ const graphicdesign = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: "PMM 101 Karangkates - Metaverse Poster",
     description: "",
     image: PMM101Metaverse,
@@ -48,7 +62,7 @@ const graphicdesign = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: "Rumah Kepemimpinan - Doa Khotmil Quran & Rapat Kerja Kabinet",
     description: "",
     image: RKDoaKhotmilRaker1,
@@ -61,7 +75,7 @@ const graphicdesign = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     title:
       "Rumah Kepemimpinan - Doa Khotmil Quran & Rapat Kerja Kabinet Part 2",
     description: "",
@@ -75,7 +89,7 @@ const graphicdesign = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     title: "SDGs UMM - Isra Miraj 14146 H",
     description: "",
     image: SDGsIsraMiraj,
@@ -88,7 +102,7 @@ const graphicdesign = [
     ],
   },
   {
-    id: 7,
+    id: 8,
     title: "SDGs UMM - Pilar 1 (No Poverty)",
     description: "",
     image: SDGsPilar1,
@@ -101,7 +115,7 @@ const graphicdesign = [
     ],
   },
   {
-    id: 8,
+    id: 9,
     title: "SDGs UMM - Ujian Akhir Semester",
     description: "",
     image: SDGsUASGanjil,
