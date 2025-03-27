@@ -15,10 +15,10 @@ const Contact: React.FC = () => {
           <div className="space-y-6 text-white flex flex-col justify-start">
             <h2 className="text-lg font-bold text-left">Get In Touch</h2>
             <p className="text-sm text-left">
-              I'm excited to connect with you. Whether it's about collaborating
-              on a project, discussing design opportunities, or just saying
-              hello, feel free to drop me a message. I'm looking forward to
-              hearing from you!
+              I'm thrilled to connect with you! Whether you’re interested in
+              collaborating on a project, exploring data-driven opportunities,
+              or simply want to say hello, feel free to send me a message. As a
+              data enthusiast, I’m eager to hear from you!
             </p>
 
             {/* SOCIAL MEDIA LINKS */}
