@@ -81,7 +81,7 @@ const TopSection: React.FC<TopSectionProps> = ({
       <div className="mb-6 flex justify-center">
         <motion.div
           className="w-36 h-36 rounded-full overflow-hidden border-4 border-white bg-gray-200"
-          whileHover={{ scale: 1.05 }}
+          whileHover={{ scale: 1.1 }}
           transition={{ type: "spring", stiffness: 300, damping: 20 }}
         >
           {profileImage ? (
