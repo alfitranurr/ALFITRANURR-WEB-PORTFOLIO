@@ -90,7 +90,7 @@ const graphicdesign = [
   },
   {
     id: 7,
-    title: "SDGs UMM - Isra Miraj 14146 H",
+    title: "SDGs UMM - Isra' Miraj 1446 H",
     description: "",
     image: SDGsIsraMiraj,
     tags: [""],
