@@ -11,7 +11,7 @@ import SDGsEidAlFitr1446H from "../../../assets/images/Projects/BeyondData/Graph
 const graphicdesign = [
   {
     id: 1,
-    title: "SDGs UMM - Happi Eid Mubarak (Eid Al-Fitr) 1446 H",
+    title: "SDGs UMM - Happy Eid Mubarak (Eid Al-Fitr) 1446 H",
     description: "",
     image: SDGsEidAlFitr1446H,
     tags: [""],
