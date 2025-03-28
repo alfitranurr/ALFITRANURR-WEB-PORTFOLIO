@@ -116,7 +116,7 @@ const graphicdesign = [
   },
   {
     id: 9,
-    title: "SDGs UMM - Ujian Akhir Semester",
+    title: "SDGs UMM - Ujian Akhir Semester Ganjil 2024/2025",
     description: "",
     image: SDGsUASGanjil,
     tags: [""],
