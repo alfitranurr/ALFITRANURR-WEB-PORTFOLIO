@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import RiseDown from "../RiseDown/RiseDown";
 import {
   AiOutlineUp,
@@ -12,6 +13,7 @@ const ProfessionalExperienceCard = () => {
   const [openCards, setOpenCards] = useState<number[]>([]);
   const [visibleStartIndex, setVisibleStartIndex] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
+  const navigate = useNavigate();
 
   const toggleCard = (cardIndex: number) => {
     setOpenCards((prevState) =>
@@ -32,6 +34,10 @@ const ProfessionalExperienceCard = () => {
     setVisibleStartIndex((prev) =>
       Math.min(prev + 1, totalCards - cardsPerPage)
     );
+  };
+
+  const navigateToFullExperience = () => {
+    navigate("/experience/full");
   };
 
   return (
@@ -118,7 +124,10 @@ const ProfessionalExperienceCard = () => {
 
       {/* MORE BUTTON AT BOTTOM RIGHT */}
       <div className="absolute bottom-4 right-1">
-        <button className="flex items-center space-x-2 p-2 rounded-full bg-[var(--warna1-color)] text-white hover:bg-white hover:text-[var(--base-color)] transition-all duration-300 cursor-pointer">
+        <button
+          onClick={navigateToFullExperience}
+          className="flex items-center space-x-2 p-2 rounded-full bg-[var(--warna1-color)] text-white hover:bg-white hover:text-[var(--base-color)] transition-all duration-300 cursor-pointer"
+        >
           <p className="text-xs">More</p>
           <AiOutlineRight size={16} />
         </button>
