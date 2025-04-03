@@ -1,5 +1,3 @@
-// src/App.tsx
-
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Navbar from "./main/navbar";
@@ -30,6 +28,9 @@ import SeminarWorkshop from "./components/Certificate/Seminar-Workshop/seminar-w
 import LicenseCertification from "./components/Certificate/License-Certification/license-certification";
 import CommitteeOrganization from "./components/Certificate/Committee-Organization/committee-organization";
 
+/* EXPERIENCE */
+import FullExperience from "./components/Experience/fullExperience";
+
 const App: React.FC = () => {
   return (
     <Router>
@@ -51,6 +52,10 @@ const App: React.FC = () => {
           <Routes>
             {/* MAIN PAGE */}
             <Route path="/" element={<Home />} />
+
+            {/* EXPERIENCE */}
+            <Route path="/experience/full" element={<FullExperience />} />
+
             {/* DATA PROJECTS */}
             <Route
               path="/components/Projects/Data/DataVisualization/datavisualization"
