@@ -25,7 +25,7 @@ interface License {
 const licenses: License[] = [
   {
     id: 1,
-    title: "Rakamin Academy - Big Data Analytics Kimia Farma",
+    title: "Rakamin Academy - Big Data Analytics Intern Kimia Farma",
     description: "",
     image: RakaminKimiaFarmaBDA,
     tags: ["National"],
