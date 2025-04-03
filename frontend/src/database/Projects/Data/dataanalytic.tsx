@@ -12,7 +12,7 @@ export const dataanalytic = [
     tags: ["Tiktok"],
     buttons: [
       {
-        text: "View Project",
+        text: "View GitHub",
         link: "https://github.com/alfitranurr/DATA-INFORMATION-KNOWLEDGE/tree/main/TikTok/KaburAjaDulu",
       },
     ],
@@ -25,7 +25,7 @@ export const dataanalytic = [
     tags: ["Google"],
     buttons: [
       {
-        text: "View Project",
+        text: "View GitHub",
         link: "https://github.com/alfitranurr/DATA-INFORMATION-KNOWLEDGE/tree/main/GooglePlayStore",
       },
     ],
@@ -39,7 +39,7 @@ export const dataanalytic = [
     tags: ["Youtube"],
     buttons: [
       {
-        text: "View Project",
+        text: "View GitHub",
         link: "https://github.com/alfitranurr/DATA-INFORMATION-KNOWLEDGE/tree/main/Youtube/Danantara",
       },
     ],

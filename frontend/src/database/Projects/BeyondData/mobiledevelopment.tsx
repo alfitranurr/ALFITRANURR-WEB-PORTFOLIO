@@ -9,7 +9,7 @@ const mobiledevelopment = [
     tags: ["Flutter"],
     buttons: [
       {
-        text: "View Project",
+        text: "View GitHub",
         link: "https://github.com/andifathir/ElMovie",
       },
       {

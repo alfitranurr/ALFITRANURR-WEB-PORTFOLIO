@@ -12,7 +12,7 @@ export const dataModelingSimulation = [
     tags: [""],
     buttons: [
       {
-        text: "View Project",
+        text: "View GitHub",
         link: "https://github.com/alfitranurr/DATA-MODELING-AND-SIMULATION/tree/master/BankQueueSimulation",
       },
     ],
@@ -25,7 +25,7 @@ export const dataModelingSimulation = [
     tags: [""],
     buttons: [
       {
-        text: "View Project",
+        text: "View GitHub",
         link: "https://github.com/alfitranurr/DATA-MODELING-AND-SIMULATION/tree/master/Call%20Centre%20Queue%20Simulation",
       },
     ],
@@ -38,7 +38,7 @@ export const dataModelingSimulation = [
     tags: [""],
     buttons: [
       {
-        text: "View Project",
+        text: "View GitHub",
         link: "https://github.com/alfitranurr/DATA-MODELING-AND-SIMULATION/tree/master/ConcertTicketBookingSystem",
       },
     ],
@@ -51,7 +51,7 @@ export const dataModelingSimulation = [
     tags: [""],
     buttons: [
       {
-        text: "View Project",
+        text: "View GitHub",
         link: "https://github.com/alfitranurr/DATA-MODELING-AND-SIMULATION/tree/master/MonteCarloSimulation",
       },
     ],
