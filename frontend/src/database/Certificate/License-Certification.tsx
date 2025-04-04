@@ -39,8 +39,7 @@ const licenses: License[] = [
   {
     id: 2,
     title: "MySkill - Data Analysis Fullstack Intensive Bootcamp",
-    description:
-      "A certification that focuses on ethical hacking skills, including penetration testing, network security, and risk management, ideal for professionals seeking careers in cybersecurity.",
+    description: "",
     image: MySkill_DataAnalysis,
     tags: ["National"],
     buttons: [
@@ -53,8 +52,7 @@ const licenses: License[] = [
   {
     id: 3,
     title: "MySkill - Marketing Management",
-    description:
-      "A certification that focuses on ethical hacking skills, including penetration testing, network security, and risk management, ideal for professionals seeking careers in cybersecurity.",
+    description: "",
     image: MySkill_MarketingManagement,
     tags: ["National"],
     buttons: [
@@ -67,8 +65,7 @@ const licenses: License[] = [
   {
     id: 4,
     title: "UMM - Semarak Literasi Al-Quran",
-    description:
-      "A globally recognized certification for project management professionals that demonstrates your skills and expertise in leading projects and teams.",
+    description: "",
     image: SLQ_UMM,
     tags: ["Local"],
     buttons: [
@@ -81,8 +78,7 @@ const licenses: License[] = [
   {
     id: 5,
     title: "As-Surkati - Memorizing the Quran 30 Juz in One Sitting",
-    description:
-      "A certification program for mastering Google Analytics, enabling you to track and analyze website traffic, understand audience behavior, and improve online marketing strategies.",
+    description: "",
     image: Quran30Juz_Surkati,
     tags: ["Local"],
     buttons: [
@@ -95,8 +91,7 @@ const licenses: License[] = [
   {
     id: 6,
     title: "ASEAN Data Science Explorers 2024 Enablement Session",
-    description:
-      "A certification for accounting professionals that is recognized worldwide, demonstrating expertise in accounting principles, taxation, and financial reporting.",
+    description: "",
     image: ASEAN_DSE,
     tags: ["National"],
     buttons: [
@@ -109,8 +104,7 @@ const licenses: License[] = [
   {
     id: 7,
     title: "Oracle Academy - Database",
-    description:
-      "A certification for accounting professionals that is recognized worldwide, demonstrating expertise in accounting principles, taxation, and financial reporting.",
+    description: "",
     image: OracleAcademy,
     tags: ["National"],
     buttons: [
@@ -123,8 +117,7 @@ const licenses: License[] = [
   {
     id: 8,
     title: "Dicoding Academy - Data Science",
-    description:
-      "A certification for accounting professionals that is recognized worldwide, demonstrating expertise in accounting principles, taxation, and financial reporting.",
+    description: "",
     image: DicodingAcademy,
     tags: ["National"],
     buttons: [
@@ -137,8 +130,7 @@ const licenses: License[] = [
   {
     id: 9,
     title: "UMM - FLSP",
-    description:
-      "A certification for accounting professionals that is recognized worldwide, demonstrating expertise in accounting principles, taxation, and financial reporting.",
+    description: "",
     image: FLSPUMM,
     tags: ["Local"],
     buttons: [
@@ -151,8 +143,7 @@ const licenses: License[] = [
   {
     id: 10,
     title: "Edutify - Filosofi Excel",
-    description:
-      "A certification for accounting professionals that is recognized worldwide, demonstrating expertise in accounting principles, taxation, and financial reporting.",
+    description: "",
     image: ExcelEdutify,
     tags: ["National"],
     buttons: [
@@ -165,8 +156,7 @@ const licenses: License[] = [
   {
     id: 11,
     title: "KarirNext - Karirnex Bootcamp Excel",
-    description:
-      "A certification for accounting professionals that is recognized worldwide, demonstrating expertise in accounting principles, taxation, and financial reporting.",
+    description: "",
     image: ExcelKarirNext,
     tags: ["National"],
     buttons: [
