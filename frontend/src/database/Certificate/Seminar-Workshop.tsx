@@ -19,8 +19,7 @@ const seminars: Seminar[] = [
   {
     id: 1,
     title: "Career Next with Jobstreet and P&G",
-    description:
-      "A hands-on workshop that explores the fundamental techniques in data science, including machine learning, data visualization, and statistical analysis.",
+    description: "",
     image: CareerNextAMCOR,
     tags: ["Participant"],
     buttons: [
@@ -33,8 +32,7 @@ const seminars: Seminar[] = [
   {
     id: 2,
     title: "Quality Assurance 101 A Beginner's Guide to Quality Assurance",
-    description:
-      "An intensive seminar focused on building digital marketing strategies for business growth, exploring SEO, content marketing, and social media advertising.",
+    description: "",
     image: QA,
     tags: ["Participant"],
     buttons: [
@@ -47,8 +45,7 @@ const seminars: Seminar[] = [
   {
     id: 3,
     title: "MSIB Batch 6 Socialization",
-    description:
-      "A beginner-friendly seminar covering the basics of AI and its applications in various industries like healthcare, finance, and manufacturing.",
+    description: "",
     image: MSIB6,
     tags: ["Participant"],
     buttons: [
@@ -61,8 +58,7 @@ const seminars: Seminar[] = [
   {
     id: 4,
     title: "UMM Library Technology Guidance",
-    description:
-      "A hands-on workshop diving into blockchain technology, cryptocurrency, and their potential in revolutionizing industries like finance and supply chain.",
+    description: "",
     image: BIMTEK,
     tags: ["Participant"],
     buttons: [

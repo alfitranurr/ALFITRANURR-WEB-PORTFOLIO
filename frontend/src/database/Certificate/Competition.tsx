@@ -27,8 +27,7 @@ const competitions: Competition[] = [
   {
     id: 1,
     title: "SIC INDICATION UMM - Infographic",
-    description:
-      "A competition where participants debate on various topics, showcasing their public speaking and argumentation skills to a panel of judges.",
+    description: "",
     image: SIC_INDICATION,
     tags: ["Win", "Regional"],
     buttons: [
@@ -41,8 +40,7 @@ const competitions: Competition[] = [
   {
     id: 2,
     title: "Hology 7.0 UB - Data Mining",
-    description:
-      "A global competition for developers to showcase their coding skills and problem-solving abilities. The event features multiple coding challenges and prizes.",
+    description: "",
     image: DataMiningHology7_0,
     tags: ["Participant", "National"],
     buttons: [
@@ -55,8 +53,7 @@ const competitions: Competition[] = [
   {
     id: 3,
     title: "4C FILKOM UB - Infographic Poster",
-    description:
-      "A competition for aspiring entrepreneurs to pitch their business ideas, compete for funding, and showcase their business strategies in front of investors.",
+    description: "",
     image: FILKOM_UB_4C,
     tags: ["Participant", "National"],
     buttons: [
@@ -69,8 +66,7 @@ const competitions: Competition[] = [
   {
     id: 4,
     title: "KEMOSTAN UB - Infographic",
-    description:
-      "A creative competition for graphic designers and digital artists to demonstrate their artistic talent, with a chance to win recognition and rewards.",
+    description: "",
     image: KemostanUB,
     tags: ["Participant", "National"],
     buttons: [
@@ -83,8 +79,7 @@ const competitions: Competition[] = [
   {
     id: 5,
     title: "Kovalen Edufair IX HMP UNS - Covalent Chemistry",
-    description:
-      "A competition where participants debate on various topics, showcasing their public speaking and argumentation skills to a panel of judges.",
+    description: "",
     image: KimiaKovalenUNS,
     tags: ["Participant", "National"],
     buttons: [

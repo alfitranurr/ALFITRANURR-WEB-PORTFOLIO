@@ -14,8 +14,7 @@ const committees = [
   {
     id: 1,
     title: "Liaison Officer of Jatim Developer Day 2024",
-    description:
-      "A committee dedicated to managing the structure and processes of the organization, ensuring smooth operations and high member engagement.",
+    description: "",
     image: JDD2024,
     tags: ["National", "Committee"],
     buttons: [
@@ -28,8 +27,7 @@ const committees = [
   {
     id: 2,
     title: "Media & Documentation of PMM 101 Karangkates 2024",
-    description:
-      "A team focused on organizing and executing events, from small workshops to large conferences, ensuring seamless planning and execution.",
+    description: "",
     image: PMMKarangkates,
     tags: ["Local", "Committee"],
     buttons: [
@@ -42,8 +40,7 @@ const committees = [
   {
     id: 3,
     title: "PESMABA 2022 Participants",
-    description:
-      "A group that handles the external communications, public relations strategies, and branding of the organization to maintain a positive public image.",
+    description: "",
     image: PESMABA2022,
     tags: ["Local", "Participant"],
     buttons: [
@@ -56,8 +53,7 @@ const committees = [
   {
     id: 4,
     title: "Student Day 2022 Participants",
-    description:
-      "A committee focused on expanding the organization's membership, recruiting new members, and maintaining strong engagement with current members.",
+    description: "",
     image: StudentDay2022,
     tags: ["Local", "Participant"],
     buttons: [
