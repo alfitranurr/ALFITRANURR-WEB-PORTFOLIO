@@ -10,6 +10,7 @@ import SIC_INDICATION from "../../../assets/images/Projects/Data/DataVisualizati
 }
 import Tokopedei from "../../../assets/images/Projects/Data/DataVisualization/Dashboard - Tokopedei Transaction Dashboard.png";
 import RakaminKimiaFarmaBDA from "../../../assets/images/Projects/Data/DataVisualization/Dashboard - Big Data Analytics Kimia Farma.png";
+import RamddShop from "../../../assets/images/Projects/Data/DataVisualization/Dashboard - Ramdd Shop Performance Analytics 2010.png";
 
 export const datavisualization = [
   {
@@ -17,7 +18,7 @@ export const datavisualization = [
     title: "Rakamin Academy x Kimia Farma - Performance Analytics 2020 - 2023",
     description: "",
     image: RakaminKimiaFarmaBDA,
-    tags: ["Dashboard"],
+    tags: ["Dashboard", "Looker Studio"],
     buttons: [
       {
         text: "View Dashboard",
@@ -27,6 +28,19 @@ export const datavisualization = [
   },
   {
     id: 2,
+    title: "MySkill - Ramdd Shop Performance Analytics 2010",
+    description: "",
+    image: RamddShop,
+    tags: ["Dashboard", "Looker Studio"],
+    buttons: [
+      {
+        text: "View Dashboard",
+        link: "https://lookerstudio.google.com/embed/reporting/cfac242c-d6f0-4fed-b8d4-35a29fb55b74/page/FzzFF",
+      },
+    ],
+  },
+  {
+    id: 3,
     title:
       "4C UB - Infographic on Telecommunication Resilience in Indonesia as a Catalyst for a Golden Indonesia 2045",
     description:
@@ -45,7 +59,7 @@ export const datavisualization = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: "ANAVA#19 FMIPA UGM - Infographic on Sexual Violence in Indonesia",
     description:
       "This project is an infographic work created in the Statistics Infographics (KIS) competition which is held by ANAVA #19 Gadjah Mada University every year. This work explains the portrait of sexual violence in Indonesia, including data on the distribution of cases, perpetrators, psychological impacts, and preventive measures needed to overcome this problem.",
@@ -63,7 +77,7 @@ export const datavisualization = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     title:
       "HMIF UMM - Infographics of Online Shopping Consumer Behavior Trends",
     description:
@@ -78,12 +92,12 @@ export const datavisualization = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     title: "MySkill - Tokopedei Transaction Performance Review Dashboard",
     description:
       "This is the Transaction Dashboard for Tokopedei, a dummy store created as part of the Fullstack Data Analysis Bootcamp assignment at MySkill. The dashboard was developed using Looker Studio and consists of two pages. It features visualizations of Sales & Profit Performance (All Time), Top Sales by Category, Top Sales by Payment Method, to Transaction Summary Table.",
     image: Tokopedei,
-    tags: ["Dashboard"],
+    tags: ["Dashboard", "Looker Studio"],
     buttons: [
       {
         text: "View Dashboard",
