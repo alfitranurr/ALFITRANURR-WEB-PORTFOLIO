@@ -22,7 +22,7 @@ const AboutMe = () => {
         {/* AL FITRA NUR RAMADHANI'S RESUME */}
         <div className="mt-6 mb-2 flex justify-center">
           <a
-            href="https://drive.google.com/file/d/1V4Y25IxtnVF95nSm0oc-fJ28I9UZIxsP/view?usp=sharing"
+            href="https://drive.google.com/file/d/1Bk00KZ1lNEeueUjGPbUYKbDC5XaP1_MQ/view?usp=sharing"
             target="_blank"
             rel="noopener noreferrer"
             className="px-6 py-2 text-xs text-white font-semibold rounded-xl shadow-md text-center transition duration-300 bg-[var(--warna2-color)] border border-transparent hover:bg-white hover:text-[var(--warna2-color)] hover:border-[var(--warna2-color)]"
