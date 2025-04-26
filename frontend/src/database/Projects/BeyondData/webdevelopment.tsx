@@ -1,21 +1,20 @@
-import OrganizationImage from "../../../assets/images/Pantai.png";
+import Depo79 from "../../../assets/images/Projects/BeyondData/WebDevelopment/Azka Group - Depo79 E-Commerce Website.png";
 
 export const webdevelopment = [
   {
     id: 1,
-    title: "Web Development Research Group",
-    description:
-      "A research group dedicated to exploring innovative web technologies, focusing on front-end and back-end development to build dynamic and responsive websites.",
-    image: OrganizationImage,
-    tags: ["Committee", "Web Development", "Front-End", "Back-End", "Research"],
+    title: "Depo79 E-Commerce Website",
+    description: "",
+    image: Depo79,
+    tags: ["React", "Type Script", "JavaScript"],
     buttons: [
       {
-        text: "View Committee",
-        link: "https://drive.google.com/drive/folders/1-4R1VSKn6FQnBoxEx4ZwyvFTyP970WQj?usp=sharing", // Adjust the link accordingly
+        text: "View Website",
+        link: "https://internship-bngefpfzewbrd8dw.southeastasia-01.azurewebsites.net/",
       },
       {
-        text: "View Project",
-        link: "/projects/web-development-research", // Adjust the link accordingly
+        text: "View Github",
+        link: "https://github.com/Haeryz/E-Commerce-depo-79",
       },
     ],
   },
