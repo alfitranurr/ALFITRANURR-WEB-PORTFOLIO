@@ -12,7 +12,9 @@ const Professional = [
     company: "Kimia Farma x Rakamin Academy",
     duration: "Mar 2025 - April 2025",
     location: "Work From Home (WFH)",
-    description: ["• ", "• ", "• "],
+    description: [
+      "• Analyzed Kimia Farma's data and created a Performance Analytics Dashboard for 2020–2023 in Looker Studio, incorporating visualizations of trends such as Net Sales of 1.3T and Net Profit of 366.3B, among others. This offered insights to boost stakeholders' profitability and efficiency decisions.",
+    ],
   },
   {
     id: 2,
