@@ -13,7 +13,12 @@ const CommitteeOrganization = [
     organization: "Rumah Kepemimpinan",
     duration: "Jun 2024 - Present",
     location: "Malang, East Java, Indonesia",
-    description: ["• ", "• ", "• ", "• "],
+    description: [
+      "• Received the August 2024 Outstanding Awardee",
+      "• Designed 10+ visual content for the 2024 Arkhosophia presidential election with 95% participation",
+      "• Designed ~15 posters for Rumah Kepemimpinan Regional Nusantara 2 Putra events like Khotmil Quran and Jejeran Kabinet, boosting attendance by 30% with 90% committee satisfaction.",
+      "• Optimized the Regional Nusantara 2 Putra Instagram, increasing followers by 70% to 430 in 5 months and achieving 15% engagement with 20 monthly posts, including collaborations.",
+    ],
   },
   {
     id: 2,
@@ -22,7 +27,9 @@ const CommitteeOrganization = [
     organization: "SDGs Student Center UMM",
     duration: "Nov 2024 - Present",
     location: "Malang, East Java, Indonesia",
-    description: ["• ", "• ", "• ", "• "],
+    description: [
+      "• Designed posters for SDGs Student Center UMM events, such as Eid Mubarak 1446H, Isra Miraj 1446H, SDGs Pillar 1 (No Poverty), and Rector Cup, increasing participant attendance by 35% with a 94% committee satisfaction rate.",
+    ],
   },
   {
     id: 3,
