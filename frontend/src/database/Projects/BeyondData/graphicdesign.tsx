@@ -7,10 +7,24 @@ import SDGsIsraMiraj from "../../../assets/images/Projects/BeyondData/GraphicDes
 import SDGsPilar1 from "../../../assets/images/Projects/BeyondData/GraphicDesign/SDGs UMM - Pilar 1 (No Poverty).png";
 import SDGsUASGanjil from "../../../assets/images/Projects/BeyondData/GraphicDesign/SDGs UMM - Ujian Akhir Semester.png";
 import SDGsEidAlFitr1446H from "../../../assets/images/Projects/BeyondData/GraphicDesign/SDGs UMM - Happy Eid Al-Fitr 1446 H.png";
+import SDGsVolunteerPDDRC2025 from "../../../assets/images/Projects/BeyondData/GraphicDesign/SDGs UMM - Oprec Volunteer PDD RC 2025.png";
 
 const graphicdesign = [
   {
     id: 1,
+    title: "SDGs UMM - Open Registration Volunteer PDD Rector Cup 2025",
+    description: "",
+    image: SDGsVolunteerPDDRC2025,
+    tags: [""],
+    buttons: [
+      {
+        text: "View Design",
+        link: "https://drive.google.com/file/d/1I1WMlJqxiBkdm1u37mumxKr61KZLODFK/view?usp=sharing",
+      },
+    ],
+  },
+  {
+    id: 2,
     title: "SDGs UMM - Happy Eid Mubarak (Eid Al-Fitr) 1446 H",
     description: "",
     image: SDGsEidAlFitr1446H,
@@ -23,7 +37,7 @@ const graphicdesign = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     title: "Azka Group - Flyer Azka Group Goes to Bali",
     description: "",
     image: AzkaGroupBali,
@@ -36,7 +50,7 @@ const graphicdesign = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: "PMM 101 Karangkates - Brosur UMKM Telur Asin DAS",
     description: "",
     image: PMM101TelurAsin,
@@ -49,7 +63,7 @@ const graphicdesign = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: "PMM 101 Karangkates - Metaverse Poster",
     description: "",
     image: PMM101Metaverse,
@@ -62,7 +76,7 @@ const graphicdesign = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     title: "Rumah Kepemimpinan - Doa Khotmil Quran & Rapat Kerja Kabinet",
     description: "",
     image: RKDoaKhotmilRaker1,
@@ -75,7 +89,7 @@ const graphicdesign = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     title:
       "Rumah Kepemimpinan - Doa Khotmil Quran & Rapat Kerja Kabinet Part 2",
     description: "",
@@ -89,7 +103,7 @@ const graphicdesign = [
     ],
   },
   {
-    id: 7,
+    id: 8,
     title: "SDGs UMM - Isra' Miraj 1446 H",
     description: "",
     image: SDGsIsraMiraj,
@@ -102,7 +116,7 @@ const graphicdesign = [
     ],
   },
   {
-    id: 8,
+    id: 9,
     title: "SDGs UMM - Pilar 1 (No Poverty)",
     description: "",
     image: SDGsPilar1,
@@ -115,7 +129,7 @@ const graphicdesign = [
     ],
   },
   {
-    id: 9,
+    id: 10,
     title: "SDGs UMM - Ujian Akhir Semester Ganjil 2024/2025",
     description: "",
     image: SDGsUASGanjil,
