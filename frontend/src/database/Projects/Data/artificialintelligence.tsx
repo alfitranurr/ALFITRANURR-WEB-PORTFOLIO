@@ -1,24 +1,10 @@
-import CoffeeBeanClassification from "../../../assets/images/Projects/Data/ArtificialIntelligence/Coffee Bean Classification.png";
 import TelcoCustomerChurn from "../../../assets/images/Projects/Data/ArtificialIntelligence/Data Mining - Telco Customer Churn Classification.png";
 import SarcasmReddit from "../../../assets/images/Projects/Data/ArtificialIntelligence/Natural Language Processing - Reddit Sarcasm Classification.png";
 
 export const artificialintelligence = [
   {
     id: 1,
-    title: "Coffee Bean Classification",
-    description: "",
-    image: CoffeeBeanClassification,
-    tags: ["VGG 16"],
-    buttons: [
-      {
-        text: "View Github",
-        link: "",
-      },
-    ],
-  },
-  {
-    id: 2,
-    title: "Telco Customer Churn Calssification",
+    title: "Telco Customer Churn Classification",
     description: "",
     image: TelcoCustomerChurn,
     tags: ["Naive Bayes", "Decision Tree"],
@@ -38,7 +24,7 @@ export const artificialintelligence = [
     ],
   },
   {
-    id: 3,
+    id: 2,
     title: "Reddit Sarcasm Classification for Political Content",
     description: "",
     image: SarcasmReddit,

@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
+import { FaInstagram, FaWhatsapp, FaLinkedin, FaGithub } from "react-icons/fa";
 import ProfileIMG from "../../assets/images/Heading/Profile Picture.png"; // Import the image
 
 interface TopSectionProps {
@@ -76,7 +77,7 @@ const TopSection: React.FC<TopSectionProps> = ({
   }, [controls, name]);
 
   return (
-    <div className="text-center text-white mt-27">
+    <div className="text-center text-white mt-25">
       {/* Bingkai Foto Lingkaran */}
       <div className="mb-6 flex justify-center">
         <motion.div
@@ -132,9 +133,45 @@ const TopSection: React.FC<TopSectionProps> = ({
 
       <div className="border-t border-white w-full max-w-[85%] my-4 mx-auto"></div>
 
-      <p className="text-lg font-light mt-4 mb-45">
+      <p className="text-lg font-light mt-4 mb-4">
         Data Enthusiast | Digital Marketing Enthusiast
       </p>
+
+      {/* Social Media Icons */}
+      <div className="flex justify-center gap-6 mt-4">
+        <a
+          href="https://www.instagram.com/rmdhani_ii/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-[#E1306C] hover:scale-120 transition-all duration-300"
+        >
+          <FaInstagram size={22} />
+        </a>
+        <a
+          href="https://wa.me/+6285158779239"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-[#25D366] hover:scale-120 transition-all duration-300"
+        >
+          <FaWhatsapp size={22} />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/al-fitra-nur-ramadhani/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-[#0077B5] hover:scale-120 transition-all duration-300"
+        >
+          <FaLinkedin size={22} />
+        </a>
+        <a
+          href="https://github.com/alfitranurr"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-[#333] hover:scale-120 transition-all duration-300"
+        >
+          <FaGithub size={22} />
+        </a>
+      </div>
     </div>
   );
 };
