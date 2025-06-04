@@ -5,20 +5,7 @@ import SarcasmReddit from "../../../assets/images/Projects/Data/ArtificialIntell
 export const artificialintelligence = [
   {
     id: 1,
-    title: "Coffee Bean Classification",
-    description: "",
-    image: CoffeeBeanClassification,
-    tags: ["VGG 16"],
-    buttons: [
-      {
-        text: "View Github",
-        link: "",
-      },
-    ],
-  },
-  {
-    id: 2,
-    title: "Telco Customer Churn Calssification",
+    title: "Telco Customer Churn Classification",
     description: "",
     image: TelcoCustomerChurn,
     tags: ["Naive Bayes", "Decision Tree"],
@@ -38,7 +25,7 @@ export const artificialintelligence = [
     ],
   },
   {
-    id: 3,
+    id: 2,
     title: "Reddit Sarcasm Classification for Political Content",
     description: "",
     image: SarcasmReddit,
