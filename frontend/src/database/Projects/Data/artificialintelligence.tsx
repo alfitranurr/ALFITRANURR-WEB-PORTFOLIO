@@ -1,4 +1,3 @@
-import CoffeeBeanClassification from "../../../assets/images/Projects/Data/ArtificialIntelligence/Coffee Bean Classification.png";
 import TelcoCustomerChurn from "../../../assets/images/Projects/Data/ArtificialIntelligence/Data Mining - Telco Customer Churn Classification.png";
 import SarcasmReddit from "../../../assets/images/Projects/Data/ArtificialIntelligence/Natural Language Processing - Reddit Sarcasm Classification.png";
 

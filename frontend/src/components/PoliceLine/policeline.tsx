@@ -12,7 +12,7 @@ const PoliceLine: React.FC<PoliceLineProps> = ({ items, isLoaded }) => {
     <>
       {/* WHITE BOX */}
       <div
-        className="w-full h-8 bg-white mt-4 mb-[-35px] overflow-hidden flex items-center justify-center shadow-lg"
+        className="w-full h-8 bg-white mt-40 mb-[-35px] overflow-hidden flex items-center justify-center shadow-lg"
         style={{
           transform: "rotate(0deg) translateY(15px) translateX(-2px)",
           transformOrigin: "center",
