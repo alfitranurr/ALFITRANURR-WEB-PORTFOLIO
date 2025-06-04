@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
-import ProfileIMG from "../../assets/images/Heading/Logo Web Portfolio.png"; // Import the image
+import ProfileIMG from "../../assets/images/Heading/Profile Picture.png"; // Import the image
 
 interface TopSectionProps {
   name: string;
