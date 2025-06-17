@@ -24,6 +24,10 @@ export const datavisualization = [
         text: "View Dashboard",
         link: "https://lookerstudio.google.com/embed/u/0/reporting/d65c0d29-cc49-474b-adc0-538a16233d4e/page/pkBFF",
       },
+      {
+        text: "View Report",
+        link: "https://drive.google.com/file/d/1c4OhQ4NPZAFADPRRfUyqmVnoytX17_b1/view?usp=sharing",
+      },
     ],
   },
   {
