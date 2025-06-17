@@ -16,6 +16,10 @@ const mobiledevelopment = [
         text: "View Demo App",
         link: "https://drive.google.com/file/d/1JQpJ8juUEQsHtJEImmXsAUhm6SRpedOl/view?usp=sharing",
       },
+      {
+        text: "View Interactive Prototype",
+        link: "https://www.figma.com/proto/hz3ncrMMSoE1bNIFPKepi9/Prak-mobile?node-id=84-29&p=f&t=FLu0e7MxfdCW0I6p-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=84%3A29",
+      },
     ],
   },
 ];
