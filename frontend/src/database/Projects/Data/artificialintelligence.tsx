@@ -19,7 +19,7 @@ export const artificialintelligence = [
       },
       {
         text: "View Dashboard Code",
-        link: "https://colab.research.google.com/drive/1qXF9w3yiOetcsnVs57I9h5rteelDhfaL?usp=sharing",
+        link: "https://colab.research.google.com/drive/1FXsgo_SCUqeObH48NKeEuFjGBW7wr_44?usp=sharing",
       },
     ],
   },
@@ -32,7 +32,7 @@ export const artificialintelligence = [
     buttons: [
       {
         text: "View Model ML Code (Google Colab)",
-        link: "https://colab.research.google.com/drive/1RV12P1wFVqmFnuUS815Ob9dTn-69dZKU?usp=sharing",
+        link: "https://colab.research.google.com/drive/1EPXFOmm_lGxGZeSLMHyP9aLio3-XNIzd?usp=sharing",
       },
       {
         text: "View Academic Poster",
@@ -40,7 +40,7 @@ export const artificialintelligence = [
       },
       {
         text: "View Dashboard Code",
-        link: "https://colab.research.google.com/drive/1-BvGO2po9-6OW46Kn0h5n_VWeOKgp2vK?usp=sharing",
+        link: "https://colab.research.google.com/drive/1ATspYaNMNICjadVXSxqMf5TR9GzOnmzI?usp=sharing",
       },
     ],
   },
