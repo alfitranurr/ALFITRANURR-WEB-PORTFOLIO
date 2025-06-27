@@ -10,16 +10,16 @@ export const artificialintelligence = [
     tags: ["Naive Bayes", "Decision Tree"],
     buttons: [
       {
-        text: "View Github",
-        link: "",
+        text: "View Model ML Code (Google Colab)",
+        link: "https://colab.research.google.com/drive/19PWJAvf1VE9b17ee0D5xbg6DXG7L_bY7?usp=sharing",
       },
       {
         text: "View Academic Poster",
         link: "https://www.canva.com/design/DAGnJ05Emwk/rU4MwQgv4BYEcCIb_FXUKQ/view?utm_content=DAGnJ05Emwk&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=he2766b22a5",
       },
       {
-        text: "View Dashboard",
-        link: "",
+        text: "View Dashboard Code",
+        link: "https://colab.research.google.com/drive/1qXF9w3yiOetcsnVs57I9h5rteelDhfaL?usp=sharing",
       },
     ],
   },
@@ -31,16 +31,16 @@ export const artificialintelligence = [
     tags: ["Naive Bayes", "Decision Tree"],
     buttons: [
       {
-        text: "View Github",
-        link: "",
+        text: "View Model ML Code (Google Colab)",
+        link: "https://colab.research.google.com/drive/1RV12P1wFVqmFnuUS815Ob9dTn-69dZKU?usp=sharing",
       },
       {
         text: "View Academic Poster",
         link: "https://www.canva.com/design/DAGnJ72vj8E/zdh3a-w6JdcnOLtRFIZq9Q/view?utm_content=DAGnJ72vj8E&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=ha67318346b",
       },
       {
-        text: "View Dashboard",
-        link: "",
+        text: "View Dashboard Code",
+        link: "https://colab.research.google.com/drive/1-BvGO2po9-6OW46Kn0h5n_VWeOKgp2vK?usp=sharing",
       },
     ],
   },
