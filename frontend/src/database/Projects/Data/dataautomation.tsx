@@ -1,17 +1,16 @@
-import OrganizationImage from "../../../assets/images/Pantai.png";
+import OrganizationImage from "../../../assets/images/Projects/Data/DataAutomation/Azka Group - Financial Statement.png";
 
 export const dataautomation = [
   {
     id: 1,
     title: "Azka Group - Financial Statement Application ",
-    description:
-      "A global group dedicated to advancing research in data automation and machine learning, promoting innovation and collaboration among data automation experts.",
+    description: "",
     image: OrganizationImage,
-    tags: ["Ms. Excel"],
+    tags: ["Ms. Excel", "VBA"],
     buttons: [
       {
         text: "View Project",
-        link: "https://drive.google.com/drive/folders/1-4R1VSKn6FQnBoxEx4ZwyvFTyP970WQj?usp=sharing",
+        link: "https://drive.google.com/drive/folders/1H-sU-MAnHmeuMTTFOJBRc5P1Gf-P5emx?usp=sharing",
       },
     ],
   },
