@@ -6,7 +6,7 @@ const smartdeviceiot = [
     title: "Stay Tuned, Coming Soon",
     description: "",
     image: OrganizationImage,
-    tags: [],
+    tags: [""],
     buttons: [
       {
         text: "Stay Tuned, Coming Soon",
