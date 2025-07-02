@@ -6,7 +6,17 @@ export const webdevelopment = [
     title: "Depo79 E-Commerce Website",
     description: "",
     image: Depo79,
-    tags: ["React", "Type Script", "JavaScript"],
+    tags: [
+      "React",
+      "Type Script",
+      "JavaScript",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "Chakra UI",
+      "NodeMailer",
+      "Socket.io",
+    ],
     buttons: [
       {
         text: "View Website",
