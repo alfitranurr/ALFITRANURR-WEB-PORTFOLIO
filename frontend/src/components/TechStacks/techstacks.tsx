@@ -9,6 +9,7 @@ import {
   SiMysql,
   SiTableau,
   SiGooglebigquery,
+  SiDocker,
 } from "react-icons/si";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -63,6 +64,10 @@ const techStacks = [
         className="text-orange-600 text-xl"
       />
     ),
+  },
+  {
+    name: "Docker",
+    icon: <SiDocker className="text-blue-500 text-xl" />,
   },
 ];
 
