@@ -50,13 +50,13 @@ const techStacks = [
     icon: <SiGooglebigquery className="text-blue-500 text-xl" />,
   },
   {
-    name: "Microsoft Excel",
+    name: "Ms. Excel",
     icon: (
       <FontAwesomeIcon icon={faFileExcel} className="text-green-600 text-xl" />
     ),
   },
   {
-    name: "Microsoft PowerPoint",
+    name: "Ms. PowerPoint",
     icon: (
       <FontAwesomeIcon
         icon={faFilePowerpoint}
