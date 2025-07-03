@@ -10,6 +10,8 @@ import {
   SiTableau,
   SiGooglebigquery,
   SiDocker,
+  SiCanva,
+  SiFigma,
 } from "react-icons/si";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -19,12 +21,12 @@ import {
 import { motion } from "framer-motion";
 
 const techStacks = [
-  { name: "Python", icon: <FaPython className="text-blue-500 text-xl" /> },
+  { name: "Python", icon: <FaPython className="text-yellow-500 text-xl" /> },
   {
     name: "Looker Studio",
     icon: <SiGoogleanalytics className="text-red-500 text-xl" />,
   },
-  { name: "DBeaver", icon: <SiDbeaver className="text-blue-400 text-xl" /> },
+  { name: "DBeaver", icon: <SiDbeaver className="text-brown-500 text-xl" /> },
   {
     name: "PostgreSQL",
     icon: <SiPostgresql className="text-blue-500 text-xl" />,
@@ -68,6 +70,14 @@ const techStacks = [
   {
     name: "Docker",
     icon: <SiDocker className="text-blue-500 text-xl" />,
+  },
+  {
+    name: "Canva",
+    icon: <SiCanva className="text-blue-500 text-xl" />,
+  },
+  {
+    name: "Figma",
+    icon: <SiFigma className="text-purple-500 text-xl" />,
   },
 ];
 
