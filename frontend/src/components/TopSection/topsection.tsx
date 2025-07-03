@@ -47,7 +47,7 @@ const TopSection: React.FC<TopSectionProps> = ({
         }
 
         // Pause for 2 seconds after the name is fully displayed
-        await new Promise((resolve) => setTimeout(resolve, 3000)); // 2000ms = 2 seconds
+        await new Promise((resolve) => setTimeout(resolve, 4000)); // 4000ms = 2 seconds
 
         // Hide each letter from right to left
         for (let i = allLetters.length - 1; i >= 0; i--) {

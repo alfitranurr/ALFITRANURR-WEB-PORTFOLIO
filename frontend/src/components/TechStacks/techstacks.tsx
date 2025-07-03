@@ -9,7 +9,13 @@ import {
   SiMysql,
   SiTableau,
   SiGooglebigquery,
+  SiDocker,
 } from "react-icons/si";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faFileExcel,
+  faFilePowerpoint,
+} from "@fortawesome/free-solid-svg-icons";
 import { motion } from "framer-motion";
 
 const techStacks = [
@@ -44,7 +50,25 @@ const techStacks = [
     name: "Google BigQuery",
     icon: <SiGooglebigquery className="text-blue-500 text-xl" />,
   },
-  { name: "New Tech", icon: <FaReact className="text-pink-500 text-xl" /> },
+  {
+    name: "Ms. Excel",
+    icon: (
+      <FontAwesomeIcon icon={faFileExcel} className="text-green-600 text-xl" />
+    ),
+  },
+  {
+    name: "Ms. PowerPoint",
+    icon: (
+      <FontAwesomeIcon
+        icon={faFilePowerpoint}
+        className="text-orange-600 text-xl"
+      />
+    ),
+  },
+  {
+    name: "Docker",
+    icon: <SiDocker className="text-blue-500 text-xl" />,
+  },
 ];
 
 const techStacksInfinite = [...Array(4)].flatMap(() => techStacks);
@@ -88,14 +112,14 @@ const InfiniteScroll = () => {
               {techStacksInfinite.map((tech, index) => (
                 <div
                   key={index}
-                  className="flex items-center justify-center space-x-1 rounded-full px-4 py-2 border-2 border-gray-500 transition-all hover:border-white"
+                  className="flex items-center justify-center space-x-1 rounded-full px-4 py-1 border-2 border-gray-500 transition-all hover:border-white"
                   style={{
                     display: "inline-flex",
                     whiteSpace: "nowrap",
                     minWidth: "auto",
                   }}
                 >
-                  <div className="text-3xl">{tech.icon}</div>
+                  <div className="text-2xl">{tech.icon}</div>
                   <span className="text-xs">{tech.name}</span>
                 </div>
               ))}
