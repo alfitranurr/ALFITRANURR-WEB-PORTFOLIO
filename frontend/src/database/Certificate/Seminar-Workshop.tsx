@@ -2,6 +2,7 @@ import CareerNextAMCOR from "../../assets/images/Certificate/SeminarWorkshop/Cer
 import QA from "../../assets/images/Certificate/SeminarWorkshop/Certificate - Quality Assurance - 2023.png";
 import MSIB6 from "../../assets/images/Certificate/SeminarWorkshop/Certificate - Sosialisasi (MSIB) Batch 6 - 2023.png";
 import BIMTEK from "../../assets/images/Certificate/SeminarWorkshop/Certificate - BIMTEK Perpustakaan - 2022.png";
+import AI_Ignition from "../../assets/images/Certificate/SeminarWorkshop/Certificate - AI Ignition.png";
 
 interface Seminar {
   id: number;
@@ -18,6 +19,19 @@ interface Seminar {
 const seminars: Seminar[] = [
   {
     id: 1,
+    title: "AI Ignition Training - From Basics to Breakthroughs in AI",
+    description: "",
+    image: AI_Ignition,
+    tags: ["Participant"],
+    buttons: [
+      {
+        text: "View Certificate",
+        link: "https://drive.google.com/file/d/1DwKz4v10ZCjtUgLT7yPfmWdCqX7jgUxH/view?usp=sharing",
+      },
+    ],
+  },
+  {
+    id: 2,
     title: "Career Next with Jobstreet and P&G",
     description: "",
     image: CareerNextAMCOR,
@@ -30,7 +44,7 @@ const seminars: Seminar[] = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     title: "Quality Assurance 101 A Beginner's Guide to Quality Assurance",
     description: "",
     image: QA,
@@ -43,7 +57,7 @@ const seminars: Seminar[] = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: "MSIB Batch 6 Socialization",
     description: "",
     image: MSIB6,
@@ -56,7 +70,7 @@ const seminars: Seminar[] = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: "UMM Library Technology Guidance",
     description: "",
     image: BIMTEK,
