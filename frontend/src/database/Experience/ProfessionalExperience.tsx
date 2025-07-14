@@ -3,12 +3,22 @@ import LogoAzkaGroup from "../../assets/images/Experience/Professional/Logo Azka
 import LogoMetadari from "../../assets/images/Experience/Professional/Logo Metadari.png";
 import LogoINDEF from "../../assets/images/Experience/Professional/Logo INDEF.png";
 import LogoMySkill from "../../assets/images/Experience/Professional/Logo MySkill.png";
+import LogoJasaTirta1 from "../../assets/images/Experience/Professional/Logo Jasa Tirta 1.png";
 
 const Professional = [
   {
     id: 1,
+    logo: LogoJasaTirta1,
+    title: "Data Engineer Intern",
+    company: "Perum Jasa Tirta I",
+    duration: "July 2025 - Sept 2025",
+    location: "Malang, East Java, Indonesia",
+    description: [""],
+  },
+  {
+    id: 2,
     logo: LogoKimiaFarma,
-    title: "Big Data Analytics",
+    title: "Big Data Analytics Intern",
     company: "Kimia Farma x Rakamin Academy",
     duration: "Mar 2025 - April 2025",
     location: "Work From Home (WFH)",
@@ -17,9 +27,9 @@ const Professional = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     logo: LogoAzkaGroup,
-    title: "Web Development • Data Automation • Graphic Design",
+    title: "Web Development • Data Automation • Graphic Design Intern",
     company: "CV. Indo Azka Konsultan",
     duration: "Jan 2025 - Mar 2025",
     location: "Malang, East Java, Indonesia",
@@ -30,9 +40,9 @@ const Professional = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     logo: LogoMetadari,
-    title: "Data Analyst",
+    title: "Data Analyst Intern",
     company: "Digital Art and Information (DARI)",
     duration: "Dec 2024 - Now",
     location: "Malang, East Java, Indonesia",
@@ -42,7 +52,7 @@ const Professional = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     logo: LogoINDEF,
     title: "Enumerator",
     company: "Institute for Development of Economics and Finance (INDEF)",
@@ -53,7 +63,7 @@ const Professional = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     logo: LogoMySkill,
     title: "Data Analysis : Fullstack Intensive Bootcamp",
     company: "MySkill",
