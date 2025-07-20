@@ -9,7 +9,7 @@ const Professional = [
   {
     id: 1,
     logo: LogoJasaTirta1,
-    title: "Data Engineer Intern",
+    title: "BI Analyst Intern • AI Automation Developer Intern",
     company: "Perum Jasa Tirta I",
     duration: "July 2025 - Sept 2025",
     location: "Malang, East Java, Indonesia",
@@ -29,7 +29,8 @@ const Professional = [
   {
     id: 3,
     logo: LogoAzkaGroup,
-    title: "Web Development • Data Automation • Graphic Design Intern",
+    title:
+      "Web Development Intern • Data Automation Intern • Graphic Design Intern",
     company: "CV. Indo Azka Konsultan",
     duration: "Jan 2025 - Mar 2025",
     location: "Malang, East Java, Indonesia",

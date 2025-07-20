@@ -10,6 +10,7 @@ import ExcelEdutify from "../../assets/images/Certificate/LicenseCertification/C
 import ExcelKarirNext from "../../assets/images/Certificate/LicenseCertification/Certificate - Karirnex Bootcamp Excel - 2024.png";
 import RakaminKimiaFarmaBDA from "../../assets/images/Certificate/LicenseCertification/Certificate - PBI Big Data Analytics Rakamin Academy x Kimia Farma.png";
 import MySkill_PythonforDataAnalysis from "../../assets/images/Certificate/LicenseCertification/Certificate - Python for Data Analysis.png";
+import MySkill_PowerBI from "../../assets/images/Certificate/LicenseCertification/Certificate - MySkill - Microsoft Power BI.png";
 
 interface License {
   id: number;
@@ -65,6 +66,19 @@ const licenses: License[] = [
   },
   {
     id: 4,
+    title: "MySkill - Microsoft Power BI",
+    description: "",
+    image: MySkill_PowerBI,
+    tags: ["National"],
+    buttons: [
+      {
+        text: "View Certificate",
+        link: "https://drive.google.com/file/d/1YSjlyCJgD9KggDyXhpV67bKFH4XU1vrX/view?usp=sharing",
+      },
+    ],
+  },
+  {
+    id: 5,
     title: "MySkill - Marketing Management",
     description: "",
     image: MySkill_MarketingManagement,
@@ -77,7 +91,7 @@ const licenses: License[] = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     title: "UMM - Semarak Literasi Al-Quran",
     description: "",
     image: SLQ_UMM,
@@ -90,7 +104,7 @@ const licenses: License[] = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     title: "As-Surkati - Memorizing the Quran 30 Juz in One Sitting",
     description: "",
     image: Quran30Juz_Surkati,
@@ -103,7 +117,7 @@ const licenses: License[] = [
     ],
   },
   {
-    id: 7,
+    id: 8,
     title: "ASEAN Data Science Explorers 2024 Enablement Session",
     description: "",
     image: ASEAN_DSE,
@@ -116,7 +130,7 @@ const licenses: License[] = [
     ],
   },
   {
-    id: 8,
+    id: 9,
     title: "Oracle Academy - Database",
     description: "",
     image: OracleAcademy,
@@ -129,7 +143,7 @@ const licenses: License[] = [
     ],
   },
   {
-    id: 9,
+    id: 10,
     title: "Dicoding Academy - Data Science",
     description: "",
     image: DicodingAcademy,
@@ -142,7 +156,7 @@ const licenses: License[] = [
     ],
   },
   {
-    id: 10,
+    id: 11,
     title: "UMM - FLSP",
     description: "",
     image: FLSPUMM,
@@ -155,7 +169,7 @@ const licenses: License[] = [
     ],
   },
   {
-    id: 11,
+    id: 12,
     title: "Edutify - Filosofi Excel",
     description: "",
     image: ExcelEdutify,
@@ -168,7 +182,7 @@ const licenses: License[] = [
     ],
   },
   {
-    id: 12,
+    id: 13,
     title: "KarirNext - Karirnex Bootcamp Excel",
     description: "",
     image: ExcelKarirNext,
