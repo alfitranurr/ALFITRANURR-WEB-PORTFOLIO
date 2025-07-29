@@ -26,7 +26,7 @@ const MapCard = () => {
   };
 
   return (
-    <div className="bg-[var(--base-color)] p-4 rounded-xl shadow-md text-white w-full max-w-[22rem] mx-auto mt-6 overflow-hidden flex flex-col items-center text-center">
+    <div className="bg-[var(--base-color)] p-4 rounded-xl shadow-[0_0_20px_5px_rgba(255,255,255,0.08)] text-white w-full max-w-[22rem] mx-auto mt-6 overflow-hidden flex flex-col items-center text-center">
       <h2 className="text-lg font-semibold text-center mb-3 w-full">Find Me</h2>
       <div className="text-gray-300 text-base mb-4">
         <p>Location: Malang, Indonesia</p>

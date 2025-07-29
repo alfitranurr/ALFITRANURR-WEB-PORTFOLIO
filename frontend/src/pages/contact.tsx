@@ -1,5 +1,3 @@
-// src/pages/contact.tsx
-
 import React from "react";
 import { FaInstagram, FaWhatsapp, FaLinkedin, FaGithub } from "react-icons/fa";
 
@@ -7,12 +5,12 @@ const Contact: React.FC = () => {
   return (
     <section id="contact" className="flex justify-center mt-4 px-4 pt-[60px]">
       <div
-        className="max-w-6xl w-full p-4 bg-white/20 backdrop-blur-md md:backdrop-blur-md rounded-2xl shadow-md flex flex-col items-center mx-auto"
+        className="max-w-6xl w-full p-4 bg-white/20 backdrop-blur-md md:backdrop-blur-md rounded-2xl shadow-[0_0_20px_5px_rgba(255,255,255,0.1)] flex flex-col items-center mx-auto"
         style={{ backgroundColor: "var(--base-color)" }}
       >
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mt-6 w-full">
           {/* ==================== LEFT SECTION (CONTACT INFO) ==================== */}
-          <div className="space-y-6 text-white flex flex-col justify-start">
+          <div className="space-y-6 text-white flex flex-col justify-start shadow-[0_0_20px_5px_rgba(255,255,255,0.08)] p-6 rounded-lg">
             <h2 className="text-lg font-bold text-left">Get In Touch</h2>
             <p className="text-sm text-left">
               I'm thrilled to connect with you! Whether you’re interested in
@@ -98,7 +96,7 @@ const Contact: React.FC = () => {
 
           {/* ==================== RIGHT SECTION (CONTACT FORM) ==================== */}
           <div className="space-y-4">
-            <div className="p-6 bg-white/20 backdrop-blur-none lg:backdrop-blur-md rounded-lg shadow-md">
+            <div className="p-6 bg-white/20 backdrop-blur-none lg:backdrop-blur-md rounded-lg shadow-[0_0_20px_5px_rgba(255,255,255,0.08)]">
               <form className="space-y-4">
                 <div className="flex flex-col">
                   <label htmlFor="name" className="mb-2 text-sm text-white">
