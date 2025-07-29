@@ -81,7 +81,7 @@ const TopSection: React.FC<TopSectionProps> = ({
       {/* Bingkai Foto Lingkaran */}
       <div className="mb-6 flex justify-center">
         <motion.div
-          className="w-36 h-36 rounded-full overflow-hidden border-4 border-white bg-gray-200"
+          className="w-36 h-36 rounded-full overflow-hidden border-4 border-white bg-gray-200 shadow-[0_0_20px_5px_rgba(255,255,255,0.2)]"
           whileHover={{ scale: 1.1 }}
           transition={{ type: "spring", stiffness: 300, damping: 20 }}
         >
@@ -95,7 +95,7 @@ const TopSection: React.FC<TopSectionProps> = ({
             <svg
               className="w-full h-full text-gray-500"
               fill="currentColor"
-              viewBox="0 0 24 15"
+              viewBox="0 0 24 24"
             >
               <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
             </svg>
@@ -103,9 +103,7 @@ const TopSection: React.FC<TopSectionProps> = ({
         </motion.div>
       </div>
 
-      <h1 className="text-2xl font-light">
-        Hello, I<span className="text-[var(--warna3-color)]">'</span>m
-      </h1>
+      <h1 className="text-2xl font-light">Hello, I'm</h1>
 
       {/* Typewriter Effect for h2 */}
       <h2 className="text-2xl font-semibold mt-2">

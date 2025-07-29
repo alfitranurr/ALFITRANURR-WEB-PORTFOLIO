@@ -8,11 +8,13 @@ interface PoliceLineProps {
 }
 
 const PoliceLine: React.FC<PoliceLineProps> = ({ items, isLoaded }) => {
+  const itemRepeatCount = 30; // Jumlah elemen yang sama untuk keduanya
+
   return (
     <>
       {/* WHITE BOX */}
       <div
-        className="w-full h-8 bg-white mt-40 mb-[-35px] overflow-hidden flex items-center justify-center shadow-lg"
+        className="w-full h-8 bg-white mt-40 mb-[-35px] overflow-hidden flex items-center justify-center shadow-[0_0_20px_5px_rgba(255,255,255,0.1)]"
         style={{
           transform: "rotate(0deg) translateY(15px) translateX(-2px)",
           transformOrigin: "center",
@@ -28,13 +30,12 @@ const PoliceLine: React.FC<PoliceLineProps> = ({ items, isLoaded }) => {
             ease: "linear",
           }}
         >
-          {/* Duplicated items using array for continuous scroll */}
-          {Array.from({ length: 30 }).map((_, index) => (
+          {Array.from({ length: itemRepeatCount }).map((_, index) => (
             <span
-              key={index}
+              key={`white-${index}`}
               className="flex items-center text-xs sm:text-sm md:text-sm whitespace-nowrap"
             >
-              <Circle size={10} className="mr-2" />{" "}
+              <Circle size={10} className="mr-2" />
               {items[index % items.length]}
             </span>
           ))}
@@ -43,7 +44,7 @@ const PoliceLine: React.FC<PoliceLineProps> = ({ items, isLoaded }) => {
 
       {/* PURPLE BOX */}
       <div
-        className="w-full h-8 bg-[var(--warna2-color)] mt-0 mb-[-35px] overflow-hidden flex items-center justify-center px-0 shadow-lg"
+        className="w-full h-8 bg-[var(--warna2-color)] mt-0 mb-[-35px] overflow-hidden flex items-center justify-center px-0 shadow-[0_0_20px_5px_rgba(255,255,255,0.1)]"
         style={{
           transform: "rotate(0deg) translateY(-20px) translateX(-2px)",
           transformOrigin: "center",
@@ -59,13 +60,12 @@ const PoliceLine: React.FC<PoliceLineProps> = ({ items, isLoaded }) => {
             ease: "linear",
           }}
         >
-          {/* Duplicated items using array for continuous scroll */}
-          {Array.from({ length: 15 }).map((_, index) => (
+          {Array.from({ length: itemRepeatCount }).map((_, index) => (
             <span
-              key={index}
+              key={`purple-${index}`}
               className="flex items-center text-xs sm:text-sm md:text-sm whitespace-nowrap"
             >
-              <Circle size={10} className="mr-2" />{" "}
+              <Circle size={10} className="mr-2" />
               {items[index % items.length]}
             </span>
           ))}

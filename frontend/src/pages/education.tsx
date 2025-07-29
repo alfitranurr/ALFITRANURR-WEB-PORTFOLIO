@@ -5,7 +5,7 @@ const EducationCard = () => {
   return (
     <section
       id="education"
-      className="w-full p-5 bg-white/20 backdrop-blur-md rounded-2xl shadow-md flex flex-col items-center mt-20 space-y-2"
+      className="w-full p-5 bg-white/20 backdrop-blur-md rounded-2xl shadow-[0_0_20px_5px_rgba(255,255,255,0.1)] flex flex-col items-center mt-20 space-y-2"
     >
       <h2 className="text-lg font-semibold text-white mb-6 w-full text-center">
         EDUCATION
