@@ -1,5 +1,5 @@
-import TelcoCustomerChurn from "../../../assets/images/Projects/Data/ArtificialIntelligence/Data Mining - Telco Customer Churn Classification.png";
-import SarcasmReddit from "../../../assets/images/Projects/Data/ArtificialIntelligence/Natural Language Processing - Reddit Sarcasm Classification.png";
+import TelcoCustomerChurn from "../../../assets/images/Projects/Data/ArtificialIntelligence/Telco - Customer Churn Classification.png";
+import SarcasmReddit from "../../../assets/images/Projects/Data/ArtificialIntelligence/Reddit - Political Content Sarcasm Classification.png";
 
 export const artificialintelligence = [
   {
