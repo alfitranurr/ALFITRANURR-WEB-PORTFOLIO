@@ -29,7 +29,7 @@ interface Competition {
 const competitions: Competition[] = [
   {
     id: 1,
-    title: "1st Winner PKP2 PTMA - PKM KC 2025",
+    title: "1st Winner of PKP2 PTMA - PKM KC 2025",
     description: "",
     image: Juara1_PKP2_PTMA,
     tags: ["Win", "National"],
