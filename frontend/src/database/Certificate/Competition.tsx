@@ -4,6 +4,9 @@
 import SIC_INDICATION from "../../assets/images/Certificate/Competition/Certificate - SIC INDICATION - 2024.jpg";
 import Juara1_PKP2_PTMA from "../../assets/images/Certificate/Competition/Certificate - 1st Winner PKP2 PTMA PKM KC.png";
 import Passed_The_Univ_Level from "../../assets/images/Certificate/Competition/Certificate - Passed The Univ Level - PKM KC 2025.png";
+import AwardedPKMNational from "../../assets/images/Certificate/Competition/Certificate - Awarded National Funding - PKM Karsa Cipta 2025.png";
+import Juara2PIMTANAS from "../../assets/images/Certificate/Competition/Certificate - 2nd Place Winner - PKM KC Presentation Category, PIMTANAS 2025.png";
+import Juara3DataSlayer from "../../assets/images/Certificate/Competition/Certificate - 3rd Place Winner - DAC Data Slayer 3.0 2025.png";
 
 {
   /* PARTICIPANTS */
@@ -12,7 +15,6 @@ import DataMiningHology7_0 from "../../assets/images/Certificate/Competition/Cer
 import FILKOM_UB_4C from "../../assets/images/Certificate/Competition/Certificate - 4C FILKOM UB - 2024.png";
 import KemostanUB from "../../assets/images/Certificate/Competition/Certificate - Kemostan UB - 2024.png";
 import KimiaKovalenUNS from "../../assets/images/Certificate/Competition/Certificate - Kimia Kovalen UNS - 2019.png";
-import Participants_of_PKP2_PTMA from "../../assets/images/Certificate/Competition/Certificate - Participants of PKP2 PTMA - PKM KC 2025.png";
 
 interface Competition {
   id: number;
@@ -29,7 +31,31 @@ interface Competition {
 const competitions: Competition[] = [
   {
     id: 1,
-    title: "1st Winner of PKP2 PTMA - PKM KC 2025",
+    title: "3rd Place Winner - DAC Data Slayer 3.0 2025",
+    description: "",
+    image: Juara3DataSlayer,
+    tags: ["Win", "National"],
+    buttons: [
+      {
+        text: "View Certificate",
+        link: "https://drive.google.com/file/d/1YmIY-BMUP5urkUWnqF84xq7PSgxe0nzL/view?usp=sharing",
+      },
+    ],
+  },{
+    id: 2,
+    title: "2nd Place Winner - PKM KC Presentation Category, PIMTANAS 2025",
+    description: "",
+    image: Juara2PIMTANAS,
+    tags: ["Win", "National"],
+    buttons: [
+      {
+        text: "View Certificate",
+        link: "https://drive.google.com/file/d/1a6wkxHHaNzJDbTWWt1093heIsGUHW-f3/view?usp=sharing",
+      },
+    ],
+  },{
+    id: 3,
+    title: "1st Place Winner of PKP2 PTMA - PKM Karsa Cipta 2025",
     description: "",
     image: Juara1_PKP2_PTMA,
     tags: ["Win", "National"],
@@ -40,20 +66,20 @@ const competitions: Competition[] = [
       },
     ],
   },{
-    id: 2,
-    title: "Participants of PKP2 PTMA - PKM KC 2025",
+    id: 4,
+    title: "Awarded National Funding - PKM Karsa Cipta 2025",
     description: "",
-    image: Participants_of_PKP2_PTMA,
-    tags: ["Participant", "National"],
+    image: AwardedPKMNational,
+    tags: ["Win", "National"],
     buttons: [
       {
         text: "View Certificate",
-        link: "https://drive.google.com/file/d/1wEdVQ5pnpG6BKTJawqI_SFeeJ7YBlyyB/view?usp=sharing",
+        link: "https://drive.google.com/file/d/1pMX745hZLAizcyz662x2WcgZCTZWmcqo/view?usp=sharing",
       },
     ],
   },{
-    id: 3,
-    title: "Passed The Univ Level - PKM KC 2025",
+    id: 5,
+    title: "Qualified for the University Level - PKM Karsa Cipta 2025",
     description: "",
     image: Passed_The_Univ_Level,
     tags: ["Win", "National"],
@@ -65,8 +91,8 @@ const competitions: Competition[] = [
     ],
   },
   {
-    id: 4,
-    title: "SIC INDICATION UMM - Infographic",
+    id: 6,
+    title: "1st Place Winner of Statistics Infographics Competition",
     description: "",
     image: SIC_INDICATION,
     tags: ["Win", "Regional"],
@@ -78,7 +104,7 @@ const competitions: Competition[] = [
     ],
   },
   {
-    id: 5,
+    id: 7,
     title: "Hology 7.0 UB - Data Mining",
     description: "",
     image: DataMiningHology7_0,
@@ -91,7 +117,7 @@ const competitions: Competition[] = [
     ],
   },
   {
-    id: 6,
+    id: 8,
     title: "4C FILKOM UB - Infographic Poster",
     description: "",
     image: FILKOM_UB_4C,
@@ -104,7 +130,7 @@ const competitions: Competition[] = [
     ],
   },
   {
-    id: 7,
+    id: 9,
     title: "KEMOSTAN UB - Infographic",
     description: "",
     image: KemostanUB,
@@ -117,7 +143,7 @@ const competitions: Competition[] = [
     ],
   },
   {
-    id: 8,
+    id: 10,
     title: "Kovalen Edufair IX HMP UNS - Covalent Chemistry",
     description: "",
     image: KimiaKovalenUNS,
