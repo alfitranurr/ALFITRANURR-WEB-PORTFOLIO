@@ -7,6 +7,7 @@ import Passed_The_Univ_Level from "../../assets/images/Certificate/Competition/C
 import AwardedPKMNational from "../../assets/images/Certificate/Competition/Certificate - Awarded National Funding - PKM Karsa Cipta 2025.png";
 import Juara2PIMTANAS from "../../assets/images/Certificate/Competition/Certificate - 2nd Place Winner - PKM KC Presentation Category, PIMTANAS 2025.png";
 import Juara3DataSlayer from "../../assets/images/Certificate/Competition/Certificate - 3rd Place Winner - DAC Data Slayer 3.0 2025.png";
+import FinalistSPARC from "../../assets/images/Certificate/Competition/Certificate - Finalist SPARC 2026.png";
 
 {
   /* PARTICIPANTS */
@@ -31,6 +32,19 @@ interface Competition {
 const competitions: Competition[] = [
   {
     id: 1,
+    title: "Finalist - Smart Analyze for Smarter Decisions, SPARC 2026",
+    description: "",
+    image: FinalistSPARC,
+    tags: ["Win", "National"],
+    buttons: [
+      {
+        text: "View Certificate",
+        link: "https://drive.google.com/file/d/1Hhe9Tedpxw7uH3b7glPRshG-oKdxJcYF/view?usp=sharing",
+      },
+    ],
+  },
+  {
+    id: 2,
     title: "3rd Place Winner - DAC Data Slayer 3.0 2025",
     description: "",
     image: Juara3DataSlayer,
@@ -42,7 +56,7 @@ const competitions: Competition[] = [
       },
     ],
   },{
-    id: 2,
+    id: 3,
     title: "2nd Place Winner - PKM KC Presentation Category, PIMTANAS 2025",
     description: "",
     image: Juara2PIMTANAS,
@@ -54,7 +68,7 @@ const competitions: Competition[] = [
       },
     ],
   },{
-    id: 3,
+    id: 4,
     title: "1st Place Winner of PKP2 PTMA - PKM Karsa Cipta 2025",
     description: "",
     image: Juara1_PKP2_PTMA,
@@ -66,7 +80,7 @@ const competitions: Competition[] = [
       },
     ],
   },{
-    id: 4,
+    id: 5,
     title: "Awarded National Funding - PKM Karsa Cipta 2025",
     description: "",
     image: AwardedPKMNational,
@@ -78,7 +92,7 @@ const competitions: Competition[] = [
       },
     ],
   },{
-    id: 5,
+    id: 6,
     title: "Qualified for the University Level - PKM Karsa Cipta 2025",
     description: "",
     image: Passed_The_Univ_Level,
@@ -91,7 +105,7 @@ const competitions: Competition[] = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     title: "1st Place Winner of Statistics Infographics Competition",
     description: "",
     image: SIC_INDICATION,
@@ -104,7 +118,7 @@ const competitions: Competition[] = [
     ],
   },
   {
-    id: 7,
+    id: 8,
     title: "Hology 7.0 UB - Data Mining",
     description: "",
     image: DataMiningHology7_0,
@@ -117,7 +131,7 @@ const competitions: Competition[] = [
     ],
   },
   {
-    id: 8,
+    id: 9,
     title: "4C FILKOM UB - Infographic Poster",
     description: "",
     image: FILKOM_UB_4C,
@@ -130,7 +144,7 @@ const competitions: Competition[] = [
     ],
   },
   {
-    id: 9,
+    id: 10,
     title: "KEMOSTAN UB - Infographic",
     description: "",
     image: KemostanUB,
@@ -143,7 +157,7 @@ const competitions: Competition[] = [
     ],
   },
   {
-    id: 10,
+    id: 11,
     title: "Kovalen Edufair IX HMP UNS - Covalent Chemistry",
     description: "",
     image: KimiaKovalenUNS,
