@@ -12,10 +12,28 @@ import Tokopedei from "../../../assets/images/Projects/Data/DataVisualization/Da
 import RakaminKimiaFarmaBDA from "../../../assets/images/Projects/Data/DataVisualization/Dashboard - Big Data Analytics Kimia Farma.png";
 import RamddShop from "../../../assets/images/Projects/Data/DataVisualization/Dashboard - Ramdd Shop Performance Analytics 2010.png";
 import MySkill_CreditCard from "../../../assets/images/Projects/Data/DataVisualization/Dasboard - Credit Card Report.png";
+import DataSlayer from "../../../assets/images/Projects/Data/DataVisualization/Dashboard - The Silent Gap.png";
 
 export const datavisualization = [
   {
     id: 1,
+    title: "Data Slayer 3.0 - The Silent Gap: Kesenjangan Akses Internet di Indonesia",
+    description: "This project is a dashboard analytics work presented in the Data Slayer 3.0 competition held by HMSD & Pojok Statistik Telkom University Purwokerto, where it successfully secured the 3rd Place Winner position in December 2025. This work, titled 'The Silent Gap' explores the disparities in internet access across Indonesia from 2020 to 2024 and analyzes its significant impact on the Human Development Index (HDI) and digital economic transformation to support more inclusive national digital policies.",
+    image: DataSlayer,
+    tags: ["Dashboard", "Looker Studio"],
+    buttons: [
+      {
+        text: "View Dashboard",
+        link: "https://datastudio.google.com/embed/u/0/reporting/353e52a2-1ac4-4dc7-bf86-103de4fb9cbc/page/p_ss2000fgyd",
+      },
+      {
+        text: "View Report",
+        link: "https://canva.link/y6utle6iv2vdcgn",
+      },
+    ],
+  },
+  {
+    id: 2,
     title: "Rakamin Academy x Kimia Farma - Performance Analytics 2020 - 2023",
     description: "",
     image: RakaminKimiaFarmaBDA,
@@ -32,7 +50,7 @@ export const datavisualization = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     title: "MySkill - Credit Card Report",
     description: "",
     image: MySkill_CreditCard,
@@ -45,7 +63,7 @@ export const datavisualization = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: "MySkill - Ramdd Shop Performance Analytics 2010",
     description: "",
     image: RamddShop,
@@ -58,7 +76,7 @@ export const datavisualization = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     title:
       "4C UB - Infographic on Telecommunication Resilience in Indonesia as a Catalyst for a Golden Indonesia 2045",
     description:
@@ -77,7 +95,7 @@ export const datavisualization = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     title: "ANAVA#19 FMIPA UGM - Infographic on Sexual Violence in Indonesia",
     description:
       "This project is an infographic work created in the Statistics Infographics (KIS) competition which is held by ANAVA #19 Gadjah Mada University every year. This work explains the portrait of sexual violence in Indonesia, including data on the distribution of cases, perpetrators, psychological impacts, and preventive measures needed to overcome this problem.",
@@ -95,7 +113,7 @@ export const datavisualization = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     title:
       "HMIF UMM - Infographics of Online Shopping Consumer Behavior Trends",
     description:
@@ -110,7 +128,7 @@ export const datavisualization = [
     ],
   },
   {
-    id: 7,
+    id: 8,
     title: "MySkill - Tokopedei Transaction Performance Review Dashboard",
     description:
       "This is the Transaction Dashboard for Tokopedei, a dummy store created as part of the Fullstack Data Analysis Bootcamp assignment at MySkill. The dashboard was developed using Looker Studio and consists of two pages. It features visualizations of Sales & Profit Performance (All Time), Top Sales by Category, Top Sales by Payment Method, to Transaction Summary Table.",

@@ -39,7 +39,7 @@ const competitions: Competition[] = [
     buttons: [
       {
         text: "View Certificate",
-        link: "https://drive.google.com/file/d/1Hhe9Tedpxw7uH3b7glPRshG-oKdxJcYF/view?usp=sharing",
+        link: "https://drive.google.com/file/d/1Hhe9Tedpxw7uH3b7glPRshG-oKdxJcYF/view?usp=sharingz",
       },
     ],
   },
