@@ -6,17 +6,10 @@ const AboutMe = () => {
           ABOUT ME
         </h1>
         <p className="text-sm text-warna3 text-justify leading-relaxed">
-          An Informatics undergraduate at the University of Muhammadiyah Malang,
-          currently in the 6th semester, showcasing a strong passion and
-          aptitude for data analytics, data science, data engineering, machine
-          learning, and research. Possessing a robust background in mathematics
-          and programming, complemented by effective communication abilities.
-          Well-versed in handling big data and proficient in Python, SQL, Excel,
-          and Tableau. Actively seeking opportunities to apply my knowledge and
-          skills in a dynamic professional environment. Committed to continuous
-          learning and personal growth, with a future objective of contributing
-          to innovative projects and advancing in the realm of data-related
-          technologies.
+          Informatics graduate from University of Muhammadiyah Malang, specializing in data analytics and machine learning. 
+          Proficient in Python, SQL, Excel, and Tableau, with experience in end-to-end data handling and a solid foundation in 
+          mathematics and programming, strong analytical, problem-solving skills and a passion for continuous learning. Seeking 
+          opportunities to apply expertise in dynamic environments while advancing in data-driven technologies.
         </p>
 
         {/* AL FITRA NUR RAMADHANI'S RESUME */}
