@@ -2,10 +2,24 @@ import YoutubeDanantara from "../../../assets/images/Projects/Data/DataAnalytic/
 import GooglePlayStore from "../../../assets/images/Projects/Data/DataAnalytic/Google - Google Play Store.png";
 import TiktokKaburAjaDulu from "../../../assets/images/Projects/Data/DataAnalytic/Tiktok - Kabur Aja Dulu.png";
 import RamddShop from "../../../assets/images/Projects/Data/DataAnalytic/E Commerce - User Retention Analysis.jpeg";
+import DQLabHack1 from "../../../assets/images/Projects/Data/DataAnalytic/DQLab - Hackathon Retail Crisis.png";
 
 export const dataanalytic = [
   {
     id: 1,
+    title: "Hackathon: Retail Crisis & Recovery Visualization Challenge with Python",
+    description: "",
+    image: DQLabHack1,
+    tags: ["E-Commerce"],
+    buttons: [
+      {
+        text: "View GitHub",
+        link: "https://github.com/alfitranurr/SOAL-HACKATHON-2026-PYTHON-01/blob/main/README.md",
+      },
+    ],
+  },
+  {
+    id: 2,
     title: "User Retention Analysis in a Leading Online Retail Platform",
     description: "",
     image: RamddShop,
@@ -18,7 +32,7 @@ export const dataanalytic = [
     ],
   },
   {
-    id: 2,
+    id: 3,
     title:
       "Sentiment Analysis of Indonesian Citizens' Tiktok Comments on #KaburAjaDulu",
     description: "",
@@ -32,7 +46,7 @@ export const dataanalytic = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: "Google Play Store",
     description: "",
     image: GooglePlayStore,
@@ -45,7 +59,7 @@ export const dataanalytic = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     title:
       "Sentiment Analysis of Indonesian Citizens' YouTube Comments on Danantara",
     description: "",
